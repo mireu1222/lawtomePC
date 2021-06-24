@@ -1,0 +1,31 @@
+<!-- mypage lnb -->
+<div id="lnb" class="mypage-lnb">
+    <h2 class="lnb-title">마이페이지</h2>
+    <nav class="lnb">
+        <ul>
+            <li@@if(context.my01){ class="active"}><a href="/page/mypage_01.html">나의 정보/설정</a></li>
+            <li@@if(context.my02){ class="active"}><a href="/page/mypage_02.html">프로필 관리</a></li>
+            <li@@if(context.my03){ class="active"}><a href="/page/mypage_03.html">나의 문의내역</a></li>
+            <li@@if(context.my04){ class="active"}><a href="/page/mypage_04.html">나의 결제내역</a></li>
+            <li@@if(context.my05){ class="active open"} data-toggle="class-toggle" data-toggle-class="open" data-toggle-self="true">
+                <button type="button">보유캐시/충전</button>
+                <ul class="sub-depth">
+                    <li><a href="/page/mypage_05_01.html"@@if(context.my05==='01'){ class="active"}>보유 캐시</a></li>
+                    <li><a href="/page/mypage_05_02.html"@@if(context.my05==='02'){ class="active"}>캐시 충전</a></li>
+                </ul>
+            </li>
+            <li@@if(context.my06){ class="active"}><a href="/page/mypage_06.html">적립금 내역</a></li>
+            <li@@if(context.my07){ class="active"}><a href="/page/mypage_07.html">쿠폰 관리</a></li>
+            <li@@if(context.my08){ class="active open"} data-toggle="class-toggle" data-toggle-class="open" data-toggle-self="true">
+                <button type="button">광고신청/관리</button>
+                <ul class="sub-depth">
+                    <li><a href="/page/mypage_08_01.html"@@if(context.my08==='01'){ class="active"}>광고 신청</a></li>
+                    <li><a href="/page/mypage_08_02.html"@@if(context.my08==='02'){ class="active"}>광고 집행 내역</a></li>
+                </ul>
+            </li>
+            <li@@if(context.my09){ class="active"}><a href="/page/mypage_09.html">수익관리</a></li>
+            <li@@if(context.my10){ class="active"}><a href="/page/mypage_10.html">비밀번호 변경</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- // mypage lnb -->

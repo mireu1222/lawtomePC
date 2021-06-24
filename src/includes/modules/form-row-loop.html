@@ -1,0 +1,36 @@
+<div class="row">
+    <p class="tit">@@tit</p>
+    @@if(context.input){
+        <div class="forms">
+            <input type="text" class="form-control"@@if(context.input.value){ value="@@input.value"}@@if(context.input.placeholder){ placeholder="@@input.placeholder"} aria-label="@@tit 입력">
+        </div>
+    }
+    @@if(context.inputBtn){
+        <div class="forms btn-type">
+            <input type="text" class="form-control"@@if(context.inputBtn.value){ value="@@inputBtn.value"}@@if(context.inputBtn.placeholder){ placeholder="@@inputBtn.placeholder"} aria-label="@@tit 입력">
+            <a href="" class="btn btn-point"><span>@@inputBtn.button</span></a>
+        </div>
+    }
+    @@if(context.col2){
+        <div class="forms flex size2">
+            <div class="col">
+                <input type="text" class="form-control"@@if(context.col2.input1.value){ value="@@col2.input1.value"}@@if(context.col2.input1.placeholder){ placeholder="@@col2.input1.placeholder"} aria-label="@@tit @@col2.input1.text 입력">
+                <p>@@col2.input1.text</p>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control"@@if(context.col2.input2.value){ value="@@col2.input2.value"}@@if(context.col2.input2.placeholder){ placeholder="@@col2.input2.placeholder"} aria-label="@@tit @@col2.input2.text 입력">
+                <p>@@col2.input2.text</p>
+            </div>
+        </div>
+    }
+    @@if(context.textarea){
+        <div class="forms">
+            <textarea class="form-control"@@if(context.textarea.placeholder){ placeholder="@@textarea.placeholder"} aria-label="@@tit 입력"></textarea>
+        </div>
+    }
+    @@if(context.datepicker){
+        <div class="forms">
+            <input type="text" class="form-control datepicker" placeholder="@@tit를 입력하세요">
+        </div>
+    }
+</div>

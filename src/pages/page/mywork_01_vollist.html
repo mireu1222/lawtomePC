@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                work : '01'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                @@include('./modules/work-card.html')
+
+                <div class="tbl-wrap">
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:80px;">
+                            <col>
+                            <col>
+                            <col style="width:140px;">
+                            <col style="width:150px;">
+                            <col style="width:130px;">
+                            <col style="width:180px;">
+                            <col style="width:120px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">아이디</th>
+                                <th scope="col">회원명</th>
+                                <th scope="col">제시금액</th>
+                                <th scope="col">지원일시</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">의뢰</th>
+                                <th scope="col">가우로톡</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td>kimmem1</td>
+                                <td>김회원</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00</td>
+                                <td><span class="text-basic">지원중</span></td><!-- 지원중 .text-basic -->
+                                <td><a href="/page/mywork_01_order.html" class="btn btn-md btn-point"><span>의뢰하기</span></a></td>
+                                <td><a href="" class="btn-talk sm"><span class="blind">가우로톡</span><em class="count">1</em></a></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td>kimmem1</td>
+                                <td>김회원</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00</td>
+                                <td><span class="text-cont">지원취소</span></td><!-- 지원취소 .text-cont -->
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td>kimmem1</td>
+                                <td>김회원</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00</td>
+                                <td><span class="text-basic fw-medium">확정</span></td><!-- 확정 .text-basic.fw-medium -->
+                                <td><a href="" class="btn btn-md btn-border"><span>취소</span></a></td>
+                                <td><a href="" class="btn-talk sm"><span class="blind">가우로톡</span><em class="count">1</em></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                @@include('./modules/pagination.html')
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

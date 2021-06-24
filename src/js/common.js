@@ -5,6 +5,7 @@ $(function () {
     uiDropdown('header .my-menu');
     $(this).find('.datepicker').datepicker();
     modalToggle(); // modal
+    classToggle();
 });
 
 $(window).on('load', function(){
@@ -180,16 +181,25 @@ function fileUpload() {
 
 // class toggle
 function classToggle() {
-    var classToggle = $('[data-toggle="class-toggle"]');
-
-    if (classToggle.length <= 0) return;
-
-    classToggle.find('button, a').on('click', function(){
+    $('[data-toggle="class-toggle"]').find('button, a').click(function(){
         var li = $(this).closest('li');
         var lis = li.siblings('li');
+        var wraps = $(this).closest($('[data-toggle="class-toggle"]'));
+        var toggleSelf = wraps.data('toggle-self');
+        var toggleClass = wraps.data('toggle-class');
+        var className = toggleClass === undefined ? 'active' : toggleClass;
 
-        lis.removeClass('active');
-        li.addClass('active');
+        if (toggleSelf){
+            if (li.hasClass(className)){
+                li.removeClass(className);
+            } else {
+                lis.removeClass(className);
+                li.addClass(className);
+            }
+        } else {
+            lis.removeClass(className);
+            li.addClass(className);
+        }
     });
 }
 

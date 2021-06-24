@@ -1,0 +1,183 @@
+/* 마이페이지 */
+.mypage-sections {
+    .sect {
+        position:relative;
+        margin-top:70px;
+        padding:25px 20px 40px;
+        border:1px solid $border;
+        &:first-child {
+            margin-top:0;
+        }
+        h4.sect-title {
+            margin-bottom:50px;
+            font-size:22px;
+            font-weight:500;
+        }
+    }
+    // 나의 정보/설정
+    .my-profile {
+        padding:15px 0 0 20px;
+        @include clearfix;
+        .my-photo {
+            float:left;
+            position:relative;
+            .thumb {
+                display:block;
+                width:130px;
+                height:130px;
+                border-radius:50%;
+                overflow:hidden;
+                background-size:cover;
+                background-position:center;
+                background-repeat:no-repeat;
+            }
+            .btn-photo-upload {
+                position:absolute;
+                bottom:0;
+                right:0;
+                width:30px;
+                height:30px;
+                border:1px solid $border;
+                border-radius:50%;
+                background:#fff url('/images/icon/icon-photop.png') center no-repeat;
+            }
+        }
+        .name {
+            margin-left:160px;
+            padding-top:12px;
+            font-size:25px;
+            font-weight:500;
+        }
+        .btn.btn-md {
+            position:absolute;
+            bottom:40px;
+            right:25px;
+            width:220px;
+        }
+    }
+    .work-info-lists {
+        display:flex;
+        li {
+            position:relative;
+            flex:1;
+            margin-left:20px;
+            padding-left:21px;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:12px;
+                bottom:0;
+                left:0;
+                width:1px;
+                background:$border;
+            }
+            &:first-child {
+                margin-left:0;
+                padding-left:0;
+                &::before {
+                    display:none;
+                }
+            }
+            .inner {
+                position:relative;
+                .count {
+                    padding:40px 0 25px;
+                    text-align:center;
+                    font-size:48px;
+                }
+                .btn {
+                    display:block;
+                    width:100%;
+                }
+                .today {
+                    position:absolute;
+                    top:0;
+                    left:50%;
+                    transform:translateX(-50%);
+                    height:26px;
+                    padding:0 10px;
+                    border-radius:13px;
+                    background:$disabled;
+                    color:$cont;
+                    font-size:14px;
+                    line-height:26px;
+                    white-space:nowrap;
+                    em {
+                        color:$point;
+                        font-weight:500;
+                    }
+                }
+            }
+        }
+    }
+    .state-select-lists {
+        > li {
+            margin-top:40px;
+            &:first-child {
+                margin-top:0;
+            }
+        }
+        .state-options {
+            margin-top:15px;
+            padding:30px 25px;
+            background:$disabled;
+            ul {
+                display:flex;
+                li {
+                    flex:1;
+                    display:flex;
+                    align-items:center;
+                    .chk-wrap {
+                        margin-right:20px;
+                        input + label {
+                            white-space:nowrap;
+                        }
+                    }
+                    .form-control {
+                        height:50px;
+                        min-height:50px;
+                        background:#fff;
+                    }
+                }
+            }
+        }
+    }
+    .alert-setting {
+        margin-bottom:100px;
+        padding-right:45px;
+        &:last-child {
+            margin-bottom:0;
+        }
+        > p.tit {
+            display:flex;
+            font-size:20px;
+            font-weight:500;
+            span {
+                width:68px;
+                margin-left:90px;
+                text-align:center;
+            }
+            span:first-child {
+                margin-right:auto;
+                margin-left:0;
+                width:auto;
+                text-align:left;
+            }
+        }
+        ul.lists {
+            margin-top:35px;
+            li {
+                display:flex;
+                align-items:center;
+                margin-top:30px;
+                p {
+                    margin-right:auto;
+                    font-size:18px;
+                }
+                .chk-switch {
+                    margin-left:90px;
+                }
+            }
+        }
+    }
+}

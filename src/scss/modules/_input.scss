@@ -123,6 +123,7 @@ $types : chk, rdo, rdo-btn, like-chk;
             }
             @if $type == 'chk' {
                 &:checked + label {
+                    color:$basic;
                     &::before {
                         border-color:$point;
                         background:$point;
@@ -143,6 +144,7 @@ $types : chk, rdo, rdo-btn, like-chk;
             }
             @if $type == 'rdo' {
                 &:checked + label {
+                    color:$basic;
                     &::before {
                         border-color:$point;
                     }
@@ -169,6 +171,52 @@ $types : chk, rdo, rdo-btn, like-chk;
                 &:checked + label {
                     background-position-y:bottom;
                 }
+            }
+        }
+    }
+}
+
+/* switch */
+.chk-switch {
+    display:inline-block;
+    position:relative;
+    min-height:38px;
+    vertical-align:top;
+    input {
+        position:absolute;
+        width:1px;
+        height:1px;
+        padding:0;
+        margin:-1px;
+        overflow:hidden;
+        clip:rect(0, 0, 0, 0);
+        border:0;
+        + label {
+            display:block;
+            position:relative;
+            width:68px;
+            height:38px;
+            border-radius:19px;
+            background:#ddd;
+            cursor:pointer;
+            user-select:none;
+            transition:background 0.1s ease-in-out;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:4px;
+                left:4px;
+                width:30px;
+                height:30px;
+                border-radius:50%;
+                background:#fff;
+                transition:all 0.2s ease-in-out;
+            }
+        }
+        &:checked + label {
+            background:$point;
+            &::before {
+                left:34px;
             }
         }
     }

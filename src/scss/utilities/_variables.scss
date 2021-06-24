@@ -1,7 +1,7 @@
 // colors
 $black :        #111 !default;
 $basic :        #333 !default;
-$cont :         #555 !default;
+$cont :         #666 !default;
 $gray :         #888 !default;
 $placeholder :  #999 !default;
 $border :       #ddd !default;
@@ -66,7 +66,7 @@ $input-transition : border-color $time ease-in-out !default;
 
 $btn-sizes : (
     "sm" 14px 26px 14px,
-    "md" 16px 48px 20px,
+    "md" 18px 48px 20px,
     "lg" 20px 68px 20px,
 ) !default;
 

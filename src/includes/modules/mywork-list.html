@@ -31,14 +31,22 @@
                                     <li class="type1">희망비용 : <em>000,000</em>원</li>
                                     <li class="type2">처리일시 : <em>2021.00.00 00:00</em></li>
                                 </ul>
-                                <p class="cont">
+                                <p class="cont type2">
                                     <span>업무내용</span>법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정
                                 </p>
                             </div>
+                            @@if(context.type1){
                             <div class="controls">
-                                <p class="vol-count">지원자 : <em>00</em>명</p>
+                                <p class="vol-count">지원자 : <a href="/page/mywork_01_vollist.html">00</a>명</p>
                                 <a href="" class="btn-talk"><span class="blind">가우로톡</span><em class="count">999+</em></a>
                             </div>
+                            }
+                            @@if(context.type2){
+                            <div class="controls">
+                                <p class="vol-count">지원자 : <em>00</em>명</p>
+                                <button type="button" class="btn btn-md btn-point" data-toggle="modal" data-target="#modal-apply"><span>지원하기</span></button>
+                            </div>
+                            }
                         </div>
                     </td>
                 </tr>

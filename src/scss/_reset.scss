@@ -116,6 +116,9 @@ button {
 button {
     border:none;
     cursor:pointer;
+    &:disabled {
+        cursor:default;
+    }
 }
 .blind {
     position: absolute !important;

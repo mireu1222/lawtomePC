@@ -43,6 +43,16 @@
                     color:$point;
                 }
             }
+            p {
+                font-size:22px;
+                line-height:30px;
+                font-weight:500;
+                word-break:keep-all;
+                span {
+                    margin-right:5px;
+                    color:$point;
+                }
+            }
         }
         .condition-list {
             margin-top:30px;
@@ -92,7 +102,9 @@
             margin-top:10px;
             color:$cont;
             @include font;
-            @include textEllipsis;
+            &.type2 {
+                @include textEllipsis;
+            }
             span {
                 &::after {
                     content:':';
@@ -102,6 +114,8 @@
         }
     }
     .controls {
+        display:flex;
+        flex-direction:column;
         margin-left:auto;
         text-align:right;
         .vol-count {
@@ -112,6 +126,16 @@
                 margin-right:4px;
                 color:$point;
                 font-weight:500;
+            }
+            a {
+                display:inline-block;
+                vertical-align:top;
+                margin-right:4px;
+                color:$point;
+                font-weight:500;
+                &:hover {
+                    text-decoration:underline;
+                }
             }
             &::before {
                 content:' ';
@@ -124,29 +148,43 @@
             }
         }
         .btn-talk {
-            position:relative;
-            display:block;
-            width:64px;
-            height:58px;
             margin-top:30px;
             margin-left:auto;
-            padding-top:14px;
-            padding-right:14px;
-            background:url('/images/icon/icon-talk.png') 0 bottom no-repeat;
-            .count {
-                position:absolute;
-                top:0;
-                right:0;
-                height:25px;
-                min-width:25px;
-                padding:0 5px;
-                border-radius:13px;
-                background:$point;
-                color:#fff;
-                font-size:16px;
-                line-height:24px;
-                font-weight:500;
-                text-align:center;
+        }
+        .btn.btn-md {
+            width:200px;
+            margin-top:auto;
+            margin-left:auto;
+        }
+    }
+    &.card-type {
+        display:block;
+        width:610px;
+        margin:0 auto 40px;
+        padding:40px 50px;
+        border:1px solid $border;
+        &:last-child {
+            margin-bottom:0;
+        }
+        .infos {
+            max-width:none;
+            .title {
+                p span {
+                    display:block;
+                    margin-bottom:4px;
+                }
+            }
+            .cont {
+                margin-top:15px;
+                padding:20px;
+                background:$disabled;
+                span {
+                    display:block;
+                    font-weight:500;
+                    &::after {
+                        display:none;
+                    }
+                }
             }
         }
     }

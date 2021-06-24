@@ -1,9 +1,30 @@
 /* form */
 .form-wrap {
+    &.type2 {
+        .row {
+            .tit {
+                width:120px;
+                font-size:18px;
+            }
+            .forms {
+                width:calc(100% - 120px);
+            }
+        }
+    }
+    &.narrow {
+        border-top:1px solid $basic;
+        padding:0 180px;
+    }
+    .form-title {
+        margin-bottom:70px;
+        padding-top:45px;
+        font-size:22px;
+        font-weight:500;
+    }
     .row {
         display:flex;
         align-items:flex-start;
-        margin-top:60px;
+        margin-top:40px;
         &:first-child {
             margin-top:0;
         }
@@ -32,6 +53,14 @@
         .forms {
             width:calc(100% - 195px);
             font-size:18px;
+            .btn {
+                width:180px;
+                min-width:180px;
+                height:60px;
+                line-height:58px;
+                font-size:18px;
+                font-weight:500;
+            }
             &.date-type {
                 display:flex;
                 align-items:center;
@@ -56,9 +85,12 @@
                     margin-right:20px;
                 }
                 &.size2 {
-                    justify-content:space-between;
                     .col {
-                        width:470px;
+                        flex:1;
+                        margin-left:80px;
+                        &:first-child {
+                            margin-left:0;
+                        }
                         .form-control,
                         .select-wrap {
                             width:100%;
@@ -67,9 +99,12 @@
                     }
                 }
                 &.size3 {
-                    justify-content:space-between;
                     .col {
-                        width:310px;
+                        flex:1;
+                        margin-left:35px;
+                        &:first-child {
+                            margin-left:0;
+                        }
                         .form-control,
                         .select-wrap {
                             width:100%;
@@ -100,6 +135,7 @@
                         color:$basic;
                         white-space:nowrap;
                         &:last-child {
+                            margin-left:10px;
                             margin-right:0;
                         }
                     }
@@ -112,9 +148,87 @@
                     }
                 }
             }
+            &.btn-type {
+                display:flex;
+                .btn {
+                    margin-left:20px;
+                }
+            }
             .bullet-list {
                 margin-top:15px;
             }
+        }
+    }
+    .alert-msg {
+        margin-top:40px;
+        padding:15px 10px;
+        background:#edf4fa;
+        @include font;
+        font-weight:500;
+        text-align:center;
+    }
+}
+
+.row-form-wrap {
+    .row {
+        display:flex;
+        margin-top:40px;
+        &:first-child {
+            margin-top:0;
+        }
+        .col {
+            flex:1;
+            margin-left:25px;
+            &:first-child {
+                margin-left:0;
+            }
+            .tit {
+                margin-bottom:15px;
+                font-size:16px;
+                font-weight:500;
+                &.essen {
+                    &::after {
+                        content:'*';
+                        margin-left:2px;
+                        color:$red;
+                    }
+                }
+            }
+            .forms {
+                position:relative;
+                display:flex;
+                align-items:center;
+                .btn.absolute {
+                    position:absolute;
+                    top:50%;
+                    right:6px;
+                    transform:translateY(-50%);
+                    height:45px;
+                    line-height:43px;
+                }
+                > * {
+                    flex:1;
+                }
+                > span.bar {
+                    flex:none;
+                    width:auto;
+                    margin:0 10px;
+                    color:$cont;
+                }
+                .form-control:last-child {
+                    margin-left:20px;
+                }
+                .form-control:only-child {
+                    margin-left:0;
+                }
+            }
+        }
+    }
+    .btn-row {
+        margin-top:60px;
+        text-align:center;
+        .btn {
+            min-width:220px;
         }
     }
 }

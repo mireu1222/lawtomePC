@@ -77,36 +77,11 @@
                 }
                 .form-wrap {
                     .row {
-                        margin-top:40px;
-                        &:first-child {
-                            margin-top:0;
-                        }
-                        > .tit {
-                            width:115px;
-                            font-size:18px;
-                        }
-                        > .forms {
-                            width:calc(100% - 115px);
-                        }
-                    }
-                }
-                .form-wrap.type2 {
-                    .row {
-                        .forms {
-                            &.flex {
-                                &.size2 {
-                                    .col {
-                                        width:240px;
-                                        .form-control {
-                                            width:200px;
-                                            margin-right:10px;
-                                        }
-                                    }
-                                }
-                            }
-                            &.date-type {
-                                .form-control {
-                                    margin-right:15px;
+                        .forms.flex.size2 {
+                            .col {
+                                margin-left:60px;
+                                &:first-child {
+                                    margin-left:0;
                                 }
                             }
                         }

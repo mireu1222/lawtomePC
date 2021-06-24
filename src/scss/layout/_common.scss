@@ -61,6 +61,99 @@
                 }
             }
         }
+        &.mypage {
+            padding-top:80px;
+            @include clearfix;
+            .mypage-lnb {
+                float:left;
+                width:220px;
+                h2.lnb-title {
+                    margin-bottom:30px;
+                    padding-bottom:20px;
+                    border-bottom:2px solid $basic;
+                    font-size:26px;
+                    font-weight:500;
+                }
+                nav.lnb {
+                    > ul > li {
+                        margin-top:50px;
+                        &:first-child {
+                            margin-top:0;
+                        }
+                        > a, 
+                        > button {
+                            display:block;
+                            width:100%;
+                            font-size:20px;
+                            color:$cont;
+                            text-align:left;
+                        }
+                        > button {
+                            position:relative;
+                            &::after {
+                                content:' ';
+                                position:absolute;
+                                right:3px;
+                                top:50%;
+                                width:10px;
+                                height:10px;
+                                margin-top:-8px;
+                                border:1px solid $cont;
+                                border-top:none;
+                                border-right:none;
+                                transform:rotate(-45deg);
+                                transition:all 0.2s ease-in-out;
+                            }
+                        }
+                        &.active > a,
+                        &.active > button {
+                            color:$point;
+                            font-weight:500;
+                        }
+                        &.open {
+                            > button::after {
+                                transform:rotate(135deg);
+                                margin-top:-2px;
+                            }
+                            .sub-depth {
+                                display:block;
+                            }
+                        }
+                        .sub-depth {
+                            display:none;
+                            margin-top:15px;
+                            padding:20px 25px;
+                            background:$disabled;
+                            > li {
+                                margin-top:40px;
+                                &:first-child {
+                                    margin-top:0;
+                                }
+                                a {
+                                    display:block;
+                                    font-size:18px;
+                                    color:$cont;
+                                    &.active {
+                                        color:$basic;
+                                        font-weight:500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .mypage-contents {
+                float:right;
+                width:930px;
+                padding-top:46px;
+                h3.mypage-title {
+                    margin-bottom:40px;
+                    font-size:22px;
+                    font-weight:500;
+                }
+            }
+        }
     }
     .complete-page {
         padding-top:100px;

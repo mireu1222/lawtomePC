@@ -280,7 +280,7 @@
                     }
                     th {
                         height:60px;
-                        padding:16px 25px;
+                        padding:16px 0;
                         border-bottom:1px solid $border;
                         background:$disabled;
                         @include font-lg;
@@ -293,7 +293,7 @@
             tbody {
                 td, th {
                     height:60px;
-                    padding:16px 25px;
+                    padding:4px 10px;
                     border-bottom:1px solid $border;
                     @include font-lg;
                     text-align:center;
