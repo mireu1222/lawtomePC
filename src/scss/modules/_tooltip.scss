@@ -1,0 +1,42 @@
+/* tooltip */
+.tooltip-wrap {
+    position:relative;
+    z-index:10;
+    .tooltip-button {
+        display:block;
+        width:22px;
+        height:22px;
+        border-radius:11px;
+        background:$point;
+        color:$white;
+        font-size:16px;
+        line-height:22px;
+        text-align:center;
+        cursor:pointer;
+        &::before {
+            content:'?';
+        }
+        &:hover + .tooltip-box {
+            display:block;
+        }
+    }
+    .tooltip-box {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:420px;
+        margin-top:20px;
+        padding:30px 25px;
+        border-radius:6px;
+        background:$white;
+        box-shadow:0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+        .tit {
+            margin-bottom:10px;
+            @include font;
+        }
+        .desc {
+            @include font-sm;
+        }
+    }
+}

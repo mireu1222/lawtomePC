@@ -1,0 +1,20 @@
+<div class="thumb-list-wrap">
+    <!-- 게시글이 있을 때 -->
+    <ul class="lists">
+        @@for (var i=0; i < lists; i++) {
+            <li>
+                <a href="@@link" class="inner">
+                    <span class="thumb" style="background-image:url('/images/@thumb.jpg');"></span>
+                    <p class="tit"><span class="blind">이벤트 제목</span>이벤트 제목이 들어감</p>
+                    <p class="desc"><span class="blind">이벤트 내용</span>이벤트 내용이 들어감 이벤트 내용이 들어감 이벤트 내용이 들어감 이벤트 내용이 들어감이벤트 내용이 들어감</p>
+                    <p class="date"><span class="blind">이벤트기간</span>2021.00.00 ~ 2021.00.00</p>
+                </a>
+            </li>
+        }
+    </ul>
+    <!-- // 게시글이 있을 때 -->
+    <!-- nodata -->
+    <p class="nodata">게시글이 없습니다.</p>
+    <!-- // nodata -->
+</div>
+@@include('./modules/pagination.html')

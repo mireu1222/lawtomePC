@@ -1,0 +1,145 @@
+<div class="tbl-wrap">
+    @@if(context.total) {
+    <p class="tbl-count">전체 <em>(6)</em></p>
+    }
+    <table class="table notice-table">
+        <colgroup>
+            @@if(context.notice || context.comm){
+                <col class="col1">
+                <col>
+                <col class="col2">
+            }
+        </colgroup>
+        @@if(context.notice || context.comm){
+        <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">등록일</th>
+            </tr>
+        </thead>
+        }
+        @@if(context.notice){
+        <tbody>
+            <!-- 공지글 case -->
+            <tr>
+                <td><span class="text-flag text-flag-lg text-flag-point">[공지]</span></td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic">
+                        <span>제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.</span>
+                    </a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 공지글 case -->
+            <!-- 새글 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic new"><span>제목이 들어갑니다. 새글 CASE .new</span></a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 새글 case -->
+            <!-- 새글+첨부파일 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic file new"><span>제목이 들어갑니다. 새글+첨부파일 CASE .file.new</span></a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 새글+첨부파일 case -->
+            <!-- 첨부파일 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic file"><span>제목이 들어갑니다. 첨부파일 CASE .file</span></a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 첨부파일 case -->
+            <!-- nodata -->
+            <tr>
+                <td colspan="3">
+                    <p class="nodata">게시글이 없습니다.</p>
+                </td>
+            </tr>
+            <!-- // nodata -->
+        </tbody>
+        }
+        @@if(context.comm){
+        <tbody>
+            <!-- 새글+댓글 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic new">
+                        <span>제목이 들어갑니다. 새글 CASE .new</span>
+                        <em class="reply-count">999+</em>
+                    </a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 새글+댓글 case -->
+            <!-- 새글+이미지파일+댓글 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic img-file new">
+                        <span>제목이 들어갑니다. 새글+첨부파일 CASE</span>
+                        <em class="reply-count">1</em>
+                    </a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- 새글+이미지파일+댓글 case -->
+            <!-- 이미지파일+댓글 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic img-file">
+                        <span>제목이 들어갑니다. 첨부파일 CASE .img-file</span>
+                        <em class="reply-count">1</em>
+                    </a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 이미지파일+댓글 case -->
+            <!-- 댓글 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic">
+                        <span>제목이 들어갑니다.</span>
+                        <em class="reply-count">1</em>
+                    </a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 댓글 case -->
+            <!-- 제목 case -->
+            <tr>
+                <td>999</td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic">
+                        <span>제목이 들어갑니다.</span>
+                    </a>
+                </td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 제목 case -->
+            <!-- nodata -->
+            <tr>
+                <td colspan="3">
+                    <p class="nodata">게시글이 없습니다.</p>
+                </td>
+            </tr>
+            <!-- // nodata -->
+        </tbody>
+        }
+    </table>
+    @@if(context.write){
+    <a href="@@write.html" class="btn btn-border-point btn-write"><span>글쓰기</span></a>
+    }
+</div>

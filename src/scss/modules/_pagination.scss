@@ -1,0 +1,97 @@
+/* pagination */
+.pagination {
+    margin-top:70px;
+    font-size:0;
+    text-align:center;
+    .control-btn, 
+    .page-btn-wrap,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        display:inline-block;
+        vertical-align:top;
+    }
+    .control-btn,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        width:34px;
+        height:34px;
+        font-size:16px;
+        color:#999;
+        border:1px solid transparent;
+        border-radius:50%;
+        line-height:32px;
+        background:#fff;
+    }
+    .control-btn {
+        position:relative;
+        margin:0 6px;
+        border-color:$border;
+        &::before,
+        &::after {
+            content:' ';
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:10px;
+            height:10px;
+            margin-top:-5px;
+            border:1px solid $cont;
+            border-bottom:none;
+            border-right:none;
+        }
+        &.prev,
+        &.pprev {
+            &::before,
+            &::after {
+                transform:rotate(-45deg);
+            }
+        }
+        &.prev {
+            &::before {
+                margin-left:-3px;
+            }
+        }
+        &.pprev {
+            &::before {
+                margin-left:-5px;
+            }
+        }
+        &.next,
+        &.nnext {
+            &::before,
+            &::after {
+                transform:rotate(135deg);
+            }
+        }
+        &.next {
+            &::before {
+                margin-left:-8px;
+            }
+        }
+        &.nnext {
+            &::before {
+                margin-left:-11px;
+            }
+            &::after {
+                margin-left:-6px;
+            }
+        }
+        &.prev,
+        &.next {
+            &::after {
+                display:none;
+            }
+        }
+    }
+    .page-btn-wrap {
+        margin:0;
+        > a,
+        > .now {
+            margin:0 6px;
+        }
+        .now {
+            color:$point;
+            font-weight:500;
+        }
+    }
+}

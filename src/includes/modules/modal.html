@@ -1,0 +1,115 @@
+@@if(context.id === 'modal-apply'){
+<article id="@@id" class="modal" aria-hidden="true">
+    <div class="modal-wrap">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h1 class="modal-title">업무대행 지원 정보 확인</h1>
+                <button type="button" class="btn-close" data-toggle="modal-close"><span class="blind">팝업 닫기</span></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-wrap type2">
+                        <div class="row">
+                            <p class="tit">성명</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" value="홍길동" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">휴대폰번호</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" value="010-0000-0000" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">이메일</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" value="gildong2@naver.com" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">경력년수</p>
+                            <div class="forms flex size2">
+                                <div class="col">
+                                    <input type="text" class="form-control" value="10" readonly>
+                                    <p>년</p>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" value="12" readonly>
+                                    <p>개월</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">업무가능일시</p>
+                            <div class="forms date-type">
+                                <input type="text" class="form-control datepicker" placeholder="업무가능 날짜를 입력하세요">
+                                <div class="select-wrap">
+                                    <select class="nice-select" aria-label="시작 시간 선택">
+                                        <option value="">09:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">희망보수</p>
+                            <div class="forms">
+                                <input type="text" class="form-control" placeholder="희망보수를 입력하세요" aria-label="희망보수 입력">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="tit">남기는 글</p>
+                            <div class="forms">
+                                <textarea class="form-control"></textarea>
+                                <ul class="bullet-list">
+                                    <li>개인정보(연락처, 메일 주소) 등은 메일을 남길 경우 필터링 됩니다.</li>
+                                    <li>프로필을 최신으로 업데이트 하시면 빠른 진행에 도움이 됩니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-border-point" data-toggle="modal-close"><span>취소하기</span></button>
+                        <button type="submit" class="btn btn-lg btn-point"><span>지원하기</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+}
+@@if(context.id === 'modal-order'){
+    <article id="@@id" class="modal large" aria-hidden="true">
+        <div class="modal-wrap">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h1 class="modal-title">변호사 업무대행 의뢰</h1>
+                    <button type="button" class="btn-close" data-toggle="modal-close"><span class="blind">팝업 닫기</span></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <!-- category -->
+                        <div class="button-tabs" data-toggle="category-collapse">
+                            <ul class="tabs">
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate01" name="category" data-visible-target="row1, row2, row3, row4, row5, row6"><label for="cate01">복대리</label></span></li>
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate02" name="category" data-visible-target="row3, row7, row8, row9, row10, row11, row12, row13"><label for="cate02">기록등사</label></span></li>
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate03" name="category" data-visible-target="row2, row3, row6, row14, row15"><label for="cate03">조사참여</label></span></li>
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate04" name="category" data-visible-target="row2, row3, row6, row16, row17"><label for="cate04">접견</label></span></li>
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate05" name="category" data-visible-target="row6, row8, row18, row19, row20"><label for="cate05">서면작성</label></span></li>
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate06" name="category" data-visible-target="row6, row8, row19, row21"><label for="cate06">계약서</label></span></li>
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate07" name="category" data-visible-target="row6, row8, row19, row20, row22"><label for="cate07">증명서 발급</label></span></li>
+                                <li><span class="rdo-btn-wrap"><input type="radio" id="cate08" name="category" data-visible-target="row6, row8, row19, row20, row23"><label for="cate08">기타</label></span></li>
+                            </ul>
+                        </div>
+                        <!-- // category -->
+                        @@include('./modules/sub0101.html')
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-lg btn-border-point" data-toggle="modal-close"><span>취소하기</span></button>
+                            <button type="submit" class="btn btn-lg btn-point"><span>의뢰하기</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+    }

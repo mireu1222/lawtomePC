@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                cate06 : '05'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                @@include('./modules/list-filter.html')
+
+                @@include('./modules/notice-tbl.html', {
+                    comm: true,
+                    page : 'sub_06_05_view',
+                    write : 'sub_06_05_write'
+                })
+
+                @@include('./modules/pagination.html')
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

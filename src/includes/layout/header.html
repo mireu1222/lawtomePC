@@ -1,0 +1,120 @@
+<header@@if(context.main){ class="main"}>
+    <div class="head-top">
+        <ul class="link">
+            <li><a href="/">HOME</a></li>
+            <li><a href="">사이트맵</a></li>
+        </ul>
+    </div>
+    <div class="head-cont">
+        <h1><a href="/"><img src="/images/logo.png" alt="LawToMe"></a></h1>
+        <!-- gnb -->
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <a href="/page/sub_01_01.html" class="dep1@@if(context.cate01){ active}">대행업무 등록</a>
+                    <div class="depth2">
+                        <ul>
+                            <li><a href="/page/sub_01_01.html" class="dep2">업무무료등록</a></li>
+                            <li><a href="/page/sub_01_02.html" class="dep2">대행업무 등록 안내</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/page/sub_02_01.html" class="dep1@@if(context.cate02){ active}">대행업무 찾기</a>
+                    <div class="depth2">
+                        <ul>
+                            <li><a href="/page/sub_02_01.html" class="dep2">복대리</a></li>
+                            <li><a href="/page/sub_02_02.html" class="dep2">기록등사</a></li>
+                            <li><a href="/page/sub_02_03.html" class="dep2">조사참여</a></li>
+                            <li><a href="/page/sub_02_04.html" class="dep2">접견</a></li>
+                            <li><a href="/page/sub_02_05.html" class="dep2">서면작성</a></li>
+                            <li><a href="/page/sub_02_06.html" class="dep2">계약서</a></li>
+                            <li><a href="/page/sub_02_07.html" class="dep2">증명서 발급</a></li>
+                            <li><a href="/page/sub_02_08.html" class="dep2">기타</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/page/sub_03_01.html" class="dep1@@if(context.cate03){ active}">변호사 찾기</a>
+                    <div class="depth2">
+                        <ul>
+                            <li><a href="/page/sub_03_01.html" class="dep2">변호사 검색</a></li>
+                            <li><a href="/page/sub_03_02.html" class="dep2">변호사 회원가입 안내</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/page/sub_04_01.html" class="dep1@@if(context.cate04){ active}">이용안내</a>
+                    <div class="depth2">
+                        <ul>
+                            <li><a href="/page/sub_04_01.html" class="dep2">가우로 이용안내</a></li>
+                            <li><a href="/page/sub_04_02.html" class="dep2">포인트 안내</a></li>
+                            <li><a href="/page/sub_04_03.html" class="dep2">예치금 충전 안내</a></li>
+                            <li><a href="/page/sub_04_04.html" class="dep2">에스크로 안내</a></li>
+                            <li><a href="/page/sub_04_05.html" class="dep2">위임장 안내</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/page/sub_05_01.html" class="dep1@@if(context.cate05){ active}">지원센터</a>
+                    <div class="depth2">
+                        <ul>
+                            <li><a href="/page/sub_05_01.html" class="dep2">공지사항</a></li>
+                            <li><a href="/page/sub_05_02.html" class="dep2">뉴스/언론</a></li>
+                            <li><a href="/page/sub_05_03.html" class="dep2">이벤트</a></li>
+                            <li><a href="/page/sub_05_04.html" class="dep2">자주찾는질문</a></li>
+                            <li><a href="/page/sub_05_05.html" class="dep2">온라인 1:1문의</a></li>
+                            <li><a href="/page/sub_05_06.html" class="dep2">정보게시판</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/page/sub_06_01.html" class="dep1@@if(context.cate06){ active}">커뮤니티</a>
+                    <div class="depth2">
+                        <ul>
+                            <li><a href="/page/sub_06_01.html" class="dep2">지식나눔터</a></li>
+                            <li><a href="/page/sub_06_02.html" class="dep2">양식자료실</a></li>
+                            <li><a href="/page/sub_06_03.html" class="dep2">변호사고충상담</a></li>
+                            <li><a href="/page/sub_06_04.html" class="dep2">변호사업무 Q&amp;A</a></li>
+                            <li><a href="/page/sub_06_05.html" class="dep2">소개해 주세요</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/page/sub_07_01.html" class="dep1@@if(context.cate07){ active}">회사소개</a>
+                    <div class="depth2">
+                        <ul>
+                            <li><a href="/page/sub_07_01.html" class="dep2">회사개요</a></li>
+                            <li><a href="/page/sub_07_02.html" class="dep2">인사말</a></li>
+                            <li><a href="/page/sub_07_03.html" class="dep2">사업내용</a></li>
+                            <li><a href="/page/sub_07_04.html" class="dep2">홍보자료</a></li>
+                            <li><a href="/page/sub_07_05.html" class="dep2">사업연혁</a></li>
+                            <li><a href="/page/sub_07_06.html" class="dep2">찾아오시는 길</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- // gnb -->
+        @@if(context.main){
+        <!-- 로그인 전 -->
+        <a href="/page/login.html" class="btn btn-point login"><span>로그인</span></a>
+        <!-- // 로그인 전 -->
+        }
+        @@if(!context.main){
+        <!-- 로그인 전 -->
+        <!-- <a href="/page/login.html" class="btn btn-point login"><span>로그인</span></a> -->
+        <!-- // 로그인 전 -->
+        <!-- 로그인 후 -->
+        <div class="my-menu">
+            <button type="button" class="btn-toggle" aria-label="마이메뉴 보기"><span class="thumb" style="background-image:url('/images/@noimg.gif')"></span></button>
+            <ul class="lists">
+                <li><a href="/page/mypage_01.html" class="link-basic">마이페이지</a></li>
+                <li><a href="/page/mywork_01.html" class="link-basic">나의 업무</a></li>
+                <li><a href="/page/logout.html" class="link-basic">로그아웃</a></li>
+            </ul>
+        </div>
+        <!-- // 로그인 후 -->
+        }
+    </div>
+</header>

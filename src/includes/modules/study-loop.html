@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="left">
+        <h4 class="tit">@@title</h4>
+        <p class="desc">@@desc</p>
+        @@if(context.dd){
+            <dl>
+                <dt>취득자격증&amp;수료</dt>
+                <dd>@@dd</dd>
+            </dl>
+        }
+    </div>
+    <div class="right">
+        @@if(context.cont1){
+            <dl>
+                <dt>주요내용</dt>
+                <dd>@@cont1</dd>
+            </dl>
+        }
+        @@if(context.cont2){
+            <dl>
+                <dt>진출분야</dt>
+                <dd>@@cont2</dd>
+            </dl>
+        }
+        @@if(context.cont3){
+            <dl>
+                <dt>과정안내</dt>
+                @@if(!context.cont3.list && !context.cont3.ex){
+                    <dd>@@cont3</dd>
+                }
+                @@if(context.cont3.list){
+                    <dd>
+                        <ul class="bullet-list">
+                        @@for(var i=0; i < cont3.list.length; i++){
+                            <li class="b-txt">`+cont3.list[i]+`</li>
+                        }
+                        </ul>
+                    </dd>
+                }
+                @@if(context.cont3.ex){
+                    <dd>
+                        @@for(var j=0; j < cont3.ex.length; j++){
+                        <dl class="in">
+                            <dt>`+cont3.ex[j].dt+`</dt>
+                            <dd>`+cont3.ex[j].dd+`</dd>
+                        </dl>
+                        }
+                    </dd>
+                }
+            </dl>
+        }
+    </div>
+</div>

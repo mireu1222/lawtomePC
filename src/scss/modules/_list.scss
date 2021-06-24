@@ -1,0 +1,350 @@
+/* list */
+// input list
+.slt-lists {
+    overflow:hidden;
+    ul {
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        margin-top:-10px;
+    }
+    li {
+        margin-top:10px;
+        &.mix {
+            display:flex;
+            align-items:center;
+            padding-right:0 !important;
+            .rdo-wrap input + label {
+                white-space:nowrap;
+            }
+            .form-control {
+                margin-left:20px;
+            }
+        }
+    }
+    &.wide li {
+        min-width:200px;
+        padding-right:20px;
+        &.mix {
+            width:calc(100% - 400px);
+        }
+    }
+    &.auto li {
+        padding-right:60px;
+    }
+    &.col4 li {
+        min-width:25%;
+        padding-right:20px;
+        &.mix {
+            width:100%;
+        }
+    }
+}
+
+// bullet list
+.bullet-list {
+    li {
+        margin-top:3px;
+        padding-left:20px;
+        color:$cont;
+        font-size:15px;
+        line-height:22px;
+        &:first-child {
+            margin-top:0;
+        }
+        &::before {
+            content:'※';
+            display:inline-block;
+            vertical-align:top;
+            width:20px;
+            margin-left:-20px;
+        }
+        sup {
+            display:inline-block;
+            vertical-align:top;
+            font-size:0.8em;
+            line-height:1;
+        }
+    }
+}
+
+// work list
+.worklist-wrap {
+    ul.lists {
+        display:flex;
+        > li {
+            width:380px;
+            margin-left:30px;
+            &:first-child {
+                margin-left:0;
+            }
+        }
+    }
+    .inner {
+        display:flex;
+        flex-direction:column;
+        height:100%;
+        padding:24px 16px 30px; 
+        border:1px solid $border;
+        .top {
+            display:flex;
+            align-items:center;
+            justify-content:flex-end;
+            .flag-wrap {
+                margin-right:auto;
+                font-size:0;
+                .flag {
+                    margin-right:7px;
+                }
+            }
+            .like-chk-wrap {
+                margin-left:8px;
+            }
+        }
+        .end-alert {
+            margin-top:18px;
+            font-size:0;
+            > * {
+                display:inline-block;
+                vertical-align:top;
+                font-size:18px;
+                font-weight:500;
+            }
+            .dday {
+                margin-left:20px;
+            }
+            .count {
+                margin-left:10px;
+            }
+        }
+        .head {
+            margin-top:35px;
+            padding-bottom:20px;
+            .category {
+                margin-bottom:5px;
+                font-size:18px;
+            }
+            .title {
+                display:block;
+                color:$point;
+                @include font-title;
+                font-weight:500;
+                @include textEllipsisClamp(2);
+            }
+            .info-list {
+                margin-top:10px;
+                li {
+                    @include font;
+                    color:$gray;
+                    @include textEllipsis;
+                }
+            }
+        }
+        .condition-list {
+            margin:0 -16px;
+            margin-top:auto;
+            padding:20px 16px;
+            background:$disabled;
+            li {
+                margin-top:10px;
+                font-size:18px;
+                line-height:20px;
+                &:first-child {
+                    margin-top:0;
+                }
+                em {
+                    font-weight:500;
+                }
+                &::before {
+                    content:' ';
+                    display:inline-block;
+                    vertical-align:top;
+                    width:20px;
+                    height:20px;
+                    margin-right:10px;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                &.type1::before {
+                    background-image:url('/images/icon/icon-won.png');
+                }
+                &.type2::before {
+                    background-image:url('/images/icon/icon-time.png');
+                }
+            }
+        }
+        .more {
+            margin-top:20px;
+            @include font;
+            .tit {
+                margin-bottom:3px;
+                font-weight:700;
+            }
+            .desc {
+                @include textEllipsisClamp(2);
+            }
+        }
+    }
+}
+
+// lawyer list
+.lawyerlist-wrap {
+    ul.lists {
+        display:flex;
+        > li {
+            width:380px;
+            margin-left:30px;
+            &:first-child {
+                margin-left:0;
+            }
+        }
+    }
+    .inner {
+        display:flex;
+        flex-direction:column;
+        height:100%;
+        padding:24px 16px 30px; 
+        border:1px solid $border;
+        .top {
+            display:flex;
+            align-items:center;
+            justify-content:flex-end;
+            .flag-wrap {
+                margin-right:auto;
+                font-size:0;
+                .flag {
+                    margin-right:7px;
+                }
+            }
+            .like-chk-wrap {
+                margin-left:8px;
+            }
+        }
+        .head {
+            display:flex;
+            align-items:center;
+            margin-top:35px;
+            .thumb {
+                display:block;
+                width:92px;
+                min-width:92px;
+                max-width:90px;
+                height:92px;
+                margin-right:20px;
+                border-radius:50%;
+                background-size:cover;
+                background-position:center;
+                background-repeat:no-repeat;
+                overflow:hidden;
+            }
+            .info {
+                flex:1 1 auto;
+                .name {
+                    font-size:24px;
+                    line-height:26px;
+                    font-weight:700;
+                }
+                .company {
+                    margin-top:4px;
+                    font-size:20px;
+                    line-height:24px;
+                    word-break:keep-all;
+                }
+            }
+        }
+        .belong {
+            display:flex;
+            align-items:flex-start;
+            margin-top:25px;
+            .flag {
+                margin-top:3px;
+                margin-right:7px;
+            }
+            p {
+                flex:1 1 auto;
+                color:$point;
+                @include font-xl;
+                font-weight:500;
+            }
+        }
+        .introduce {
+            margin-top:25px;
+            color:$cont;
+            @include font;
+            word-break:keep-all;
+        }
+        .spot-info {
+            display:flex;
+            align-items:flex-start;
+            margin-top:25px;
+            margin-bottom:50px;
+            @include font;
+            dt {
+                font-weight:500;
+                white-space:nowrap;
+                &::after {
+                    content:' ';
+                    display:inline-block;
+                    vertical-align:top;
+                    width:1px;
+                    height:14px;
+                    background:$cont;
+                    margin:5px 10px 0;
+                }
+            }
+            dd {
+                color:$cont;
+            }
+        }
+        .btn.btn-md {
+            display:block;
+            width:180px;
+            margin:auto auto 0;
+        }
+    }
+}
+
+// thumbnail(event) list
+.thumb-list-wrap {
+    overflow:hidden;
+    > ul.lists {
+        display:flex;
+        flex-wrap:wrap;
+        margin-top:-80px;
+        margin-left:-30px;
+        > li {
+            width:calc(100% / 3);
+            min-width:calc(100% / 3);
+            max-width:calc(100% / 3);
+            margin-top:80px;
+            padding-left:30px;
+            a.inner {
+                display:block;
+                .thumb {
+                    display:block;
+                    width:100%;
+                    height:320px;
+                    margin-bottom:15px;
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-position:center;
+                }
+                .tit {
+                    font-size:22px;
+                    font-weight:500;
+                    @include textEllipsis;
+                }
+                .desc {
+                    margin-top:15px;
+                    @include font-lg;
+                    @include textEllipsisClamp(2);
+                }
+                .date {
+                    margin-top:20px;
+                    color:$gray;
+                    font-size:16px;
+                }
+            }
+        }
+    }
+}

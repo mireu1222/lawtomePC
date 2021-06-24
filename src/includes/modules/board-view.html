@@ -1,0 +1,64 @@
+<div class="boardview-wrap">
+    <!-- title -->
+    <div class="board-head">
+        <p class="tit"><span class="blind">제목</span>게시물 타이틀 영역입니다.</p>
+        <p class="date"><span class="blind">등록일</span>2021.00.00</p>
+        <ul class="info">
+            @@if(context.event){
+                <li>이벤트기간 : 2021.00.00 ~ 2021.00.00</li>
+            }
+            <li>조회 : 999</li>
+        </ul>
+    </div>
+    <!-- // title -->
+    <!-- content -->
+    <div class="board-content">
+        <div class="cont">
+            입력한 텍스트 또는 에디터 내용 불러옴
+        </div>
+        <!-- 첨부파일 / 없을 경우 DOM 삭제되도록. 빈 DOM 남지않게 해주세요. -->
+        <div class="files">
+            <p class="tit">첨부파일</p>
+            <ul class="file-lists">
+                <li><a href="#n" class="file-down">첨부파일제목.jpg</a></li>
+                <li><a href="#n" class="file-down">첨부파일제목.jpg</a></li>
+                <li><a href="#n" class="file-down">첨부파일제목.jpg</a></li>
+            </ul>
+        </div>
+        <!-- // 첨부파일 -->
+    </div>
+    <!-- // content -->
+    <!-- prev/next -->
+    <div class="board-foot">
+        <!-- 이전글/다음글 다 없을 경우 ul.more-view DOM 삭제 -->
+        <ul class="more-view">
+            <!-- 이전글 없을 경우 li.prev DOM 삭제 -->
+            <li class="prev">
+                <dl>
+                    <dt>이전글</dt>
+                    <dd>
+                        <a href="#n">
+                            <span class="blind">제목</span>[2020.05.18] 22주년 MDM그룹 창립기념 행사 22주년 MDM그룹 창립기념 행사
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+            <!-- // 이전글 없을 경우 li.prev DOM 삭제 -->
+            <!-- 다음글 없을 경우 li.next DOM 삭제 -->
+            <li class="next">
+                <dl>
+                    <dt>다음글</dt>
+                    <dd>
+                        <a href="#n">
+                            <span class="blind">제목</span>[2021.01.02] 2020년도 시무식
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+            <!-- // 다음글 없을 경우 li.next DOM 삭제 -->
+        </ul>
+        <!-- // 이전글/다음글 다 없을 경우 ul.more-view DOM 삭제 -->
+        <a href="/page/@@page.html" class="btn-list"><span class="bar"></span><span class="blind">목록으로</span></a>
+    </div>
+    <!-- // prev/next -->
+</div>

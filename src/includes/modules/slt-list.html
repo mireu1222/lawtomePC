@@ -1,0 +1,37 @@
+<div class="slt-lists@@if(context.size){ @@size}"@@if(context.typing){ data-toggle="writable"}>
+    <ul>
+        @@for (var i = 0; i < slt.length; i++) {
+        <li>
+            @@if (context.rdo) {
+            <span class="rdo-wrap">
+                <input type="radio" id="@@rdo-`+[i]+`" name="@@rdo">
+                <label for="@@rdo-`+[i]+`">`+slt[i]+`</label>
+            </span>
+            }
+            @@if (context.chk) {
+            <span class="chk-wrap">
+                <input type="checkbox" id="@@chk-`+[i]+`" name="@@chk">
+                <label for="@@chk-`+[i]+`">`+slt[i]+`</label>
+            </span>
+            }
+        </li>
+        }
+        @@if(context.typing){
+        <li class="mix">
+            @@if (context.rdo) {
+                <span class="rdo-wrap">
+                    <input type="radio" id="@@rdo-etc" name="@@rdo">
+                    <label for="@@rdo-etc">@@typing</label>
+                </span>
+                }
+            @@if (context.chk) {
+            <span class="chk-wrap">
+                <input type="checkbox" id="@@chk-etc" name="@@chk">
+                <label for="@@chk-etc">@@typing</label>
+            </span>
+            }
+            <input type="text" class="form-control" placeholder="@@typing 내용을 입력하세요" aria-label="@@typing 입력" data-writable-target="input" disabled>
+        </li>
+        }
+    </ul>
+</div>

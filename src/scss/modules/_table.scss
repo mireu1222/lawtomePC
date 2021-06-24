@@ -1,0 +1,327 @@
+/* table */
+.tbl-wrap {
+    position:relative;
+    &.narrow {
+        width:930px;
+        margin:0 auto;
+    }
+    .tbl-title {
+        margin-bottom:25px;
+        @include font-xl;
+        font-weight:500;
+    }
+    .essen-txt {
+        margin-top:55px;
+        margin-bottom:15px;
+        color:$cont;
+        font-size:15px;
+        text-align:right;
+        span {
+            color:$red;
+        }
+        &:first-child {
+            margin-top:0;
+        }
+    }
+    .table {
+        width:100%;
+        table-layout:fixed;
+        &.work-table {
+            tbody {
+                tr {
+                    &:first-child {
+                        th,
+                        td {
+                            border-top:1px solid $cont;
+                        }
+                    }
+                    th,
+                    td {
+                        height:70px;
+                        padding:22px 40px;
+                        border-bottom:1px solid #ccc;
+                        @include font-lg;
+                        text-align:left;
+                        vertical-align:middle;
+                    }
+                    th {
+                        background:#e2ecf4;
+                        color:$basic;
+                        font-weight:500;
+                    }
+                    td {
+                        background:#fafafa;
+                        color:$cont;
+                    }
+                }
+            }
+            .spc-txt {
+                span {
+                    display:inline-block;
+                    vertical-align:top;
+                    margin-right:20px;
+                    color:inherit;
+                    @include font-lg;
+                    &:last-child {
+                        margin-right:0;
+                    }
+                    .wt {
+                        margin-right:4px;
+                    }
+                }
+                .wt {
+                    color:$basic;
+                    font-weight:500;
+                }
+            }
+            p.spc-txt {
+                font-size:0;
+            }
+            ul.spc-txt {
+                font-size:0;
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    &::after {
+                        content:' ';
+                        display:inline-block;
+                        vertical-align:top;
+                        width:1px;
+                        height:16px;
+                        margin:5px 40px 0;
+                        background:$border;
+                    }
+                    &:last-child::after {
+                        display:none;
+                    }
+                }
+            }
+        }
+        &.notice-table {
+            .col1 {
+                width:90px;
+            }
+            .col2 {
+                width:130px;
+            }
+            thead {
+                tr {
+                    &:first-child {
+                        th {
+                            border-top:1px solid $basic;
+                        }
+                    }
+                    th {
+                        height:60px;
+                        border-bottom:1px solid $border;
+                        background:$disabled;
+                        @include font-lg;
+                        font-weight:500;
+                        text-align:center;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        height:60px;
+                        padding:10px 20px;
+                        border-bottom:1px solid $border;
+                        @include font-lg;
+                        text-align:center;
+                        a[class^="link"] {
+                            position:relative;
+                            &:hover {
+                                text-decoration:none;
+                                span {
+                                    text-decoration:underline;
+                                }
+                            }
+                            span {
+                                display:inline-block;
+                                vertical-align:top;
+                                max-width:830px;
+                                padding-right:10px;
+                                @include textEllipsis;
+                            }
+                            em.reply-count {
+                                display:inline-block;
+                                vertical-align:top;
+                                min-width:30px;
+                                height:24px;
+                                border:1px solid $border;
+                                border-radius:12px;
+                                margin-top:1px;
+                                padding:0 5px;
+                                font-size:16px;
+                                line-height:22px;
+                                color:$point;
+                                text-align:center;
+                            }
+                            &.new {
+                                padding-right:27px;
+                                &::after {
+                                    content:'N';
+                                    position:absolute;
+                                    top:50%;
+                                    right:0;
+                                    width:22px;
+                                    height:22px;
+                                    margin-top:-11px;
+                                    border-radius:50%;
+                                    background:$point;
+                                    color:$white;
+                                    font-size:14px;
+                                    line-height:22px;
+                                    text-indent:5.5px;
+                                }
+                            }
+                            &.file {
+                                padding-right:27px;
+                                &::before {
+                                    content:' ';
+                                    position:absolute;
+                                    top:50%;
+                                    right:0;
+                                    width:22px;
+                                    height:22px;
+                                    margin-top:-11px;
+                                    border:1px solid #bababa;
+                                    border-radius:11px;
+                                    background:url('/images/icon/icon-clip.png') center no-repeat;
+                                }
+                            }
+                            &.img-file {
+                                padding-right:28px;
+                                &::before {
+                                    content:' ';
+                                    position:absolute;
+                                    top:50%;
+                                    right:0;
+                                    width:23px;
+                                    height:22px;
+                                    margin-top:-11px;
+                                    background:url('/images/icon/icon-img-file.png') center no-repeat;
+                                }
+                            }
+                            &.new.file {
+                                padding-right:49px;
+                                &::before {
+                                    right:27px;
+                                }
+                            }
+                            &.new.img-file {
+                                padding-right:55px;
+                                &::before {
+                                    right:27px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.row-table {
+            .col1 {
+                @include calcs(width, 156px, 930px);
+            }
+            tbody {
+                tr {
+                    &:first-child {
+                        th,
+                        td {
+                            border-top:1px solid $basic;
+                        }
+                    }
+                    th {
+                        height:77px;
+                        padding:13px 25px;
+                        border-bottom:1px solid $border;
+                        background:$disabled;
+                        @include font-lg;
+                        font-weight:500;
+                        text-align:left;
+                        vertical-align:middle;
+                        &.essen {
+                            &::after {
+                                content:'*';
+                                color:$red;
+                            }
+                        }
+                    }
+                    td {
+                        height:77px;
+                        padding:13px 25px 13px 15px;
+                        border-bottom:1px solid $border;
+                        @include font-lg;
+                        text-align:left;
+                        vertical-align:middle;
+                        .form-control {
+                            height:50px;
+                            min-height:50px;
+                            padding:13px 24px;
+                            background:$white;
+                        }
+                        textarea.form-control {
+                            height:180px;
+                            min-height:180px;
+                        }
+                    }
+                }
+            }
+        }
+        &.col-table {
+            thead {
+                tr {
+                    &:first-child {
+                        th {
+                            border-top:1px solid $basic;
+                        }
+                    }
+                    th {
+                        height:60px;
+                        padding:16px 25px;
+                        border-bottom:1px solid $border;
+                        background:$disabled;
+                        @include font-lg;
+                        font-weight:500;
+                        text-align:center;
+                        vertical-align:middle;
+                    }
+                }
+            }
+            tbody {
+                td, th {
+                    height:60px;
+                    padding:16px 25px;
+                    border-bottom:1px solid $border;
+                    @include font-lg;
+                    text-align:center;
+                    vertical-align:middle;
+                }
+            }
+            &.work-type {
+                tbody {
+                    td, th {
+                        padding:45px 0;
+                    }
+                }
+            }
+        }
+        .nodata {
+            padding:20px 0;
+        }
+    }
+    .btn-write {
+        position:absolute;
+        top:100%;
+        right:0;
+        display:block;
+        width:135px;
+        height:55px;
+        margin-top:20px;
+        font-size:18px;
+        font-weight:500;
+        line-height:53px;
+    }
+}

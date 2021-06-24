@@ -1,0 +1,103 @@
+// colors
+$black :        #111 !default;
+$basic :        #333 !default;
+$cont :         #555 !default;
+$gray :         #888 !default;
+$placeholder :  #999 !default;
+$border :       #ddd !default;
+$point :        #1965b0 !default;
+$point2 :       #9a3175 !default;
+$blur :         #eee !default;
+$white :        #fff !default;
+$disabled :     #f5f5f5 !default;
+$red :          #ff2d04 !default;
+$yellow :       #dea82a !default;
+
+$colors : (
+    "black" $black "dark",
+    "basic" $basic "dark",
+    "cont" $cont "dark",
+    "gray" $gray "dark",
+    "border" $border "bright",
+    "point" $point "dark", 
+    "point2" $point2 "dark", 
+    "blur" $blur "bright",
+    "white" $white "bright",
+    "red" $red "dark",
+    "yellow" $yellow "dark",
+) !default;
+$color-maps : (
+    "black" :   $black,
+    "basic" :   $basic,
+    "cont" :    $cont,
+    "gray" :    $gray,
+    "border" :  $border,
+    "point" :   $point,
+    "point2" :  $point2,
+    "blur" :    $blur,
+    "white" :   $white,
+    "red" :     $red,
+    "yellow" :  $yellow,
+) !default;
+
+$min-contrast-ratio : 4.5 !default;
+
+// transition time
+$time : 0.15s;
+
+// font
+$font-family-square :       "NanumSquare", "noto sans KR", sans-serif !default;
+$font-family-notosans :     "noto sans KR", sans-serif !default;
+
+$font-size-base :       16px !default;
+$font-size-sm-base :    $font-size-base - 2 !default;
+$font-size-lg-base :    $font-size-base + 2 !default;
+
+$line-height-base :     24px !default;
+$line-height-sm-base :  $line-height-base - 2 !default;
+$line-height-lg-base :  $line-height-base + 4 !default;
+
+// body
+$body-bg :              $white !default;
+$body-font-color :      $basic !default;
+
+$btn-transition : color $time ease-in-out, background-color $time ease-in-out, border-color $time ease-in-out !default;
+$input-transition : border-color $time ease-in-out !default;
+
+$btn-sizes : (
+    "sm" 14px 26px 14px,
+    "md" 16px 48px 20px,
+    "lg" 20px 68px 20px,
+) !default;
+
+// border
+$border-radius :        8px !default;
+$border-radius-sm :     2px !default;
+$border-radius-lg :     12px !default;
+
+$border-width :         1px !default;
+$border-widths : (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+) !default;
+
+//spacing
+$spacers : (
+    0:  0,
+    5:  5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    60: 60px
+) !default;
+
+// shadow
+$boxshadow : 0px 0px 16px 0px rgba(0, 0, 0, 0.23);
+$textshadow : 0px 0px 16px rgba(0, 0, 0, 0.23);

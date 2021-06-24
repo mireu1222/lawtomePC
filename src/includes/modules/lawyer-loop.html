@@ -1,0 +1,46 @@
+<!-- loop -->
+<li>
+    <div class="inner">
+        <div class="top">
+            <div class="flag-wrap">
+                <span class="flag flag-border-point">즉시 투입가능</span>
+                @@if(context.new){
+                    <span class="flag flag-point">NEW</span>
+                }
+            </div>
+            @@if(context.city === '01'){<span class="flag flag-gray" data-city="01">서울</span>}
+            @@if(context.city === '02'){<span class="flag flag-gray" data-city="02">경기</span>}
+            @@if(context.city === '03'){<span class="flag flag-gray" data-city="03">인천</span>}
+            @@if(context.city === '04'){<span class="flag flag-gray" data-city="04">광주</span>}
+            @@if(context.city === '05'){<span class="flag flag-gray" data-city="05">부산</span>}
+            @@if(context.city === '06'){<span class="flag flag-gray" data-city="06">대전</span>}
+            @@if(context.city === '07'){<span class="flag flag-gray" data-city="07">충청도</span>}
+            @@if(context.city === '08'){<span class="flag flag-gray" data-city="08">전라도</span>}
+            @@if(context.city === '09'){<span class="flag flag-gray" data-city="09">경상도</span>}
+            @@if(context.city === '10'){<span class="flag flag-gray" data-city="10">강원도</span>}
+            @@if(context.city === '11'){<span class="flag flag-gray" data-city="11">제주도</span>}
+            <span class="like-chk-wrap">
+                <input type="checkbox" id="@@id" name="@@id"@@if(context.checked){ checked}>
+                <label for="@@id"><span class="blind">관심 업무</span></label>
+            </span>
+        </div>
+        <div class="head">
+            <span class="thumb" style="background-image:url('/images/@noimg.gif')" aria-hidden="true"></span>
+            <div class="info">
+                <p class="name">@@name</p>
+                <p class="company">@@company</p>
+            </div>
+        </div>
+        <div class="belong">
+            <span class="flag flag-sm flag-point">소속</span>
+            <p>@@belong</p>
+        </div>
+        <p class="introduce">2017년 설립한 법무법인 한강시대에는 11명의 변호사가 근무하고 있으며, 다양한 분야의 업무를 수행하고 있습니다.</p>
+        <dl class="spot-info">
+            <dt>사무소 위치</dt>
+            <dd>서울 서초구 서초대로 강남빌딩 3층</dd>
+        </dl>
+        <button type="button" class="btn btn-md btn-point" data-toggle="modal" data-target="#modal-order"><span>업무 의뢰하기</span></button>
+    </div>
+</li>
+<!-- // loop -->

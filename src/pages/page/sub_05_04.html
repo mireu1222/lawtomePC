@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                cate05 : '04'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                <div class="border-tabs">
+                    <ul class="tabs" data-toggle="class-toggle">
+                        <li class="active"><a href="#n">자주찾는질문</a></li>
+                        <li><a href="#n">회원가입</a></li>
+                        <li><a href="#n">업무대행</a></li>
+                        <li><a href="#n">아웃소싱</a></li>
+                        <li><a href="#n">회원/파트너</a></li>
+                        <li><a href="#n">유료/결제</a></li>
+                        <li><a href="#n">적립금</a></li>
+                        <li><a href="#n">기타</a></li>
+                    </ul>
+                </div>
+
+                @@include('./modules/accordion-list.html')
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <script>
+        classToggle(); // tab active class toggle script
+        accordion();
+    </script>
+</body>
+</html>

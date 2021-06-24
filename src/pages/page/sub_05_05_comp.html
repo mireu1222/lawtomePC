@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                cate05 : '05'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                <div class="complete-page">
+                    <h3 class="tit">문의가 성공적으로 <em>접수</em> 되었습니다!</h3>
+                    <p class="desc">고객님의 문의 접수가 성공적으로 완료되었습니다.<br>빠른 답변 드리겠습니다.</p>
+                    <a href="/" class="btn btn-lg btn-point"><span>홈으로 가기</span></a>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <script>
+        classToggle(); // tab active class toggle script
+        accordion();
+    </script>
+</body>
+</html>

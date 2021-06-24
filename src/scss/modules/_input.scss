@@ -1,0 +1,175 @@
+/* input */
+.form-control {
+    display:block;
+    width:100%;
+    min-height:60px;
+    height:60px;
+    padding:18px 24px;
+    border:1px solid $border;
+    border-radius:$border-radius;
+    background:#f5f5f5;
+    font-size:18px;
+    line-height:normal;
+    transition:$input-transition;
+    &:focus {
+        outline:none;
+        border-color:$point;
+    }
+    &::placeholder,
+    &::-webkit-input-placeholder {
+        color:$placeholder;
+        opacity:1;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    &:disabled {
+        opacity:0.5;
+    }
+    &.datepicker {
+        padding-right:60px;
+        background-image:url('/images/icon/icon-cal.png');
+        background-repeat:no-repeat;
+        background-position:right 19px center;
+    }
+}
+input[type=password].form-control {
+    font-family:sans-serif;
+    &::placeholder,
+    &::-webkit-input-placeholder {
+        font-family:$font-family-square;
+        transform:translateY(-2px);
+    }
+}
+textarea.form-control {
+    resize:none;
+    height:180px;
+}
+
+/* checkbox, radio */
+$types : chk, rdo, rdo-btn, like-chk;
+@each $type in $types {
+    .#{$type}-wrap {
+        display:inline-block;
+        position:relative;
+        min-height:24px;
+        vertical-align:top;
+        input {
+            position:absolute;
+            width:1px;
+            height:1px;
+            padding:0;
+            margin:-1px;
+            overflow:hidden;
+            clip:rect(0, 0, 0, 0);
+            border:0;
+            + label {
+                display:inline-block;
+                position:relative;
+                cursor:pointer;
+                padding-left:30px;
+                color:$cont;
+                font-size:18px;
+                line-height:24px;
+                user-select:none;
+                vertical-align:top;
+                @if $type == 'chk' {
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:1px;
+                        left:0;
+                        width:22px;
+                        height:22px;
+                        border:1px solid $border;
+                        background:#fff;
+                    }
+                }
+                @if $type == 'rdo' {
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:1px;
+                        left:0;
+                        width:22px;
+                        height:22px;
+                        border:1px solid $border;
+                        background:#fff;
+                        border-radius:11px;
+                    }
+                }
+                @if $type == 'like-chk' {
+                    padding-left:0;
+                    width:24px;
+                    height:24px;
+                    background:url('/images/bg/bg-star.gif') 0 0 no-repeat;
+                }
+                @if $type == 'rdo-btn' {
+                    height:44px;
+                    padding:0 18px;
+                    border:1px solid $border;
+                    border-radius:22px;
+                    color:$placeholder;
+                    font-size:18px;
+                    line-height:42px;
+                }
+            }
+            &:disabled + label {
+                color:$gray;
+                &::before {
+                    background:$disabled;
+                }
+            }
+            @if $type == 'chk' {
+                &:checked + label {
+                    &::before {
+                        border-color:$point;
+                        background:$point;
+                    }
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:4px;
+                        left:7px;
+                        width:8px;
+                        height:12px;
+                        border:2px solid #fff;
+                        border-top:none;
+                        border-left:none;
+                        transform:rotate(45deg);
+                    }
+                }
+            }
+            @if $type == 'rdo' {
+                &:checked + label {
+                    &::before {
+                        border-color:$point;
+                    }
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:7px;
+                        left:6px;
+                        width:10px;
+                        height:10px;
+                        border-radius:5px;
+                        background:$point;
+                    }
+                }
+            }
+            @if $type == 'rdo-btn' {
+                &:checked + label {
+                    border-color:$point;
+                    background:$point;
+                    color:$white;
+                }
+            }
+            @if $type == 'like-chk' {
+                &:checked + label {
+                    background-position-y:bottom;
+                }
+            }
+        }
+    }
+}

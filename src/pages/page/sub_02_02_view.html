@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                cate02 : '02'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                @@include('./modules/work-view.html', {
+                    sub0202 : true,
+                    prev : 'sub_02_02.html'
+                })
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <!-- modal -->
+    @@include('./modules/modal.html', {
+        id : 'modal-apply'
+    })
+    <!-- // modal -->
+
+    <script>
+        classToggle();
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* accordion */
+.accordion-wrap {
+    position:relative;
+    ul.lists {
+        border-top:1px solid $border;
+        > li {
+            border-bottom:1px solid $border;
+            .accord-title {
+                display:block;
+                position:relative;
+                .btn-toggle {
+                    display:block;
+                    position:relative;
+                    width:100%;
+                    padding:17px 50px 17px 70px;
+                    text-align:left;
+                    @include font-lg;
+                    word-break:keep-all;
+                    &::before {
+                        content:'Q';
+                        position:absolute;
+                        top:16px;
+                        left:20px;
+                        width:28px;
+                        height:28px;
+                        border-radius:50%;
+                        background:$point;
+                        color:$white;
+                        text-align:center;
+                        font-size:16px;
+                        line-height:26px;
+                        font-weight:500;
+                    }
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        right:23px;
+                        width:10px;
+                        height:10px;
+                        border:1px solid $gray;
+                        border-top:none;
+                        border-left:none;
+                        margin-top:-8px;
+                        transform:rotate(45deg);
+                        transition:all 0.2s ease-out;
+                    }
+                }
+            }
+            &.open {
+                .accord-title .btn-toggle::after {
+                    margin-top:-3px;
+                    transform:rotate(225deg);
+                }
+            }
+            .accord-cont {
+                display:none;
+                position:relative;
+                padding:17px 20px;
+                padding-left:70px;
+                border-top:1px solid $border;
+                background:$disabled;
+                color:$basic;
+                @include font-lg;
+                word-break:keep-all;
+                &::before {
+                    content:'A';
+                    position:absolute;
+                    top:16px;
+                    left:20px;
+                    width:28px;
+                    height:28px;
+                    border-radius:50%;
+                    background:#bbb;
+                    color:$white;
+                    text-align:center;
+                    font-size:16px;
+                    line-height:26px;
+                    font-weight:500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+
+<div class="thumbnail-list-wrap">
+    <p class="count">전체 <em>(3)</em></p>
+    <ul class="lists">
+        @@for(var i = 0; i < lists; i++){
+        <!-- loop -->
+        <li>
+            <div class="inner">
+                <div class="thumb">
+                    <span class="area">
+                        <img src="/images/@thumb.gif" alt="이미지 설명">
+                    </span>
+                </div>
+                <div class="info">
+                    <div class="flag flag-border-point">임상자료</div>
+                    <a href="/page/@@page.html" class="link-basic">에비던스 임플란트 임상자료-1</a>
+                    <p class="date">2021.01.01</p>
+                </div>
+            </div>
+        </li>
+        <!-- // loop -->
+        }
+    </ul>
+</div>

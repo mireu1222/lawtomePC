@@ -1,0 +1,83 @@
+<div class="tbl-wrap narrow">
+    @@if(context.sub0505){
+        <h3 class="tbl-title">궁금하신 내용에 해당하는 항목을 선택하신 후 문의하시면 기입하신 이메일 또는 연락처로 답변 드리겠습니다.</h3>
+        @@include('./modules/slt-list.html', {
+            size : 'auto',
+            rdo : 'category',
+            slt : [
+                '업무대행관련 문의', '회원관련 문의', '사업제휴', '고객의 소리', '기타'
+            ]
+        })
+        <p class="essen-txt"><span>*</span> 필수 입력 정보입니다.</p>
+    }
+    <table class="table row-table">
+        <colgroup>
+            <col class="col1">
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row" class="essen">성함</th>
+                <td>
+                    <input type="text" class="form-control" aria-label="성함 입력" placeholder="성함을 입력하세요">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="essen">휴대폰번호</th>
+                <td>
+                    <input type="text" class="form-control" aria-label="휴대폰번호 입력" placeholder="`-`를 제외하고 입력하세요">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="essen">이메일</th>
+                <td>
+                    <input type="text" class="form-control" aria-label="이메일 입력" placeholder="이메일을 입력하세요">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="essen">제목</th>
+                <td>
+                    <input type="text" class="form-control" aria-label="제목 입력" placeholder="제목을 입력하세요">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="essen">내용</th>
+                <td>
+                    <textarea class="form-control" aria-label="내용 입력" placeholder="내용을 입력하세요"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">파일첨부</th>
+                <td>
+                    <div class="inputfile-wrap">
+                        <input type="text" class="form-control">
+                        <input type="file" id="file-upload">
+                        <label for="file-upload" class="btn">파일찾기</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+@@if(context.agree){
+<div class="agree-chk-box">
+    <p class="tit">개인정보수집동의</p>
+    <div class="agree-cont">
+        ■ 수집하는 개인정보 항목<br>
+        회사는 업무문의, 지원문의 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+        ο 수집항목 : 이름 , 휴대전화번호 , 이메일 , 쿠키 , 접속 IP 정보<br>
+        ο 개인정보 수집방법 : 홈페이지(www.abc.kr), 서면양식 <br>
+        ■ 개인정보의 수집 및 이용목적<br>
+        회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+        ο 업무에 대한 문의, 지원문의 등 민원처리, 고지사항 전달 <br>
+        ■ 개인정보의 보유 및 이용기간<br>
+        원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br>
+        ο 보존 항목 : 이름 , 휴대전화번호 , 이메일 , 접속 로그 , 쿠키 , 접속 IP <br>
+        ο 정보보존 기간 : 1년
+    </div>
+    <span class="chk-wrap">
+        <input type="checkbox" id="agree">
+        <label for="agree">위 내용을 숙지하였으며 동의합니다.</label>
+    </span>
+</div>
+}

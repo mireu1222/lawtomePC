@@ -1,0 +1,163 @@
+<div class="comm-boardview-wrap">
+    <!-- 게시글 -->
+    <div class="board-cont">
+        <div class="cont-head">
+            <h3 class="tit">게시물 제목이 들어감</h3>
+            <div class="infos">
+                <p class="name">
+                    <span class="blind">작성자</span>
+                    <span class="thumb" style="background-image:url('/images/@noimg.gif')" aria-hidden="true"></span>
+                    gawoolaw21
+                </p>
+                <p class="date"><span class="blind">작성일</span>2021.00.00 00:00</p>
+                <p class="view">조회 999</p>
+            </div>
+        </div>
+        <div class="cont-body">
+            게시글 내용 노출
+        </div>
+    </div>
+    <!-- // 게시글 -->
+    <!-- 댓글 --> 
+    <div class="board-reply">
+        <p class="tit">댓글 <em>999</em></p>
+        <ul class="reply-lists">
+            <li>
+                <div class="inner">
+                    <span class="thumb" style="background-image:url('/images/@noimg.gif')" aria-hidden="true"></span>
+                    <div class="reply-conts">
+                        <p class="name"><span class="blind">작성자</span><em>bestlaw11</em></p>
+                        <p class="reply">댓글 내용이 들어감</p>
+                        <p class="date"><span class="blind">작성일</span>2021.00.00 00:00</p>
+                    </div>
+                    <div class="controls">
+                        <button type="button" class="link-gray btn-reply-write"><span>답글</span></button>
+                    </div>
+                </div>
+            </li>
+            <!-- 대댓글일 때 .re-reply -->
+            <li class="re-reply">
+                <div class="inner">
+                    <span class="thumb" style="background-image:url('/images/@noimg.gif')" aria-hidden="true"></span>
+                    <div class="reply-conts">
+                        <p class="name">
+                            <span class="blind">작성자</span><em>bestlaw111</em>
+                            <span class="flag flag-sm flag-border-point rounded">작성자</span>
+                        </p>
+                        <p class="reply">대댓글 내용이 들어감</p>
+                        <p class="date"><span class="blind">작성일</span>2021.00.00 00:00</p>
+                    </div>
+                    <div class="controls">
+                        <button type="button" class="link-gray btn-reply-write"><span>답글</span></button>
+                        <!-- 내 댓글일 때 -->
+                        <button type="button" class="link-gray"><span>수정</span></button>
+                        <button type="button" class="link-gray"><span>삭제</span></button>
+                        <!-- // 내 댓글일 때 -->
+                    </div>
+                </div>
+            </li>
+            <!-- // 대댓글일 때 .re-reply -->
+            <li class="re-reply">
+                <div class="inner">
+                    <span class="thumb" style="background-image:url('/images/@noimg.gif')" aria-hidden="true"></span>
+                    <div class="reply-conts">
+                        <p class="name">
+                            <span class="blind">작성자</span><em>bestlaw111</em>
+                        </p>
+                        <p class="reply">대댓글 내용이 들어감</p>
+                        <p class="date"><span class="blind">작성일</span>2021.00.00 00:00</p>
+                    </div>
+                    <div class="controls">
+                        <button type="button" class="link-gray btn-reply-write"><span>답글</span></button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <span class="thumb" style="background-image:url('/images/@noimg.gif')" aria-hidden="true"></span>
+                    <div class="reply-conts">
+                        <p class="name"><span class="blind">작성자</span><em>bestlaw1111</em></p>
+                        <p class="reply">댓글 내용이 들어감</p>
+                        <p class="date"><span class="blind">작성일</span>2021.00.00 00:00</p>
+                    </div>
+                    <div class="controls">
+                        <button type="button" class="link-gray btn-reply-write"><span>답글</span></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="reply-write">
+            <p class="name">최우선</p>
+            <textarea class="form-control autosize" placeholder="댓글을 남겨보세요"></textarea>
+            <button type="button" class="btn btn-border-gray rounded"><span>등록</span></button>
+        </div>
+    </div>
+    <!-- // 댓글 --> 
+    <!-- button -->
+    <div class="board-btns">
+        <a href="" class="btn btn-border-border"><span>다음글</span></a>
+        <a href="" class="btn btn-border-border"><span>이전글</span></a>
+        <a href="@@prev.html" class="btn btn-border-border"><span>목록</span></a>
+    </div>
+    <!-- // button -->
+</div>
+<script>
+    $(function(){
+        function replyInput(replyTo) {
+            var inputTemp =
+                '<div class="reply-write" data-type="re-reply">' + 
+                    '<p class="name">최우선</p>' + 
+                    '<textarea class="form-control autosize" placeholder="'+replyTo+'님께 답글쓰기"></textarea>' + 
+                    '<button type="button" class="btn btn-border-gray rounded"><span>등록</span></button>' + 
+                '</div>';
+            return inputTemp;
+        }
+
+        var reply = $('.reply-lists');
+
+        reply.find('.btn-reply-write').on('click', function(){
+            var btn = $(this);
+            var allBtn = reply.find('.btn-reply-write');
+            var inner = btn.closest('.inner');
+            var to = inner.find('.name em').text();
+            var inputs = reply.find('[data-type="re-reply"]');
+
+            if ( inputs.find('textarea').val() ){
+                if (confirm('작성중인 답글 내용을 취소 하겠습니까?') == true) {
+                    if (btn.hasClass('on')){
+                        btn.removeClass('on');
+                        btn.find('span').text('답글');
+                        inner.next('[data-type="re-reply"]').remove();
+                    } else {
+                        reply.find('[data-type="re-reply"]').remove();
+                        allBtn.removeClass('on');
+                        allBtn.find('span').text('답글');
+                        btn.addClass('on');
+                        btn.find('span').text('답글 취소');
+                        inner.after(replyInput(to));
+                        autosize($('textarea.autosize'));
+                    }
+                } else {
+                    return;
+                }
+            } else {
+                if (btn.hasClass('on')){
+                    btn.removeClass('on');
+                    btn.find('span').text('답글');
+                    inner.next('[data-type="re-reply"]').remove();
+                } else {
+                    reply.find('[data-type="re-reply"]').remove();
+                    allBtn.removeClass('on');
+                    allBtn.find('span').text('답글');
+                    btn.addClass('on');
+                    btn.find('span').text('답글 취소');
+                    inner.after(replyInput(to));
+                    autosize($('textarea.autosize'));
+                }
+            }
+
+        });
+
+        autosize($('textarea.autosize'));
+    });
+</script>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html', {
+        main : true
+    })
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            main : true
+        })
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="main">
+            <!-- visual -->
+            <div class="main-visual">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/images/img/img-visual01.jpg" alt="">
+                            <div class="slide-cont">
+                                <h2 class="tit">로투미는<br>변호사의 업무 중개 플랫폼입니다.</h2>
+                                <div class="buttons">
+                                    <a href="/page/sub_01_01.html" class="btn btn-lg btn-border-point fw-medium"><span>무료 업무등록</span></a>
+                                    <a href="/page/sub_02_01.html" class="btn btn-lg btn-border-point fw-medium"><span>업무 찾기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/img/img-visual01.jpg" alt="">
+                            <div class="slide-cont">
+                                <h2 class="tit">로투미는<br>변호사의 업무 중개 플랫폼입니다.</h2>
+                                <div class="buttons">
+                                    <a href="/page/sub_01_01.html" class="btn btn-lg btn-border-point fw-medium"><span>무료 업무등록</span></a>
+                                    <a href="/page/sub_02_01.html" class="btn btn-lg btn-border-point fw-medium"><span>업무 찾기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button type="button" class="btn-control prev"><span class="blind">이전 슬라이드</span></button>
+                    <button type="button" class="btn-control next"><span class="blind">다음 슬라이드</span></button>
+                    <p class="page-count"></p>
+                    <button type="button" class="play-control on-play"><span class="blind">일시정지</span></button>
+                </div>
+            </div>
+            <!-- // visual -->
+            <!-- section 01 -->
+            <section class="sect01">
+                <div class="cont-area">
+                    <h3 class="sect-title"><em>분야</em>로 업무를 찾으세요.</h3>
+                    <div class="icon-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="/page/sub_02_01.html" class="link01">복대리</a></div>
+                                <div class="swiper-slide"><a href="/page/sub_02_02.html" class="link02">기록등사</a></div>
+                                <div class="swiper-slide"><a href="/page/sub_02_03.html" class="link03">조사참여</a></div>
+                                <div class="swiper-slide"><a href="/page/sub_02_04.html" class="link04">접견</a></div>
+                                <div class="swiper-slide"><a href="/page/sub_02_05.html" class="link05">서면작성</a></div>
+                                <div class="swiper-slide"><a href="/page/sub_02_06.html" class="link06">계약서</a></div>
+                                <div class="swiper-slide"><a href="/page/sub_02_07.html" class="link07">증명서 발급</a></div>
+                                <div class="swiper-slide"><a href="/page/sub_02_08.html" class="link08">기타</a></div>
+                            </div>
+                        </div>
+                        <div class="page-control"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- // section 01 -->
+            <!-- section 02 -->
+            <section class="sect02">
+                <div class="cont-area">
+                    <h3 class="sect-title">변호사 업무중개 플랫폼</h3>
+                    <ul class="count-list">
+                        <li>
+                            <h4 class="tit">등록된 업무</h4>
+                            <p class="num">0,000개</p>
+                        </li>
+                        <li>
+                            <h4 class="tit">업무등록 금액</h4>
+                            <p class="num">000,000,000원</p>
+                        </li>
+                        <li>
+                            <h4 class="tit">변호사&amp;법률사무소</h4>
+                            <p class="num">0,000명</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- // section 02 -->
+            <!-- section 03 -->
+            <section class="sect03">
+                <div class="cont-area">
+                    <h3 class="sect-title"><em>대행할 업무</em>를 등록하고 지원을 받아 보세요!</h3>
+                    <!-- 업무 카테고리 --> 
+                    <div class="category-tabs">
+                        <ul class="tabs" data-toggle="class-toggle">
+                            <li class="active"><a href="#n">복대리</a></li>
+                            <li><a href="#n">기록등사</a></li>
+                            <li><a href="#n">조사참여</a></li>
+                            <li><a href="#n">접견</a></li>
+                            <li><a href="#n">서면작성</a></li>
+                            <li><a href="#n">계약서</a></li>
+                            <li><a href="#n">증명서 발급</a></li>
+                            <li><a href="#n">기타</a></li>
+                        </ul>
+                    </div>
+                    <!-- // 업무 카테고리 --> 
+                    <!-- 도시 -->
+                    <div class="button-tabs">
+                        <ul class="tabs" data-toggle="class-toggle">
+                            <li class="active"><a href="#n">서울</a></li>
+                            <li><a href="#n">경기</a></li>
+                            <li><a href="#n">인천</a></li>
+                            <li><a href="#n">광주</a></li>
+                            <li><a href="#n">부산</a></li>
+                            <li><a href="#n">대전</a></li>
+                            <li><a href="#n">충청도</a></li>
+                            <li><a href="#n">전라도</a></li>
+                            <li><a href="#n">경상도</a></li>
+                            <li><a href="#n">강원도</a></li>
+                            <li><a href="#n">제주도</a></li>
+                        </ul>
+                    </div>
+                    <!-- // 도시 -->
+                    <div class="worklist-wrap">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                @@loop('./modules/work-loop.html', [
+                                    {
+                                        cateNum : '01',
+                                        cityNum : '01',
+                                        new : true,
+                                        city : '01',
+                                        id : 'work01',
+                                        checked : true,
+                                        work : '01',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '02',
+                                        cityNum : '02',
+                                        city : '02',
+                                        id : 'work02',
+                                        work : '02',
+                                        title : '서울남부지방법원 총무과/법원경비관리대',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '03',
+                                        cityNum : '03',
+                                        city : '03',
+                                        id : 'work03',
+                                        work : '03',
+                                        title : '서울남부지방법원 총무과/법원경비관리대 제목이 길면 두줄까지 노출 말줄임 처리',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '02',
+                                        cityNum : '04',
+                                        city : '04',
+                                        id : 'work04',
+                                        work : '02',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '03',
+                                        cityNum : '05',
+                                        city : '05',
+                                        id : 'work05',
+                                        work : '03',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '03',
+                                        cityNum : '06',
+                                        city : '06',
+                                        id : 'work06',
+                                        work : '03',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '04',
+                                        cityNum : '07',
+                                        city : '07',
+                                        id : 'work07',
+                                        work : '04',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '05',
+                                        cityNum : '08',
+                                        city : '08',
+                                        id : 'work08',
+                                        work : '05',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '06',
+                                        cityNum : '09',
+                                        city : '09',
+                                        id : 'work09',
+                                        work : '06',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '07',
+                                        cityNum : '10',
+                                        city : '10',
+                                        id : 'work10',
+                                        work : '07',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    },
+                                    {
+                                        cateNum : '08',
+                                        cityNum : '11',
+                                        city : '11',
+                                        id : 'work11',
+                                        work : '08',
+                                        title : '서울남부지방법원',
+                                        page : '#n'
+                                    }
+                                ])
+                            </div>
+                        </div>
+                        <div class="page-control"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- // section 03 -->
+            <!-- section 04 -->
+            <section class="sect04">
+                <div class="cont-area">
+                    <h3 class="sect-title">로투미에서 <em>변호사의 의뢰 업무</em>를 찾고 있으신가요?</h3>
+                    <a href="/page/join.html" class="btn btn-lg btn-white fw-medium"><span>회원가입하기</span></a>
+                </div>
+            </section>
+            <!-- // section 04 -->
+            <!-- section 05 -->
+            <section class="sect05">
+                <h3 class="sect-title">로투미의 <em>빠르고 편리하고 안전한 프로세스</em>를 경험해 보세요.</h3>
+                <div class="steps-slider">
+                    <!-- steps -->
+                    <div class="steps-pager-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <span class="num">01</span>
+                                    <p>변호사 업무등록</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="num">02</span>
+                                    <p>업무 지원자 확인</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="num">03</span>
+                                    <p>지원자 결정 및 결제</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="num">04</span>
+                                    <p>업무 중개 진행</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="num">05</span>
+                                    <p>업무 완료 및 정산</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // steps -->
+                    <!-- conts -->
+                    <div class="steps-conts-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="inner bg01">
+                                        <p class="eyebrow">변호사 업무등록</p>
+                                        <p class="title">변호사 업무를 분야별로 등록하세요!</p>
+                                        <p class="desc">의뢰할 업무를 등록해 주시면<br>회원(변호사, 법률사무소)이 업무에 지원하게 됩니다.</p>
+                                        <ul class="desc-list">
+                                            <li>의뢰할 업무는 구체적으로 등록해 주시면 정확한 처리가 이뤄집니다.</li>
+                                            <li>의뢰할 비용은 업무 난이도와 긴급도에 따라 적절하게 제시해 주시기 바랍니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="inner bg02">
+                                        <p class="eyebrow">업무 지원자 확인</p>
+                                        <p class="title">컨텐츠 수급 필요</p>
+                                        <p class="desc">컨텐츠 수급 필요</p>
+                                        <ul class="desc-list">
+                                            <li>컨텐츠 수급 필요</li>
+                                            <li>컨텐츠 수급 필요</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="inner bg03">
+                                        <p class="eyebrow">지원자 결정 및 결제</p>
+                                        <p class="title">컨텐츠 수급 필요</p>
+                                        <p class="desc">컨텐츠 수급 필요</p>
+                                        <ul class="desc-list">
+                                            <li>컨텐츠 수급 필요</li>
+                                            <li>컨텐츠 수급 필요</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="inner bg04">
+                                        <p class="eyebrow">업무 중개 진행</p>
+                                        <p class="title">컨텐츠 수급 필요</p>
+                                        <p class="desc">컨텐츠 수급 필요</p>
+                                        <ul class="desc-list">
+                                            <li>컨텐츠 수급 필요</li>
+                                            <li>컨텐츠 수급 필요</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="inner bg05">
+                                        <p class="eyebrow">업무 완료 및 정산</p>
+                                        <p class="title">컨텐츠 수급 필요</p>
+                                        <p class="desc">컨텐츠 수급 필요</p>
+                                        <ul class="desc-list">
+                                            <li>컨텐츠 수급 필요</li>
+                                            <li>컨텐츠 수급 필요</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="control-btn prev"><span class="blind">이전 슬라이드</span></button>
+                        <button type="button" class="control-btn next"><span class="blind">다음 슬라이드</span></button>
+                        <p class="page-count"></p>
+                    </div>
+                    <!-- // conts -->
+                </div>
+            </section>
+            <!-- // section 05 -->
+            <!-- section 06 -->
+            <section class="sect06">
+                <div class="cont-area">
+                    <h3 class="sect-title">로투미에서 상황에 맞게 <em>변호사에게 업무를 의뢰</em>하세요.</h3>
+                    <ul class="type-lists">
+                        <li>
+                            <div class="inner">
+                                <p class="bg bg01">부담없이 변호사 업무를<br>의뢰하고 싶을 때</p>
+                                <p class="tit">회원가입하고 의뢰업무 등록</p>
+                                <p class="desc">변호사나 법률사무소는 회원가입하고, 의뢰할 대리 업무를 무료로 등록하여 업무를 성공적으로 의뢰합니다.</p>
+                                <a href="" class="btn-go">변호사 업무 대리 의뢰하기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <p class="bg bg02">긴급한 업무도 신속하고 빠르게<br>의뢰하고 싶을 때</p>
+                                <p class="tit">긴급한 업무도 빠르게 의뢰 등록</p>
+                                <p class="desc">변호사나 법률사무소는 회원가입하고, 의뢰할 대리 업무를 무료로 등록하여 업무를 성공적으로 의뢰합니다.</p>
+                                <a href="" class="btn-go">변호사 업무 대리 의뢰하기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <p class="bg bg03">이용대금은 업무를 완료하고<br>정산하고 싶을 때</p>
+                                <p class="tit">업무 완료 후 이용요금 정산</p>
+                                <p class="desc">변호사 대리 업무가 완료된 후 의뢰대금이 지금되므로 안심하고 업무 의뢰에 안전 장치를 마련하였습니다.</p>
+                                <a href="" class="btn-go">변호사 업무 대리 의뢰하기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- // section 06 -->
+            <!-- section 07 -->
+            <section class="sect07">
+                <div class="cont-area">
+                    <div class="flex-box">
+                        <h3 class="sect-title">로투미는<br><em>빠르고 편리하고 안전</em>합니다.</h3>
+                        <div class="box box01">
+                            <p class="tit">무료등록</p>
+                            <p class="desc">빠르고 편리하게,<br>무료로 변호사 업무등록</p>
+                        </div>
+                        <div class="box box02">
+                            <p class="tit">신뢰가는 지원자</p>
+                            <p class="desc">믿을 수 있는 지원자,<br>한눈에 비교하고 선택까지</p>
+                        </div>
+                        <div class="box box03">
+                            <p class="tit">안전보호</p>
+                            <p class="desc">안전한 대금보호,<br>간편한 업무중개 시스템</p>
+                        </div>
+                        <div class="box box04">
+                            <p class="tit">안심의뢰</p>
+                            <p class="desc">보호받을 수 있는<br>안심 업무 의뢰</p>
+                        </div>
+                        <div class="box box05">
+                            <p class="tit">업무처리</p>
+                            <p class="desc">신뢰할 수 있는<br>업무 처리</p>
+                        </div>
+                        <div class="box box06">
+                            <p class="tit">담당 매니저</p>
+                            <p class="desc">시작부터 끝까지<br>함께하는 담당 매니저</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // section 07 -->
+            <!-- section 08 -->
+            <section class="sect08">
+                <div class="cont-area">
+                    <h3 class="sect-title">이미 <em>0,000</em>명의 변호사, 법률사무소가 이용하고 있습니다.</h3>
+                    <div class="ci-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="ci-lists">
+                                        <ul class="lists">
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci01.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci02.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci03.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci04.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci05.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci01.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci02.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci03.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci04.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci05.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ci-lists">
+                                        <ul class="lists">
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci01.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci02.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci03.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci04.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci05.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>홍길동 변호사</p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci01.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci02.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci03.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci04.jpg" alt="">
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <img src="/images/img/img-ci05.jpg" alt="">
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-control"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- // section 08 -->
+            <!-- section 09 -->
+            <section class="sect09">
+                <div class="cont-area">
+                    <h3 class="sect-title">로투미에서 빠르고 안전하게 <em>변호사 업무를 의뢰</em>해 보세요.</h3>
+                    <a href="/page/sub_01_01.html" class="btn btn-lg btn-basic fw-medium"><span>무료로 업무등록하고 의뢰하기</span></a>
+                </div>
+            </section>
+            <!-- // section 09 -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script>
+        $(function(){
+            classToggle();
+
+            // mainvisual
+            const mainVisual = new Swiper('.main-visual .swiper-container', {
+                autoplay : {
+                    delay : 4000,
+                    disableOnInteraction: false
+                },
+                loop : true,
+                pagination: {
+                    el : '.main-visual .controls .page-count',
+                    type : 'fraction',
+                    formatFractionCurrent: function (number) {
+                        return ('0' + number).slice(-2);
+                    },
+                    formatFractionTotal: function (number) {
+                        return ('0' + number).slice(-2);
+                    },
+                    renderFraction: function (currentClass, totalClass) {
+                        return '<span class="' + currentClass + '"></span>' +
+                            ' / ' +
+                            '<span class="' + totalClass + '"></span>';
+                    }
+                },
+                navigation: {
+                    prevEl : '.main-visual .controls .btn-control.prev',
+                    nextEl : '.main-visual .controls .btn-control.next'
+                },
+            });
+    
+            $('.main-visual .controls .play-control').on('click', function(){
+                if ( $(this).hasClass('on-play') ) {
+                    $(this).removeClass('on-play');
+                    $(this).find('span').text('재생');
+                    $(this).addClass('on-pause');
+                    mainVisual.autoplay.stop();
+                } else if ( $(this).hasClass('on-pause') ) {
+                    $(this).removeClass('on-pause');
+                    $(this).find('span').text('일시정지');
+                    $(this).addClass('on-play');
+                    mainVisual.autoplay.start();
+                }
+            });
+
+            // icon slider
+            const iconSlider = new Swiper('.icon-slider .swiper-container', {
+                loop : false,
+                slidesPerView : 7,
+                spaceBetween : 25,
+                pagination : {
+                    el : '.icon-slider .page-control',
+                    type : 'bullets',
+                    clickable : true,
+                }
+            });
+
+            // 대행업무 slider
+            const workSlider = new Swiper('.worklist-wrap .swiper-container', {
+                loop: false,
+                slidesPerGroup: 3,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el : '.worklist-wrap .page-control',
+                    type : 'bullets',
+                    clickable : true
+                },
+            });
+
+            // 프로세스 steps
+            const stepsSlider = new Swiper('.steps-pager-slider .swiper-container', {
+                loop: false,
+                slidesPerGroup: 5,
+                slidesPerView: 5,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true
+            });
+            const contsSlider = new Swiper('.steps-conts-slider .swiper-container', {
+                loop: true,
+                spaceBetween: 0,
+                navigation: {
+                    prevEl: '.steps-conts-slider .control-btn.prev',
+                    nextEl: '.steps-conts-slider .control-btn.next',
+                },
+                pagination: {
+                    el : '.steps-conts-slider .page-count',
+                    type : 'fraction',
+                },
+                thumbs: {
+                    swiper: stepsSlider
+                }
+            });
+
+            // ci slider
+            const ciSlider = new Swiper('.ci-slider .swiper-container', {
+                loop: false,
+                spaceBetween: 20,
+                pagination: {
+                    el : '.ci-slider .page-control',
+                    type : 'bullets',
+                    clickable : true
+                },
+            });
+        });
+    </script>
+</body>
+</html>
