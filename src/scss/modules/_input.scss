@@ -103,7 +103,6 @@ $types : chk, rdo, rdo-btn, like-chk;
                     background:url('/images/bg/bg-star.gif') 0 0 no-repeat;
                 }
                 @if $type == 'rdo-btn' {
-                    min-width:110px;
                     height:50px;
                     padding:0 20px;
                     border-radius:25px;
@@ -112,6 +111,7 @@ $types : chk, rdo, rdo-btn, like-chk;
                     font-size:18px;
                     line-height:50px;
                     text-align:center;
+                    white-space:nowrap;
                     em {
                         font-weight:500;
                     }

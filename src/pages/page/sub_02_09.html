@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                cate02 : '09'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents">
+                <div class="button-tabs">
+                    <ul class="tabs" data-toggle="class-toggle">
+                        <li class="active"><a href="#n">전체</a></li>
+                        <li><a href="#n">서울</a></li>
+                        <li><a href="#n">경기</a></li>
+                        <li><a href="#n">인천</a></li>
+                        <li><a href="#n">광주</a></li>
+                        <li><a href="#n">부산</a></li>
+                        <li><a href="#n">대전</a></li>
+                        <li><a href="#n">충청도</a></li>
+                        <li><a href="#n">전라도</a></li>
+                        <li><a href="#n">경상도</a></li>
+                        <li><a href="#n">강원도</a></li>
+                        <li><a href="#n">제주도</a></li>
+                    </ul>
+                </div>
+                <div class="worklist-wrap">
+                    <ul class="lists">
+                        @@loop('./modules/work-loop.html', [
+                            {
+                                listType : true,
+                                new : true,
+                                id : 'work01',
+                                checked : true,
+                                work : '09',
+                                city : '01',
+                                title : '서울남부지방법원',
+                                page : 'sub_02_09_view.html'
+                            },
+                            {
+                                listType : true,
+                                id : 'work02',
+                                work : '09',
+                                city : '02',
+                                title : '서울남부지방법원 총무과/법원경비관리대',
+                                page : 'sub_02_09_view.html'
+                            },
+                            {
+                                listType : true,
+                                id : 'work03',
+                                work : '09',
+                                city : '03',
+                                title : '서울남부지방법원 총무과/법원경비관리대 제목이 길면 두줄까지 노출 말줄임 처리',
+                                page : 'sub_02_09_view.html'
+                            },
+                        ])
+                    </ul>
+                </div>
+                @@include('./modules/pagination.html')
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    
+</body>
+</html>

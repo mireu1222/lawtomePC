@@ -386,6 +386,11 @@
                     justify-content:space-between;
                     > li {
                         position:relative;
+                        .rdo-btn-wrap {
+                            input + label {
+                                min-width:110px;
+                            }
+                        }
                         .tooltips {
                             position:absolute;
                             bottom:100%;

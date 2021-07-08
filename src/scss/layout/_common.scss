@@ -28,11 +28,14 @@
             padding-bottom:25px;
             border-bottom:1px solid $border;
             .tabs {
-                font-size:0;
-                white-space:nowrap;
+                display:flex;
+                &.type2 {
+                    justify-content:space-between;
+                    li {
+                        margin-left:0;
+                    }
+                }
                 li {
-                    display:inline-block;
-                    vertical-align:top;
                     margin-left:50px;
                     &:first-child {
                         margin-left:0;
@@ -43,6 +46,7 @@
                         border-bottom:2px solid transparent;
                         color:$cont;
                         font-size:24px;
+                        white-space:nowrap;
                     }
                     &.active a {
                         border-color:$point;

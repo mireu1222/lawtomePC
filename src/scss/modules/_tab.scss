@@ -4,11 +4,8 @@
     margin-bottom:100px;
     ul.tabs {
         display:flex;
+        justify-content:space-between;
         li {
-            margin-left:20px;
-            &:first-child {
-                margin-left:0;
-            }
             a {
                 display:block;
                 height:44px;
@@ -32,6 +29,7 @@
         padding-bottom:10px;
         border-bottom:1px solid $border;
         ul.tabs {
+            justify-content:flex-start;
             li {
                 margin-left:10px;
                 &:first-child {

@@ -189,7 +189,7 @@
                         background-repeat:no-repeat;
                         background-position:center;
                     }
-                    @for $i from 1 through 8 {
+                    @for $i from 1 through 10 {
                         &.link0#{$i}::before {
                             background-image:url('/images/icon/icon-main0#{$i}.gif');
                         }
@@ -244,6 +244,7 @@
             ul.tabs {
                 position:relative;
                 display:flex;
+                justify-content:space-between;
                 &::before {
                     content:' ';
                     position:absolute;
@@ -255,7 +256,6 @@
                 }
                 li {
                     position:relative;
-                    margin-left:60px;
                     &:first-child {
                         margin-left:0;
                     }
@@ -265,6 +265,7 @@
                         border-bottom:2px solid transparent;
                         color:$placeholder;
                         font-size:20px;
+                        white-space:nowrap;
                     }
                     &.active a {
                         border-color:$point;
@@ -505,6 +506,7 @@
                     margin-top:15px;
                     color:$cont;
                     @include font;
+                    word-break:keep-all;
                 }
                 .btn-go {
                     display:inline-block;
