@@ -26,6 +26,26 @@
             }
         }
     }
+    &.type2 {
+        position:relative;
+        margin-bottom:40px;
+        padding-bottom:10px;
+        border-bottom:1px solid $border;
+        ul.tabs {
+            li {
+                margin-left:10px;
+                &:first-child {
+                    margin-left:0;
+                }
+            }
+        }
+        .link-cont {
+            position:absolute;
+            right:0;
+            bottom:11px;
+            text-decoration:underline;
+        }
+    }
 }
 
 .border-tabs {

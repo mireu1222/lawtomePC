@@ -140,9 +140,9 @@ gulp.task('scripts', function () {
 gulp.task('scripts-ui', function () {
     return gulp
         .src(paths.jsUi, { sourcemaps: true })
-        //.pipe(stripDebug()) // consloe.log, alert 제거
+        .pipe(stripDebug()) // consloe.log, alert 제거
         .pipe(concat('ui.min.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(dist + '/js'))
 });
 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my05 : '02',
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">캐시 충전</h3>
+                <div class="charge-wraps">
+                    <div class="charge-top">
+                        <div class="info-title">
+                            <p class="eyebrow">충전캐시</p>
+                            <p class="price"><em>50,000</em>원</p>
+                            <p class="alert">* 최대 충전 가능캐시 : 2,000,000원</p>
+                        </div>
+                        <div class="charge-slt">
+                            <ul class="lists">
+                                <li>
+                                    <span class="rdo-btn-wrap">
+                                        <input type="radio" id="cash01" name="cash-slt" data-price="5" checked>
+                                        <label for="cash01"><em>+5</em>만원</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="rdo-btn-wrap">
+                                        <input type="radio" id="cash02" name="cash-slt" data-price="30">
+                                        <label for="cash02"><em>+30</em>만원</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="rdo-btn-wrap">
+                                        <input type="radio" id="cash03" name="cash-slt" data-price="50">
+                                        <label for="cash03"><em>+50</em>만원</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="rdo-btn-wrap">
+                                        <input type="radio" id="cash04" name="cash-slt" data-price="100">
+                                        <label for="cash04"><em>+100</em>만원</label>
+                                    </span>
+                                    <span class="tooltips">+4만원 혜택</span>
+                                </li>
+                                <li>
+                                    <span class="rdo-btn-wrap">
+                                        <input type="radio" id="cash05" name="cash-slt" data-price="150">
+                                        <label for="cash05"><em>+150</em>만원</label>
+                                    </span>
+                                    <span class="tooltips">+6만원 혜택</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="charge-bottom">
+                        <p class="tit">결제수단</p>
+                        <div class="slt-lists">
+                            <ul>
+                                <li>
+                                    <span class="rdo-wrap">
+                                        <input type="radio" id="payby01" name="payby">
+                                        <label for="payby01">신용카드</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="rdo-wrap">
+                                        <input type="radio" id="payby02" name="payby">
+                                        <label for="payby02">실시간 계좌이체</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="rdo-wrap">
+                                        <input type="radio" id="payby03" name="payby">
+                                        <label for="payby03">무통장입금</label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-md btn-point btn-price-target"><span><em>5만원</em> 충전하기</span></button>
+                    </div>
+                </div>
+                <div class="alert-text-wrap">
+                    <p class="tit">이용 상세 안내</p>
+                    <ul class="bullet-list dot-type">
+                        <li>충전캐시는 최대 200만원까지 보유할 수 있습니다.</li>
+                        <li>신용카드로 결제할 경우, 각 카드사마다 결제한도가 제한됩니다(최대 월 100만원)</li>
+                        <li>충전캐시의 유효기간은 충전일로부터 5년이며, 보너스 적립캐시의 유효기간은 4개월입니다.</li>
+                        <li>서비스 구매 시 유효기간 만료일이 가까운 순서대로 사용되나, 보너스 적립캐시의 경우 충전캐시가 모두 소진된 이후 사용됩니다.</li>
+                        <li>충전캐시는 상품/서비스 구매를 위하여 사전에 일정 금액을 예치하는 것이므로 세금계산서 발행 대상이 아닙니다.</li>
+                        <li>충전캐시를 사용하여 상품/서비스를 구매하실 때 결제 금액에 대한 세금계산서 신청이 가능합니다. (개인전문가는 발행 불가)</li>
+                        <li>충전캐시의 영수증(신용카드 전표/현금영수증)은 개인 소득공제용으로만 사용하실 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script>
+        $(function(){
+            $('.charge-slt input[type=radio]').change(function(){
+                var slt = $(this);
+                var price = slt.data('price');
+                function addComma(num){
+                    var regexp = /\B(?=(\d{3})+(?!\d))/g;
+                    return num.toString().replace(regexp, ',');
+                }
+                var addPrice = addComma(price+'0000');
+    
+                var topTg = $('.charge-wraps .info-title .price em');
+                var btnTg = $('.charge-wraps .btn-price-target span em');
+    
+                topTg.text(addPrice);
+                btnTg.text(price+'만원');
+            });
+        });
+    </script>
+</body>
+</html>

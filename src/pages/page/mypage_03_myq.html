@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my03 : true,
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">내 문의글</h3>
+                <div class="tbl-wrap">
+                    <table class="table row-table">
+                        <colgroup>
+                            <col style="width:156px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">성함</th>
+                                <td>내이름</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대폰번호</th>
+                                <td>010-0000-0000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">이메일</th>
+                                <td>email@naver.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">제목</th>
+                                <td>제목이 들어감</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">내용</th>
+                                <td>내용이 들어감</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">파일첨부</th>
+                                <td><a href="" class="link-basic file">파일명.pdf</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-group">
+                    <a href="/page/mypage_03.html" class="btn btn-lg btn-border-point"><span>목록</span></a>
+                    <a href="/page/mypage_03_edit.html" class="btn btn-lg btn-point"><span>수정</span></a>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

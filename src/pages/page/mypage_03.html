@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my03 : true,
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">나의 문의내역</h3>
+                @@include('./modules/notice-tbl.html', {
+                    mypage: true,
+                    page : 'mypage_03_myq',
+                    page2 : 'mypage_03_mya'
+                })
+                @@include('./modules/pagination.html')
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

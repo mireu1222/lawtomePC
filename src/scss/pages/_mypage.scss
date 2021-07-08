@@ -1,183 +1,682 @@
 /* 마이페이지 */
-.mypage-sections {
-    .sect {
-        position:relative;
-        margin-top:70px;
-        padding:25px 20px 40px;
-        border:1px solid $border;
-        &:first-child {
-            margin-top:0;
-        }
-        h4.sect-title {
-            margin-bottom:50px;
-            font-size:22px;
-            font-weight:500;
-        }
-    }
-    // 나의 정보/설정
-    .my-profile {
-        padding:15px 0 0 20px;
-        @include clearfix;
-        .my-photo {
-            float:left;
+.mypage-contents {
+    .mypage-sections {
+        .sect {
             position:relative;
-            .thumb {
-                display:block;
-                width:130px;
-                height:130px;
-                border-radius:50%;
-                overflow:hidden;
-                background-size:cover;
-                background-position:center;
-                background-repeat:no-repeat;
-            }
-            .btn-photo-upload {
-                position:absolute;
-                bottom:0;
-                right:0;
-                width:30px;
-                height:30px;
-                border:1px solid $border;
-                border-radius:50%;
-                background:#fff url('/images/icon/icon-photop.png') center no-repeat;
-            }
-        }
-        .name {
-            margin-left:160px;
-            padding-top:12px;
-            font-size:25px;
-            font-weight:500;
-        }
-        .btn.btn-md {
-            position:absolute;
-            bottom:40px;
-            right:25px;
-            width:220px;
-        }
-    }
-    .work-info-lists {
-        display:flex;
-        li {
-            position:relative;
-            flex:1;
-            margin-left:20px;
-            padding-left:21px;
-            &::before {
-                content:' ';
-                position:absolute;
-                top:12px;
-                bottom:0;
-                left:0;
-                width:1px;
-                background:$border;
-            }
+            margin-top:70px;
+            padding:25px 20px 40px;
+            border:1px solid $border;
             &:first-child {
-                margin-left:0;
-                padding-left:0;
-                &::before {
-                    display:none;
+                margin-top:0;
+            }
+            .sect-title {
+                margin-bottom:50px;
+                font-size:22px;
+                font-weight:500;
+            }
+        }
+        // 나의 정보/설정
+        .my-profile {
+            padding:15px 0 0 20px;
+            @include clearfix;
+            .my-photo {
+                float:left;
+                position:relative;
+                .thumb {
+                    display:block;
+                    width:130px;
+                    height:130px;
+                    border-radius:50%;
+                    overflow:hidden;
+                    background-size:cover;
+                    background-position:center;
+                    background-repeat:no-repeat;
+                }
+                .btn-photo-upload {
+                    position:absolute;
+                    bottom:0;
+                    right:0;
+                    width:30px;
+                    height:30px;
+                    border:1px solid $border;
+                    border-radius:50%;
+                    background:#fff url('/images/icon/icon-photop.png') center no-repeat;
                 }
             }
-            .inner {
+            .name {
+                margin-left:160px;
+                padding-top:12px;
+                font-size:25px;
+                font-weight:500;
+            }
+            .btn.btn-md {
+                position:absolute;
+                bottom:40px;
+                right:25px;
+                width:220px;
+            }
+        }
+        .work-info-lists {
+            display:flex;
+            li {
                 position:relative;
-                .count {
-                    padding:40px 0 25px;
-                    text-align:center;
-                    font-size:48px;
-                }
-                .btn {
-                    display:block;
-                    width:100%;
-                }
-                .today {
+                flex:1;
+                margin-left:20px;
+                padding-left:21px;
+                &::before {
+                    content:' ';
                     position:absolute;
-                    top:0;
-                    left:50%;
-                    transform:translateX(-50%);
-                    height:26px;
-                    padding:0 10px;
-                    border-radius:13px;
-                    background:$disabled;
-                    color:$cont;
-                    font-size:14px;
-                    line-height:26px;
-                    white-space:nowrap;
-                    em {
-                        color:$point;
+                    top:12px;
+                    bottom:0;
+                    left:0;
+                    width:1px;
+                    background:$border;
+                }
+                &:first-child {
+                    margin-left:0;
+                    padding-left:0;
+                    &::before {
+                        display:none;
+                    }
+                }
+                .inner {
+                    position:relative;
+                    .count {
+                        padding:40px 0 25px;
+                        text-align:center;
+                        font-size:48px;
+                    }
+                    .btn {
+                        display:block;
+                        width:100%;
+                    }
+                    .today {
+                        position:absolute;
+                        top:0;
+                        left:50%;
+                        transform:translateX(-50%);
+                        height:26px;
+                        padding:0 10px;
+                        border-radius:13px;
+                        background:$disabled;
+                        color:$cont;
+                        font-size:14px;
+                        line-height:26px;
+                        white-space:nowrap;
+                        em {
+                            color:$point;
+                            font-weight:500;
+                        }
+                    }
+                }
+            }
+        }
+        .state-select-lists {
+            > li {
+                margin-top:40px;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            .state-options {
+                margin-top:15px;
+                padding:30px 25px;
+                background:$disabled;
+                ul {
+                    display:flex;
+                    li {
+                        flex:1;
+                        display:flex;
+                        align-items:center;
+                        .chk-wrap {
+                            margin-right:20px;
+                            input + label {
+                                white-space:nowrap;
+                            }
+                        }
+                        .form-control {
+                            height:50px;
+                            min-height:50px;
+                            background:#fff;
+                        }
+                    }
+                }
+            }
+        }
+        .alert-setting {
+            margin-bottom:100px;
+            padding-right:45px;
+            &:last-child {
+                margin-bottom:0;
+            }
+            > p.tit {
+                display:flex;
+                font-size:20px;
+                font-weight:500;
+                span {
+                    width:68px;
+                    margin-left:90px;
+                    text-align:center;
+                }
+                span:first-child {
+                    margin-right:auto;
+                    margin-left:0;
+                    width:auto;
+                    text-align:left;
+                }
+            }
+            ul.lists {
+                margin-top:35px;
+                li {
+                    display:flex;
+                    align-items:center;
+                    margin-top:30px;
+                    p {
+                        margin-right:auto;
+                        font-size:18px;
+                    }
+                    .chk-switch {
+                        margin-left:90px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 나의 문의내역
+    .tbl-wrap {
+        .table.notice-table {
+            thead {
+                tr {
+                    th {
+                        background:transparent;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding:10px;
+                        a[class^="link"] {
+                            max-width:100%;
+                            span {
+                                max-width:100%;
+                            }
+                        }
+                    }
+                    &.answer {
+                        td {
+                            background:$disabled;
+                            a[class^="link"] {
+                                margin-left:30px;
+                                max-width:calc(100% - 30px);
+                                &::before {
+                                    content:'RE :';
+                                    margin-right:4px;
+                                    font-weight:500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .qna-wrap {
+        border-top:1px solid $basic;
+        .qst-title {
+            display:flex;
+            padding:17px 25px;
+            border-bottom:1px solid $border;
+            .tit {
+                padding-right:20px;
+                @include font-lg;
+                word-break:keep-all;
+            }
+            .date {
+                margin-left:auto;
+                color:$cont;
+                @include font-lg;
+                white-space:nowrap;
+            }
+            &.answer {
+                padding-left:55px;
+                background:$disabled;
+                .tit {
+                    &::before {
+                        content:'RE :';
+                        margin-right:4px;
                         font-weight:500;
                     }
                 }
             }
         }
+        .qst-cont {
+            padding:25px 55px 100px;
+            background:$disabled;
+            border-bottom:1px solid $border;
+            @include font-lg;
+        }
     }
-    .state-select-lists {
-        > li {
+    // 나의 결제내역
+    .alert-text-wrap {
+        margin-top:70px;
+        padding:30px 25px;
+        background:$disabled;
+        .tit {
             margin-top:40px;
+            margin-bottom:20px;
+            font-size:18px;
+            font-weight:500;
             &:first-child {
                 margin-top:0;
             }
         }
-        .state-options {
-            margin-top:15px;
-            padding:30px 25px;
-            background:$disabled;
-            ul {
-                display:flex;
-                li {
-                    flex:1;
-                    display:flex;
-                    align-items:center;
-                    .chk-wrap {
-                        margin-right:20px;
-                        input + label {
-                            white-space:nowrap;
-                        }
-                    }
-                    .form-control {
-                        height:50px;
-                        min-height:50px;
-                        background:#fff;
-                    }
+        .desc {
+            @include font;
+        }
+        .dl-list {
+            margin-top:40px;
+            dt {
+                position:relative;
+                padding-left:10px;
+                @include font;
+                &::before {
+                    content:'-';
+                    position:absolute;
+                    top:0;
+                    left:0;
+                }
+            }
+            dd {
+                position:relative;
+                margin-top:10px;
+                padding-left:20px;
+                color:$cont;
+                @include font;
+                span {
+                    position:absolute;
+                    top:0;
+                    left:0;
                 }
             }
         }
     }
-    .alert-setting {
-        margin-bottom:100px;
-        padding-right:45px;
-        &:last-child {
-            margin-bottom:0;
+    // 보유캐시/충전
+    .my-cash-wrap {
+        display:flex;
+        margin-bottom:70px;
+        .box {
+            flex:1;
+            margin-left:30px;
+            padding:35px 20px 30px;
+            border-radius:$border-radius;
+            background:#eee;
+            text-align:center;
+            &:first-child {
+                margin-left:0;
+            }
+            &.total {
+                background:#d4e5f3;
+            }
+            .tit {
+                margin-bottom:30px;
+                font-size:22px;
+            }
+            .cash {
+                height:55px;
+                background:#fff;
+                border-radius:4px;
+                font-size:18px;
+                line-height:55px;
+                em {
+                    margin-right:4px;
+                    font-size:24px;
+                    font-weight:700;
+                }
+            }
         }
-        > p.tit {
+    }
+    .charge-wraps {
+        padding:25px 20px 40px;
+        border:1px solid $border;
+        .charge-top {
+            position:relative;
+            padding:25px 0 60px 210px;
+            border-bottom:1px solid $border;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:25px;
+                left:25px;
+                width:135px;
+                height:135px;
+                background:url('/images/icon/icon-charge.png') center no-repeat;
+            }
+            .info-title {
+                position:relative;
+                .eyebrow {
+                    margin-bottom:10px;
+                    font-size:20px;
+                    font-weight:500;
+                }
+                .price {
+                    display:flex;
+                    align-items:flex-end;
+                    font-size:20px;
+                    font-weight:500;
+                    em {
+                        margin-right:6px;
+                        font-size:35px;
+                        font-weight:700;
+                    }
+                }
+                .alert {
+                    position:absolute;
+                    right:0;
+                    bottom:0;
+                    color:$gray;
+                    font-size:16px;
+                }
+            }
+            .charge-slt {
+                margin-top:50px;
+                ul.lists {
+                    display:flex;
+                    justify-content:space-between;
+                    > li {
+                        position:relative;
+                        .tooltips {
+                            position:absolute;
+                            bottom:100%;
+                            right:-10px;
+                            height:25px;
+                            margin-bottom:3px;
+                            padding:0 10px;
+                            border-radius:4px;
+                            background:$point;
+                            color:#fff;
+                            font-size:14px;
+                            line-height:25px;
+                            white-space:nowrap;
+                            &::after {
+                                content:' ';
+                                position:absolute;
+                                top:100%;
+                                left:15px;
+                                border-top:8px solid $point;
+                                border-left:5px solid transparent;
+                                border-right:5px solid transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .charge-bottom {
+            margin-top:60px;
+            .tit {
+                margin-bottom:20px;
+                font-size:20px;
+                font-weight:500;
+            }
+            .slt-lists {
+                padding:35px 25px;
+                background:$disabled;
+                li {
+                    margin-right:130px;
+                    &:last-child {
+                        margin-right:0;
+                    }
+                }
+            }
+            .btn.btn-md {
+                display:block;
+                width:220px;
+                margin:60px auto 0;
+            }
+        }
+    }
+    // 적립금 내역
+    .my-point {
+        position:relative;
+        margin-bottom:70px;
+        padding:40px 30px 30px;
+        padding-left:180px;
+        border:1px solid $border;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:50%;
+            left:50px;
+            width:80px;
+            height:80px;
+            margin-top:-40px;
+            background:url('/images/icon/icon-point.png') center no-repeat;
+        }
+        .tit {
+            font-size:22px;
+        }
+        .point-box {
+            width:275px;
+            height:60px;
+            margin-top:25px;
+            padding:18px 24px;
+            border:1px solid $border;
+            border-radius:8px;
+            background:$disabled;
+            font-size:18px;
+            em {
+                margin-right:6px;
+                font-size:24px;
+                font-weight:700;
+            }
+        }
+    }
+    // 쿠폰 관리
+    .coupon-add-box {
+        margin-bottom:70px;
+        padding:40px 20px 30px;
+        border:1px solid $border;
+        .tit {
+            margin-bottom:25px;
+            font-size:22px;
+            font-weight:500;
+        }
+        .forms {
             display:flex;
+            .btn {
+                width:200px;
+                margin-left:10px;
+            }
+        }
+    }
+    // 광고 신청
+    .adv-box {
+        padding:30px 20px 60px;
+        border:1px solid $border;
+        > .tit {
+            margin-bottom:45px;
+            font-size:22px;
+            font-weight:500;
+        }
+        .adv-flex {
+            display:flex;
+            .price {
+                width:275px;
+                dl {
+                    margin-top:30px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    dt {
+                        margin-bottom:10px;
+                        font-size:18px;
+                    }
+                    dd {
+                        height:55px;
+                        padding:0 25px;
+                        border-radius:8px;
+                        background:$disabled;
+                        text-align:right;
+                        color:$cont;
+                        font-size:18px;
+                        line-height:55px;
+                        em {
+                            margin-right:6px;
+                            font-size:24px;
+                            font-weight:700;
+                        }
+                    }
+                    &.total {
+                        dd {
+                            background:#d4e5f3;
+                            color:$basic;
+                        }
+                    }
+                }
+            }
+            .info {
+                display:flex;
+                flex-direction:column;
+                width:520px;
+                margin-left:auto;
+                .info-tit {
+                    font-size:20px;
+                    font-weight:500;
+                }
+                .info-desc {
+                    margin-top:20px;
+                    @include font-lg;
+                }
+                .bullet-list {
+                    margin-top:20px;
+                    li {
+                        em {
+                            color:$basic;
+                        }
+                    }
+                }
+                .alert {
+                    margin-top:25px;
+                    margin-bottom:40px;
+                    color:$gray;
+                    @include font-sm;
+                }
+                .btn {
+                    display:block;
+                    width:260px;
+                    margin-top:auto;
+                }
+            }
+        }
+    }
+    // 수익관리
+    .reven-box {
+        display:flex;
+        margin-bottom:70px;
+        padding:40px 20px;
+        border:1px solid $border;
+        .reven-left {
+            padding-right:53px;
+            border-right:1px solid $border;
+        }
+        .reven-right {
+            display:flex;
+            margin-left:auto;
+            dl {
+                margin-left:30px;
+                &:first-child {
+                    margin-left:0;
+                }
+            }
+        }
+        dl {
+            width:250px;
+            min-width:250px;
+            max-width:250px;
+            dt {
+                margin-bottom:10px;
+                font-size:18px;
+            }
+            dd {
+                height:55px;
+                padding:0 25px;
+                border-radius:8px;
+                background:$disabled;
+                text-align:right;
+                color:$cont;
+                font-size:18px;
+                line-height:55px;
+                em {
+                    margin-right:6px;
+                    font-size:24px;
+                    font-weight:700;
+                }
+            }
+            &.total {
+                dd {
+                    background:#d4e5f3;
+                    color:$basic;
+                }
+            }
+        }
+    }
+    // 비밀번호 변경
+    .password-box {
+        margin-top:60px;
+        padding-top:30px;
+        border-top:1px solid $border;
+        &:first-child {
+            margin-top:0;
+            padding-top:0;
+            border-top:none;
+        }
+        .tit {
+            margin-bottom:35px;
             font-size:20px;
             font-weight:500;
-            span {
-                width:68px;
-                margin-left:90px;
-                text-align:center;
-            }
-            span:first-child {
-                margin-right:auto;
-                margin-left:0;
-                width:auto;
-                text-align:left;
+        }
+    }
+    // 수익관리 
+    .reven-cont-box {
+        padding:10px 0;
+        .tit {
+            font-size:18px;
+            font-weight:500;
+            em {
+                margin-left:4px;
+                color:$point;
+                font-weight:700;
             }
         }
-        ul.lists {
-            margin-top:35px;
+        .infos {
+            margin-top:10px;
+            font-size:0;
+            line-height:1;
             li {
-                display:flex;
-                align-items:center;
-                margin-top:30px;
-                p {
-                    margin-right:auto;
-                    font-size:18px;
+                display:inline-block;
+                vertical-align:top;
+                color:$cont;
+                font-size:15px;
+                line-height:20px;
+                &::after {
+                    content:' ';
+                    display:inline-block;
+                    vertical-align:top;
+                    width:1px;
+                    height:10px;
+                    margin:5px 10px 0;
+                    background:$cont;
                 }
-                .chk-switch {
-                    margin-left:90px;
+                &:last-child::after {
+                    display:none;
                 }
             }
+        }
+        .btn.btn-sm {
+            margin-top:15px;
+            color:$basic;
         }
     }
 }

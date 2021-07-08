@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my05 : '01',
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">보유 캐시</h3>
+                <div class="my-cash-wrap">
+                    <div class="box total">
+                        <p class="tit">보유중인 가우로 캐시</p>
+                        <p class="cash"><em>000,000</em>원</p>
+                    </div>
+                    <div class="box">
+                        <p class="tit">충전 캐시</p>
+                        <p class="cash"><em>000,000</em>원</p>
+                    </div>
+                    <div class="box">
+                        <p class="tit">적립금</p>
+                        <p class="cash"><em>000,000</em>원</p>
+                    </div>
+                </div>
+                <div class="my-search-wrap auto">
+                    <input type="text" class="form-control datepicker" placeholder="날짜를 입력하세요" aria-label="검색 시작 날짜 입력">
+                    <span class="bar">~</span>
+                    <input type="text" class="form-control datepicker" placeholder="날짜를 입력하세요" aria-label="검색 종료 날짜 입력">
+                    <button type="button" class="btn btn-point"><span>검색</span></button>
+                </div>
+                <div class="tbl-wrap">
+                    <p class="tbl-desc">30일 이내 만료 예정 <em>0</em>원</p>
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col>
+                            <col style="width:150px">
+                            <col style="width:170px">
+                            <col style="width:140px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구매상품</th>
+                                <th scope="col">가격</th>
+                                <th scope="col">구매일</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">상품명 노출</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00 00:00</td>
+                                <td><span class="text-cont">취소</span></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">상품명 노출</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00 00:00</td>
+                                <td><span class="text-basic">취소완료</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <p class="nodata">내역이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                @@include('./modules/pagination.html')
+                <div class="alert-text-wrap">
+                    <p class="tit">가우로(KAWOO LAW) 캐시안내</p>
+                    <p class="desc">가우로(KAWOO LAW) 캐시는 충전캐시와 적립캐시가 있습니다.</p>
+                    <dl class="dl-list num-type">
+                        <dt>충전캐시</dt>
+                        <dd><span>①</span>회원이 직접 충전했거나 주문이 취소된 후 예치된 캐시입니다.</dd>
+                        <dd><span>②</span>유효기간은 충전일(결제일)로부터 5년이며, 서비스 구매 시 유효기간 만료일이 가까운 순서대로 사용됩니다.</dd>
+                        <dd><span>③</span>충전캐시는 전액 환불만 가능합니다.</dd>
+                    </dl>
+                    <dl class="dl-list num-type">
+                        <dt>적립캐시</dt>
+                        <dd><span>①</span>각종 이벤트 참여 등에 따른 리워드로 적립된 캐시입니다.</dd>
+                        <dd><span>②</span>프로모션 성격에 따라 유효기간이 다를 수 있으며, 별도의 화면에 고지합니다.</dd>
+                        <dd><span>③</span>적립캐시는 서비스 구매 시 유효기간 만료일이 가까운 순서대로 사용됩니다.</dd>
+                        <dd><span>④</span>단, 가우로(KAWOO LAW)캐시 충전 시 지급된 적립캐시의 경우 충전캐시가 모두 소진된 이후 사용됩니다.</dd>
+                        <dd><span>⑤</span>적립캐시는 비현금성으로 환불되지 않습니다.</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

@@ -13,25 +13,24 @@
         <!-- // header -->
 
         <!-- contents -->
-        <div id="contents" class="contents">
-            @@include('./layout/page-title.html', {
-                cate05 : '05'
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my03 : true,
             })
 
-            <!-- page contents -->
-            <div class="page-contents type2">
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">1:1 문의하기</h3>
                 @@include('./modules/input-table.html', {
-                    agree : true,
                     sub0505 : true,
+                    agree : true
                 })
-
                 <div class="btn-group">
-                    <button type="button" class="btn btn-lg btn-border-point"><span>취소</span></button>
-                    <!-- <button type="button" class="btn btn-lg btn-point"><span>문의 등록</span></button> -->
-                    <a href="sub_05_05_comp.html" class="btn btn-lg btn-point"><span>문의 등록</span></a>
+                    <a href="/page/mypage_03.html" class="btn btn-lg btn-border-point"><span>취소</span></a>
+                    <button type="button" class="btn btn-lg btn-point"><span>문의 등록</span></button>
                 </div>
             </div>
-            <!-- // page contents -->
+            <!-- // mypage page contents -->
         </div>
         <!-- // contents -->
 
@@ -39,8 +38,5 @@
         @@include('./layout/footer.html')
         <!-- // footer -->
     </div>
-    <script>
-        accordion();
-    </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my03 : true,
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">내 문의글 답변</h3>
+                <div class="qna-wrap">
+                    <div class="qst-title my">
+                        <p class="tit">내 질문 제목이 들어감</p>
+                        <p class="date"><span class="blind">작성일</span>2021.00.00</p>
+                    </div>
+                    <div class="qst-title answer">
+                        <p class="tit">내 질문 답변 제목이 들어감</p>
+                        <p class="date"><span class="blind">작성일</span>2021.00.00</p>
+                    </div>
+                    <div class="qst-cont">
+                        내 질문 답변 내용이 들어감<br>
+                        내 질문 답변 내용이 들어감<br>
+                        내 질문 답변 내용이 들어감<br>
+                        내 질문 답변 내용이 들어감
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="/page/mypage_03.html" class="btn btn-lg btn-border-point"><span>목록</span></a>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

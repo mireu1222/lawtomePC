@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my09 : true,
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">수익관리</h3>
+                <div class="reven-box">
+                    <div class="reven-left">
+                        <dl class="total">
+                            <dt>출금가능 수익금</dt>
+                            <dd><em>330,000</em>원</dd>
+                        </dl>
+                    </div>
+                    <div class="reven-right">
+                        <dl>
+                            <dt>예상 수익금</dt>
+                            <dd><em>550,000</em>원</dd>
+                        </dl>
+                        <dl>
+                            <dt>출금 완료 수익금</dt>
+                            <dd><em>1,130,000</em>원</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="button-tabs type2">
+                    <ul class="tabs" data-toggle="class-toggle">
+                        <li class="active"><a href="#n">수익금 내역</a></li>
+                        <li><a href="#n">출금내역</a></li>
+                        <li><a href="#n">월별 수수료 세금계산서</a></li>
+                    </ul>
+                    <a href="" class="link-cont">업무대행 수수료가 궁금하세요?</a>
+                </div>
+                <!-- 수익금 내역 table -->
+                <div class="tbl-wrap">
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col>
+                            <col style="width:100px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">내용</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">
+                                    <div class="reven-cont-box">
+                                        <p class="tit">수익금 <em>00,000</em>원</p>
+                                        <ul class="infos">
+                                            <li>#20210000</li>
+                                            <li>업무대행일 : 2021.00.00 00:00</li>
+                                            <li>실거래금액 : 000,000원</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span class="text-basic">완료</span></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">
+                                    <div class="reven-cont-box">
+                                        <p class="tit">수익금 <em>00,000</em>원</p>
+                                        <ul class="infos">
+                                            <li>#20210000</li>
+                                            <li>업무대행일 : 2021.00.00 00:00</li>
+                                            <li>실거래금액 : 000,000원</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span class="text-gray">취소</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <p class="nodata">내역이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 수익금 내역 table -->
+                <!-- 출금 내역 table -->
+                <div class="tbl-wrap" style="display:none;">
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col>
+                            <col style="width:100px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">내용</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">
+                                    <div class="reven-cont-box">
+                                        <p class="tit">출금액 <em>00,000</em>원</p>
+                                        <ul class="infos">
+                                            <li>출금일 : 2021.00.00 00:00</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span class="text-basic">출금완료</span></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">
+                                    <div class="reven-cont-box">
+                                        <p class="tit">출금액 <em>00,000</em>원</p>
+                                        <ul class="infos">
+                                            <li>출금일 : 2021.00.00 00:00</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span class="text-gray">출금요청</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <p class="nodata">내역이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 출금 내역 table -->
+                <!-- 월별 수수료 세금계산서 table -->
+                <div class="tbl-wrap" style="display:none;">
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col>
+                            <col style="width:130px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">내용</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">
+                                    <div class="reven-cont-box">
+                                        <p class="tit">세금계산서 발행 금액 <em>000,000</em>원<small>(VAT포함)</small></p>
+                                        <ul class="infos">
+                                            <li>업무대행금액 : 0,000,000원</li>
+                                            <li>수익금 : 0,000,000원</li>
+                                            <li>세금계산서 작성일자(지급확정일) 2021.00.00</li>
+                                        </ul>
+                                        <a href="" class="btn btn-sm btn-border"><span>상세내역보기 +</span></a>
+                                    </div>
+                                </td>
+                                <td><span class="text-basic">2021년 00월</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <p class="nodata">내역이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 월별 수수료 세금계산서 table -->
+                @@include('./modules/pagination.html')
+                <div class="alert-text-wrap">
+                    <p class="tit">꼭 확인해 주세요!</p>
+                    <ul class="bullet-list dot-type">
+                        <li>할인 쿠폰을 적용해서 구매한 당사자에게는 쿠폰 금액 제외한 금액으로 세금계산서를 발행해야 합니다.</li>
+                        <li>플랫폼이 전문가에게 할인된 쿠폰 금액에 대해 보전하여 수익금으로 정산하기 때문에 매출 신고 시에는 전체 판매 금액으로 신고해야 합니다.<br>(적립캐시 사용은 할인쿠폰 적용과 무관하니 일반 거래건과 동일하게 진행해주시길 바랍니다.)</li>
+                    </ul>
+                    <p class="tit">매출신고 방법 안내</p>
+                    <ul class="bullet-list dot-type">
+                        <li>플랫폼은 전문가의 매출 신고방법을 따로 안내해 드리지 않으며 매출 신고와 관련된 문의사항은 국세청이나 세무사무실에 문의바랍니다.</li>
+                        <li>월별 출금내역은 세무 신고 시의 참고이며 반드시 귀사의 회계자료와 비교 후 처리하시기 바랍니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script>
+        $(function(){
+            $('.charge-slt input[type=radio]').change(function(){
+                var slt = $(this);
+                var price = slt.data('price');
+                function addComma(num){
+                    var regexp = /\B(?=(\d{3})+(?!\d))/g;
+                    return num.toString().replace(regexp, ',');
+                }
+                var addPrice = addComma(price+'0000');
+    
+                var topTg = $('.charge-wraps .info-title .price em');
+                var btnTg = $('.charge-wraps .btn-price-target span em');
+    
+                topTg.text(addPrice);
+                btnTg.text(price+'만원');
+            });
+        });
+    </script>
+</body>
+</html>

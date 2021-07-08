@@ -44,7 +44,7 @@
 // bullet list
 .bullet-list {
     li {
-        margin-top:3px;
+        margin-top:5px;
         padding-left:20px;
         color:$cont;
         font-size:15px;
@@ -64,6 +64,19 @@
             vertical-align:top;
             font-size:0.8em;
             line-height:1;
+        }
+    }
+    &.dot-type {
+        li {
+            padding-left:10px;
+            &::before {
+                content:' ';
+                width:4px;
+                height:4px;
+                margin:9px 6px 0 -10px;
+                border-radius:50%;
+                background:$cont;
+            }
         }
     }
 }

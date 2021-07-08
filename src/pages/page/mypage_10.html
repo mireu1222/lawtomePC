@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my10 : true,
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">비밀번호 변경</h3>
+                <div class="mypage-sections">
+                    <div class="sect">
+                        <form action="">
+                            <div class="password-box">
+                                <p class="tit">현재 비밀번호</p>
+                                <div class="row-form-wrap">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="tit">사용 중인 비밀번호를 입력</p>
+                                            <div class="forms">
+                                                <input type="text" class="form-control" aria-label="사용중인 비밀번호 입력" placeholder="현재 비밀번호를 입력하세요">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="password-box">
+                                <p class="tit">변경 비밀번호</p>
+                                <div class="row-form-wrap">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="tit">변경할 비밀번호 입력</p>
+                                            <div class="forms">
+                                                <input type="text" class="form-control" aria-label="변경할 비밀번호 입력" placeholder="변경할 비밀번호를 입력하세요">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="tit">변경할 비밀번호 확인</p>
+                                            <div class="forms">
+                                                <input type="text" class="form-control" aria-label="변경할 비밀번호 재입력" placeholder="변경할 비밀번호를 한번 더 입력하세요">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-border-point"><span>취소</span></button>
+                        <button type="button" class="btn btn-lg btn-point"><span>변경 완료</span></button>
+                      </div>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

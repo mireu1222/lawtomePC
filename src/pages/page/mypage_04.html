@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my04 : true,
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">나의 결제내역</h3>
+                <div class="my-search-wrap">
+                    <input type="text" class="form-control datepicker" placeholder="날짜를 입력하세요" aria-label="검색 시작 날짜 입력">
+                    <span class="bar">~</span>
+                    <input type="text" class="form-control datepicker" placeholder="날짜를 입력하세요" aria-label="검색 종료 날짜 입력">
+                    <input type="text" class="form-control ml-10" placeholder="검색어를 입력하세요" aria-label="검색어 입력">
+                    <button type="button" class="btn btn-point"><span>검색</span></button>
+                </div>
+                <div class="tbl-wrap">
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col>
+                            <col style="width:150px">
+                            <col style="width:170px">
+                            <col style="width:140px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구매상품</th>
+                                <th scope="col">가격</th>
+                                <th scope="col">구매일</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">상품명 노출</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00 00:00</td>
+                                <td><span class="text-cont">취소</span></td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td class="align-left">상품명 노출</td>
+                                <td>00,000원</td>
+                                <td>2021.00.00 00:00</td>
+                                <td><span class="text-basic">취소완료</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <p class="nodata">내역이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                @@include('./modules/pagination.html')
+                <div class="alert-text-wrap">
+                    <p class="tit">꼭 확인해 주세요!</p>
+                    <ul class="bullet-list dot-type">
+                        <li>세금계산서는 거래 주체인 변호사 또는 법률사무소가 당사자에게 발행합니다.</li>
+                        <li>세금계산서는 법률사무소에게 요청하실 수 있습니다.</li>
+                        <li>이벤트 쿠폰 사용 금액은 할인된 금액이기 때문에 세금계산서에 포함되지 않습니다.</li>
+                        <li>거래명세서는 결제가 완료되었음을 증명하는 용도로만 활용 가능하며 세무상의 지출증빙 효력이 없습니다.</li>
+                        <li>현금영수증은 개인의 소득공제용으로만 사용 가능하며, 결제 당시 지출 증빙용으로 선택하셨더라도 매입세액공제를 받으실 수 없습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

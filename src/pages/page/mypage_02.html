@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my02 : true,
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <div class="mypage-sections">
+                    <section class="sect">
+                        <h3 class="sect-title">자기소개</h3>
+                        <div class="row-form-wrap">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit">제목</p>
+                                    <div class="forms">
+                                        <input type="text" class="form-control" aria-label="제목 입력" placeholder="제목을 입력하세요">
+                                    </div>
+                                    <div class="forms">
+                                        <textarea class="form-control" aria-label="내용 입력"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-lg btn-border-point"><span>작성취소</span></button>
+                        <button type="button" class="btn btn-lg btn-point"><span>작성완료</span></button>
+                    </div>
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

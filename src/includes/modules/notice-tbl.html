@@ -2,12 +2,24 @@
     @@if(context.total) {
     <p class="tbl-count">전체 <em>(6)</em></p>
     }
-    <table class="table notice-table">
+    @@if(context.mypage){
+        <div class="tbl-buttons">
+            <a href="/page/mypage_03_edit.html" class="btn btn-point"><span>1:1 문의하기</span></a>
+            <button type="button" class="btn btn-basic" disabled><span>선택 삭제</span></button><!-- '선택' 시 disabled 삭제 -->
+        </div>
+    }
+    <table class="table notice-table"@@if(context.mypage){ data-toggle="allChk"}>
         <colgroup>
             @@if(context.notice || context.comm){
                 <col class="col1">
                 <col>
                 <col class="col2">
+            }
+            @@if(context.mypage){
+                <col style="width:80px;">
+                <col>
+                <col style="width:120px;">
+                <col style="width:130px;">
             }
         </colgroup>
         @@if(context.notice || context.comm){
@@ -18,6 +30,21 @@
                 <th scope="col">등록일</th>
             </tr>
         </thead>
+        }
+        @@if(context.mypage){
+        <thead>
+            <tr>
+                <th scope="col">
+                    <span class="chk-wrap icon-only">
+                        <input type="checkbox" id="chk-all" class="chk-all" name="chk-list">
+                        <label for="chk-all"><span class="blind">전체선택</span></label>
+                    </span>
+                </th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성일</th>
+            </tr>
+        </thead>    
         }
         @@if(context.notice){
         <tbody>
@@ -137,6 +164,75 @@
             </tr>
             <!-- // nodata -->
         </tbody>
+        }
+        @@if(context.mypage){
+        <tbody>
+            <!-- 공지글 case -->
+            <tr>
+                <td><span class="text-flag text-flag-lg text-flag-point">[공지]</span></td>
+                <td class="align-left">
+                    <a href="" class="link-basic">
+                        <span>제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.</span>
+                    </a>
+                </td>
+                <td>운영자</td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 공지글 case -->
+            <!-- 내 질문 -->
+            <tr>
+                <td>
+                    <span class="chk-wrap icon-only">
+                        <input type="checkbox" id="chk-list-01" name="chk-list">
+                        <label for="chk-list-01"><span class="blind">선택</span></label>
+                    </span>
+                </td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic">
+                        <span>내 질문 제목이 들어감</span>
+                    </a>
+                </td>
+                <td>내이름</td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 내 질문 -->
+            <!-- 답변 -->
+            <tr class="answer">
+                <td>&nbsp;</td>
+                <td class="align-left">
+                    <a href="/page/@@page2.html" class="link-basic">
+                        <span>질문에 대한 답변 제목이 들어감</span>
+                    </a>
+                </td>
+                <td>매니저</td>
+                <td>2021.00.00</td>
+            </tr>
+            <!-- // 답변 -->
+            <!-- 내 질문 -->
+            <tr>
+                <td>
+                    <span class="chk-wrap icon-only">
+                        <input type="checkbox" id="chk-list-02" name="chk-list">
+                        <label for="chk-list-02"><span class="blind">선택</span></label>
+                    </span>
+                </td>
+                <td class="align-left">
+                    <a href="/page/@@page.html" class="link-basic">
+                        <span>내 질문 제목이 들어감2</span>
+                    </a>
+                </td>
+                <td>내이름</td>
+                <td>2021.01.01</td>
+            </tr>
+            <!-- // 내 질문 -->
+            <!-- nodata -->
+            <tr>
+                <td colspan="4">
+                    <p class="nodata">게시글이 없습니다.</p>
+                </td>
+            </tr>
+            <!-- // nodata -->
+        </tbody>    
         }
     </table>
     @@if(context.write){
