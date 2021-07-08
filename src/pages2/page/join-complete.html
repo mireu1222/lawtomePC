@@ -14,19 +14,15 @@
 
         <!-- contents -->
         <div id="contents" class="contents">
-            @@include('./layout/page-title.html', {
-                cate05 : '05'
-            })
-
-            <!-- page contents -->
-            <div class="page-contents type2">
+            <!-- member contents -->
+            <div class="member-contents">
                 <div class="complete-page">
-                    <h3 class="tit">문의가 성공적으로 <em>접수</em>되었습니다!</h3>
-                    <p class="desc">고객님의 문의 접수가 성공적으로 완료되었습니다.<br>빠른 답변 드리겠습니다.</p>
-                    <a href="/" class="btn btn-lg btn-point"><span>홈으로 가기</span></a>
+                    <h3 class="tit">로투미 회원가입이 <em>완료</em>되었습니다!</h3>
+                    <p class="desc">회원님의 아이디는 <em>gildong2</em>입니다.<br>이제 로투미의 다양한 서비스를 누리세요!</p>
+                    <button type="button" class="btn btn-lg btn-point" data-toggle="modal" data-target="#modal-login"><span>로그인 하기</span></button>
                 </div>
             </div>
-            <!-- // page contents -->
+            <!-- // member contents -->
         </div>
         <!-- // contents -->
 
@@ -34,8 +30,5 @@
         @@include('./layout/footer.html')
         <!-- // footer -->
     </div>
-    <script>
-        accordion();
-    </script>
 </body>
 </html>

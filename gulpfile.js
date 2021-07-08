@@ -27,6 +27,7 @@ var src = './src',
     dist = './dist',
     paths = {
         html: src + '/pages/**/*.html', // pages
+        html2: src + '/pages2/**/*.html', // pages2
         includes: src + '/includes/**/*.html', // include htmls(not pages)
         js: src + '/js/*.js',
         jsUi: src + '/js/ui/*.js', // ui min
@@ -55,6 +56,19 @@ function prettyGulp(file, enc, callback) {
 gulp.task('html', async function () {
     return gulp
         .src([paths.html], { base: src + '/pages/' })
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: src + '/includes/',
+            indent: true
+        }))
+        .pipe(through2.obj(prettyGulp))
+        .pipe(gulp.dest(dist))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('html2', async function () {
+    return gulp
+        .src([paths.html2], { base: src + '/pages2/' })
         .pipe(fileinclude({
             prefix: '@@',
             basepath: src + '/includes/',
@@ -166,7 +180,9 @@ gulp.task('browserSync', function () {
     });
 
     gulp.watch(paths.html, gulp.series('html')).on('change', browserSync.reload);
+    gulp.watch(paths.html2, gulp.series('html2')).on('change', browserSync.reload);
     gulp.watch(paths.includes, gulp.series('html')).on('change', browserSync.reload);
+    gulp.watch(paths.includes, gulp.series('html2')).on('change', browserSync.reload);
     gulp.watch(paths.scss, gulp.series('style')).on('change', browserSync.reload);
     gulp.watch(paths.scssPatials, gulp.series('style')).on('change', browserSync.reload);
     gulp.watch(paths.js, gulp.series('scripts')).on('change', browserSync.reload);
@@ -187,7 +203,7 @@ gulp.task('cleaning', async function () {
     return del.sync("./dist");
 });
 
-gulp.task('building', gulp.series(['html', 'style', 'images', 'font', 'scripts', 'scripts-ui']));
+gulp.task('building', gulp.series(['html', 'html2', 'style', 'images', 'font', 'scripts', 'scripts-ui']));
 
 gulp.task('build', gulp.series('cleaning', gulp.series('building')));
 

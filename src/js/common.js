@@ -363,7 +363,6 @@ function modalToggle() {
         modal.removeAttr('aria-hidden');
         modal.attr('aria-modal', true);
         modal.show();
-        scrollPrevent(true);
     });
 
     modalClose.on('click', function(){
@@ -372,6 +371,5 @@ function modalToggle() {
         modal.hide();
         modal.removeAttr('aria-modal');
         modal.attr('aria-hidden', true);
-        scrollPrevent(false);
     });
 }

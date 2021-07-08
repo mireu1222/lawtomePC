@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            <!-- member contents -->
+            <div class="member-contents">
+                <h2 class="member-title">비밀번호 찾기</h2>
+                <div class="find-cont-wrap">
+                    <div class="find-tabs">
+                        <ul class="tabs">
+                            <li>
+                                <a href="/page/find-id.html">아이디 찾기</a>
+                            </li>
+                            <li class="active">
+                                <a href="/page/find-pw.html">비밀번호 찾기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="find-conts">
+                        <p class="tit">회원정보 입력</p>
+                        <p class="desc">가입 시 입력한 본인정보를 입력해 주세요.</p>
+                        <div class="input-box">
+                            <ul class="radio-tabs">
+                                <li>
+                                    <span class="rdo-wrap">
+                                        <input type="radio" id="email-cert" name="certification" checked>
+                                        <label for="email-cert">이메일 인증</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="rdo-wrap">
+                                        <input type="radio" id="phone-cert" name="certification">
+                                        <label for="phone-cert">휴대폰 인증</label>
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="row-form-wrap">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit">아이디</p>
+                                        <div class="forms">
+                                            <input type="text" class="form-control" placeholder="아이디를 입력하세요" aria-label="아이디 입력">
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">아이디를 입력해주세요!</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit">성함</p>
+                                        <div class="forms">
+                                            <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="성함 입력">
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">성함을 입력해주세요!</p>
+                                </div>
+                                <div class="row target" data-id="email-cert">
+                                    <div class="col">
+                                        <p class="tit">이메일</p>
+                                        <div class="forms">
+                                            <input type="text" class="form-control" placeholder="이메일을 입력하세요" aria-label="이메일 입력">
+                                            <span class="bar">@</span>
+                                            <div class="select-wrap">
+                                                <select class="nice-select" aria-label="이메일 도메인 선택">
+                                                    <option value="" data-placeholder="true">선택하세요</option>
+                                                    <option value="">naver.com</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">이메일을 입력해주세요!</p>
+                                </div>
+                                <div class="row target" data-id="phone-cert" style="display:none;">
+                                    <div class="col">
+                                        <p class="tit">휴대폰번호</p>
+                                        <div class="forms">
+                                            <div class="select-wrap">
+                                                <select class="nice-select" aria-label="통신사 선택">
+                                                    <option value="" data-placeholder="true">선택하세요</option>
+                                                    <option value="">SKT</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" class="form-control ml-10" placeholder="`-`를 제외하고 입력하세요" aria-label="휴대폰번호 입력">
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">휴대폰번호를 입력해주세요!</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-point btn-lg full mt-50"><span>비밀번호 찾기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // member contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+
+    <script>
+        $(function(){
+            $('.radio-tabs input[type=radio]').change(function(){
+                var id = $(this).attr('id');
+
+                $('.row-form-wrap .row.target').hide();
+                $('[data-id="'+id+'"]').show();
+            });
+        });
+    </script>
+</body>
+</html>

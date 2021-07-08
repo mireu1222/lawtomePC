@@ -1,0 +1,142 @@
+/* member */
+.member-contents {
+    h2.member-title {
+        margin-bottom:60px;
+        text-align:center;
+        font-size:30px;
+        font-weight:500;
+    }
+    .sns-join-btns {
+        text-align:center;
+        .desc {
+            font-size:24px;
+        }
+        .btns {
+            width:445px;
+            margin:40px auto 0;
+            > li {
+                margin-top:20px;
+                .btn-sns {
+                    display:block;
+                    height:70px;
+                    border-radius:$border-radius;
+                    text-align:center;
+                    color:#fff;
+                    font-size:20px;
+                    line-height:70px;
+                    font-weight:500;
+                    &::before {
+                        content:' ';
+                        display:inline-block;
+                        vertical-align:top;
+                        width:40px;
+                        height:70px;
+                        margin-right:10px;
+                    }
+                    &.sns01 {
+                        background:#3dab49;
+                        &::before {
+                            background:url('/images/icon/icon-naver2.png') center no-repeat;
+                        }
+                    }
+                    &.sns02 {
+                        background:#ffe600;
+                        color:#371d1d;
+                        &::before {
+                            background:url('/images/icon/icon-kakao2.png') center no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .member-join-wrap {
+        width:750px;
+        margin:50px auto 0;
+        padding-top:40px;
+        border-top:1px solid $border;
+        > .tit {
+            margin-bottom:25px;
+            font-size:24px;
+            font-weight:500;
+            text-align:center;
+        }
+        section {
+            margin-top:50px;
+            padding:30px 25px 40px;
+            border:1px solid $border;
+            border-radius:$border-radius;
+            &:first-child {
+                margin-top:0;
+            }
+        }
+        .agree-wraps {
+            .chk-wrap.all {
+                display:block;
+                padding-bottom:20px;
+                border-bottom:1px solid $border;
+            }
+            .terms-lists {
+                > li {
+                    margin-top:30px;
+                    &:first-child {
+                        margin-top:20px;
+                    }
+                    .titles {
+                        display:flex;
+                        align-items:center;
+                        .text-basic {
+                            margin-left:auto;
+                            font-size:18px;
+                        }
+                    }
+                    .conts {
+                        display:none;
+                        max-height:180px;
+                        overflow-y:auto;
+                        margin:15px -26px 0;
+                        padding:20px 26px;
+                        background:$disabled;
+                        color:$cont;
+                        @include font;
+                    }
+                }
+            }
+        }
+        .btn-group {
+            .btn {
+                width:440px;
+            }
+        }
+    }
+    .find-cont-wrap {
+        width:500px;
+        margin:0 auto;
+        .radio-tabs {
+            margin-bottom:30px;
+            font-size:0;
+            text-align:center;
+            li {
+                display:inline-block;
+                vertical-align:top;
+                margin-right:40px;
+            }
+        }
+        .find-conts {
+            padding-top:50px;
+            > .tit {
+                font-size:20px;
+            }
+            .desc {
+                margin-top:15px;
+                font-size:16px;
+            }
+            .input-box {
+                margin-top:50px;
+                padding:30px 25px 50px;
+                border:1px solid $border;
+                border-radius:$border-radius;
+            }
+        }
+    }
+}

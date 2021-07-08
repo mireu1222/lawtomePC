@@ -18,13 +18,34 @@
             max-width:1239px;
         }
     }
+    &.login {
+        .modal-wrap {
+            max-width:1100px;
+            .modal-container {
+                border:none;
+                border-radius:30px;
+                overflow:hidden;
+            }
+        }
+    }
+    &.sitemap {
+        .modal-wrap {
+            max-width:1200px;
+            .modal-container {
+                border:none;
+                border-radius:0;
+                overflow:hidden;
+            }
+        }
+    }
     .modal-wrap {
         display:flex;
         align-items:center;
         width:auto;
         max-width:750px;
-        height:calc(100% - 140px);
-        margin:70px auto;
+        height:calc(100% - 60px);
+        margin:30px auto;
+        overflow-y:auto;
         .modal-container {
             display:flex;
             flex-direction:column;
@@ -85,6 +106,228 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+            .modal-login {
+                position:relative;
+                display:flex;
+                > div {
+                    width:550px;
+                    padding:60px;
+                }
+                .hello {
+                    display:flex;
+                    flex-direction:column;
+                    background:url('/images/bg/bg-login.jpg') center no-repeat;
+                    background-size:cover;
+                    .tit {
+                        color:#fff;
+                        font-size:42px;
+                        font-weight:400;
+                        line-height:55px;
+                        word-break:keep-all;
+                        em {
+                            font-weight:700;
+                        }
+                    }
+                    .desc {
+                        color:#fff;
+                        margin-top:30px;
+                        font-size:32px;
+                        em {
+                            font-weight:500;
+                        }
+                    }
+                    .bottom {
+                        margin-top:auto;
+                        color:#fff;
+                        font-size:18px;
+                        line-height:30px;
+                    }
+                }
+                .logins {
+                    h2.tit {
+                        margin-bottom:20px;
+                        font-size:26px;
+                        font-weight:500;
+                    }
+                    .login-forms {
+                        > li {
+                            margin-top:15px;
+                            &:first-child {
+                                margin-top:0;
+                            }
+                            .form-control {
+                                background:#fff;
+                            }
+                        }
+                    }
+                    .btn-login {
+                        display:block;
+                        width:100%;
+                        margin-top:30px;
+                    }
+                    .login-bottom {
+                        display:flex;
+                        align-items:center;
+                        margin-top:30px;
+                        .chk-wrap {
+                            margin-right:auto;
+                            input + label {
+                                font-size:16px;
+                            }
+                        }
+                        .find-btn {
+                            display:block;
+                            margin-left:15px;
+                            font-size:16px;
+                            line-height:1;
+                        }
+                    }
+                    .sns-logins {
+                        margin-top:60px;
+                        .tit {
+                            font-size:18px;
+                            text-align:center;
+                        }
+                        .btns {
+                            margin-top:20px;
+                            text-align:center;
+                            font-size:0;
+                            li {
+                                display:inline-block;
+                                vertical-align:top;
+                                margin:0 25px;
+                                .btn-sns {
+                                    display:block;
+                                    width:70px;
+                                    height:70px;
+                                    border:1px solid $border;
+                                    border-radius:50%;
+                                    &.sns01 {
+                                        background:url('/images/icon/icon-naver.png') center no-repeat;
+                                    }
+                                    &.sns02 {
+                                        background:url('/images/icon/icon-kakao.png') center no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .joins {
+                        margin-top:30px;
+                        padding-top:25px;
+                        border-top:1px solid $border;
+                        .tit {
+                            text-align:center;
+                            font-size:18px;
+                            line-height:26px;
+                        }
+                        .btn {
+                            display:block;
+                            width:100%;
+                            margin-top:30px;
+                        }
+                    }
+                }
+                .btn-close {
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    width:50px;
+                    height:50px;
+                    &::before,
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        left:12px;
+                        bottom:0;
+                        width:2px;
+                        height:26px;
+                        background:#666;
+                    }
+                    &::before {
+                        transform:rotate(45deg);
+                    }
+                    &::after {
+                        transform:rotate(-45deg);
+                    }
+                }
+            }
+            .modal-sitemap {
+                position:relative;
+                padding:100px 50px;
+                > nav {
+                    > ul {
+                        display:flex;
+                        align-items:flex-start;
+                        > li {
+                            flex:1;
+                            &:hover {
+                                a.dep1 {
+                                    color:$point;
+                                }
+                            }
+                            a.dep1 {
+                                position:relative;
+                                display:inline-block;
+                                padding-bottom:25px;
+                                font-size:20px;
+                                font-weight:500;
+                                &::after {
+                                    content:' ';
+                                    position:absolute;
+                                    left:0;
+                                    bottom:0;
+                                    width:25px;
+                                    height:2px;
+                                    background:$point;
+                                }
+                            }
+                            .depth2 {
+                                margin-top:25px;
+                                > ul {
+                                    > li {
+                                        margin-top:20px;
+                                        &:first-child {
+                                            margin-top:0;
+                                        }
+                                        a {
+                                            display:inline-block;
+                                            font-size:16px;
+                                            &:hover {
+                                                color:$point;
+                                                text-decoration:underline;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn-close {
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    width:50px;
+                    height:50px;
+                    &::before,
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        left:12px;
+                        bottom:0;
+                        width:2px;
+                        height:26px;
+                        background:#666;
+                    }
+                    &::before {
+                        transform:rotate(45deg);
+                    }
+                    &::after {
+                        transform:rotate(-45deg);
                     }
                 }
             }

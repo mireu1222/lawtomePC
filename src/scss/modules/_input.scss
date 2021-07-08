@@ -34,14 +34,6 @@
         background-position:right 19px center;
     }
 }
-input[type=password].form-control {
-    font-family:sans-serif;
-    &::placeholder,
-    &::-webkit-input-placeholder {
-        font-family:$font-family-square;
-        transform:translateY(-2px);
-    }
-}
 textarea.form-control {
     resize:none;
     height:180px;

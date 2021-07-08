@@ -156,7 +156,8 @@
         }
     }
     .complete-page {
-        padding-top:100px;
+        padding-top:20px;
+        padding-bottom:50px;
         text-align:center;
         &::before {
             content:' ';
@@ -176,6 +177,9 @@
             margin-top:30px;
             font-size:18px;
             line-height:30px;
+            em {
+                color:$point;
+            }
         }
         .btn {
             display:block;

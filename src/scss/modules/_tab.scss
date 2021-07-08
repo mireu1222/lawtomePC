@@ -97,3 +97,40 @@
         }
     }
 }
+
+.find-tabs {
+    position:relative;
+    &::before {
+        content:' ';
+        position:absolute;
+        left:0;
+        bottom:0;
+        right:0;
+        height:1px;
+        background:$border;
+    }
+    ul.tabs {
+        font-size:0;
+        li {
+            position:relative;
+            display:inline-block;
+            vertical-align:top;
+            width:50%;
+            a {
+                display:block;
+                padding-bottom:12px;
+                border-bottom:2px solid transparent;
+                text-align:center;
+                font-size:20px;
+                color:$gray;
+            }
+            &.active {
+                a {
+                    border-color:$point;
+                    color:$point;
+                    font-weight:500;
+                }
+            }
+        }
+    }
+}
