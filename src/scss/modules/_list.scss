@@ -287,11 +287,17 @@
             word-break:keep-all;
         }
         .spot-info {
-            display:flex;
-            align-items:flex-start;
             margin-top:25px;
             margin-bottom:50px;
-            @include font;
+            dl {
+                display:flex;
+                align-items:flex-start;
+                margin-top:10px;
+                @include font;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
             dt {
                 font-weight:500;
                 white-space:nowrap;

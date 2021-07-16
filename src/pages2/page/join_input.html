@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            <!-- member contents -->
+            <div class="member-contents">
+                <h2 class="member-title">LawToMe</h2>
+                <div class="member-join-wrap">
+                    <h3 class="tit">로투미 회원가입</h3>
+                    <form action="">
+                        <section>
+                            <div class="row-form-wrap">
+                                <div class="form-title">
+                                    <p class="tit">회원가입하고 다양한 혜택을 누리세요!</p>
+                                    <p class="essen-txt" aria-hidden="true">필수 입력 정보입니다.</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit essen">소속<span class="blind">필수입력</span></p>
+                                        <div class="forms">
+                                            <div class="slt-lists mix" data-toggle="writable">
+                                                <ul>
+                                                    <li>
+                                                        <span class="rdo-wrap">
+                                                            <input type="radio" id="belong01" name="belongs" checked>
+                                                            <label for="belong01">개인변호사</label>
+                                                        </span>
+                                                    </li>
+                                                    <li class="mix">
+                                                        <span class="rdo-wrap">
+                                                            <input type="radio" id="belong02" name="belongs">
+                                                            <label for="belong02">법률사무소</label>
+                                                        </span>
+                                                        <input type="text" class="form-control" placeholder="법률사무소명을 입력하세요" aria-label="법률사무소명 입력" data-writable-target="input" disabled>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">법률사무소명을 정확하게 입력해 주세요!</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit essen">변호사등록번호<span class="blind">필수입력</span></p>
+                                        <div class="forms">
+                                            <input type="text" class="form-control" placeholder="변호사등록번호를 입력하세요" aria-label="변호사등록번호 입력">
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">변호사등록번호를 입력해 주세요!</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit essen">성함<span class="blind">필수입력</span></p>
+                                        <div class="forms">
+                                            <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="성함 입력">
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">성함을 입력해 주세요!</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit essen">아이디<span class="blind">필수입력</span></p>
+                                        <div class="forms">
+                                            <input type="text" class="form-control" placeholder="아이디를 입력하세요" aria-label="아이디 입력">
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">아이디를 입력해 주세요!</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit essen">비밀번호<span class="blind">필수입력</span></p>
+                                        <div class="forms password-type">
+                                            <input type="password" class="form-control" placeholder="비밀번호(6~16자의 영문, 숫자, 특수기호 포함)를 입력하세요" aria-label="비밀번호(6~16자의 영문, 숫자, 특수기호 포함) 입력">
+                                            <button type="button" class="password-view off"><span class="blind">비밀번호 입력 보이기</span></button>
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">사용불가(안전도 등급 매우 약함)</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit essen">이메일<span class="blind">필수입력</span></p>
+                                        <div class="forms">
+                                            <input type="text" class="form-control" placeholder="이메일을 입력하세요" aria-label="이메일 입력">
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">이메일을 입력해 주세요!</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit essen">업무가능지역<span class="blind">필수입력</span></p>
+                                        <div class="forms">
+                                            @@include('./modules/slt-list.html', {
+                                                size : 'col4', 
+                                                chk : 'area',
+                                                slt : [
+                                                    '서울', '경기', '인천', '대전', '대구', '부산', '광주', '충청도', '전라도', '경상도', '강원도', '제주도' 
+                                                ]
+                                            })
+                                        </div>
+                                    </div>
+                                    <p class="alert-txt">업무가능지역을 하나 이상 선택해 주세요!</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="tit">전문분야</p>
+                                        <div class="forms">
+                                            <div class="text-box">민사법, 부동산, 건설</div>
+                                            <a href="" class="btn btn-point absolute"><span>분야선택</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="agree-wraps" data-toggle="allChk">
+                                <span class="chk-wrap all">
+                                    <input type="checkbox" id="agree-all" class="chk-all" name="terms-agree">
+                                    <label for="agree-all">모두 동의합니다.</label>
+                                </span>
+                                <ul class="terms-lists">
+                                    <li>
+                                        <div class="titles">
+                                            <span class="chk-wrap">
+                                                <input type="checkbox" id="terms01" name="terms-agree">
+                                                <label for="terms01">[필수] 이용약관 동의</label>
+                                            </span>
+                                            <button type="button" class="text-basic"><span>보기</span></button>
+                                        </div>
+                                        <div class="conts">
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="titles">
+                                            <span class="chk-wrap">
+                                                <input type="checkbox" id="terms02" name="terms-agree">
+                                                <label for="terms02">[필수] 개인정보 수집 및 이용 동의</label>
+                                            </span>
+                                            <button type="button" class="text-basic"><span>보기</span></button>
+                                        </div>
+                                        <div class="conts">
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="titles">
+                                            <span class="chk-wrap">
+                                                <input type="checkbox" id="terms03" name="terms-agree">
+                                                <label for="terms03">[선택] 마케팅 정보 이메일 수신 동의</label>
+                                            </span>
+                                        </div>
+                                        <div class="conts">
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="titles">
+                                            <span class="chk-wrap">
+                                                <input type="checkbox" id="terms04" name="terms-agree">
+                                                <label for="terms04">[선택] 마케팅 정보 SMS 수신 동의</label>
+                                            </span>
+                                        </div>
+                                        <div class="conts">
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감<br>
+                                            이용약관 내용이 들어감
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div class="btn-group">
+                            <a href="/page/join-complete.html" class="btn btn-lg btn-point"><span>로투미 회원 가입하기</span></a>
+                            <!-- <button type="button" class="btn btn-lg btn-point"><span>로투미 회원 가입하기</span></button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- // member contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <script>
+        $(function(){
+            // 약관 '보기'
+            $('.terms-lists .text-basic').click(function(){
+                var btn = $(this);
+                var txt = btn.find('span');
+                var target = btn.closest('.titles').siblings('.conts');
+
+                if ( btn.hasClass('open') ){
+                    btn.removeClass('open');
+                    txt.text('보기');
+                    target.slideUp();
+                } else {
+                    btn.addClass('open');
+                    txt.text('닫기');
+                    target.slideDown();
+                }
+            });
+
+            // 비밀번호 입력 보이기
+            $('.password-view').click(function() {
+                var btn = $(this);
+                var passwordInput = btn.siblings('input.form-control');
+
+                if (btn.hasClass('off')){
+                    passwordInput.attr('type', 'text');
+                    btn.removeClass('off');
+                    btn.addClass('on');
+                } else if (btn.hasClass('on')) {
+                    passwordInput.attr('type', 'password');
+                    btn.removeClass('on');
+                    btn.addClass('off');
+                }
+            });
+
+            writableGroup();
+        });
+    </script>
+</body>
+</html>

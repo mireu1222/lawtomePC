@@ -36,6 +36,9 @@
                         <li><a href="#n">제주도</a></li>
                     </ul>
                 </div>
+                @@include('./modules/list-filter.html', {
+                    type2 : true
+                })
                 <div class="lawyerlist-wrap">
                     <ul class="lists">
                         @@loop('./modules/lawyer-loop.html', [

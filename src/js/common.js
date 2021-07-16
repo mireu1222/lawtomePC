@@ -275,7 +275,7 @@ function categoryToggle() {
         }
     });
 
-    $('[data-toggle="category-collapse"] input#cate01').click();
+    $('[data-toggle="category-collapse"] input#cate05').click();
 }
 
 // rdo select writable 

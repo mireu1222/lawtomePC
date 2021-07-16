@@ -1,7 +1,12 @@
-<div class="list-filter">
+<div class="list-filter@@if(context.type2){ type2}">
     <div class="search-wrap">
         <span class="input-wrap">
-            <input type="text" class="form-control" placeholder="검색어를 입력하세요." title="검색어를 입력하세요.">
+            @@if(!context.type2){
+                <input type="text" class="form-control" placeholder="검색어를 입력하세요." title="검색어를 입력하세요.">
+            }
+            @@if(context.type2){
+                <input type="text" class="form-control" placeholder="변호사명, 전문분야명을 입력하세요." title="변호사명, 전문분야명 검색어 입력">
+            }
         </span>
         <button type="submit" class="btn-search"><span class="blind">검색</span></button>
     </div>
