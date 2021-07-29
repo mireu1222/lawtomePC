@@ -91,16 +91,16 @@
                     <!-- category -->
                     <div class="button-tabs" data-toggle="category-collapse">
                         <ul class="tabs">
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate01" name="category" data-visible-target="row1, row2, row3, row4, row5, row6"><label for="cate01">복대리</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate02" name="category" data-visible-target="row3, row7, row8, row9, row10, row11, row12, row13"><label for="cate02">기록등사</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate03" name="category" data-visible-target="row2, row3, row6, row14, row15"><label for="cate03">조사참여</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate04" name="category" data-visible-target="row2, row3, row6, row16, row17"><label for="cate04">접견</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate05" name="category" data-visible-target="row6, row8, row18, row19, row20"><label for="cate05">서면작성</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate06" name="category" data-visible-target="row6, row8, row19, row21"><label for="cate06">계약서</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate07" name="category" data-visible-target="row6, row8, row19, row20, row22"><label for="cate07">증명서 발급</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate08" name="category" data-visible-target=""><label for="cate08">기일, 선고 성취</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate09" name="category" data-visible-target=""><label for="cate09">법률문서 번역</label></span></li>
-                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate10" name="category" data-visible-target="row6, row8, row19, row20, row23"><label for="cate10">기타</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate05" name="category" data-visible-target="row6, row8, row18, row20, row24, row25, row00"><label for="cate05">서면작성</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate06" name="category" data-visible-target="row6, row8, row21, row26, row01, row27"><label for="cate06">계약서</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate01" name="category" data-visible-target="row1, row2, row3, row4, row5, row6, row00"><label for="cate01">복대리</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate07" name="category" data-visible-target="row1, row3, row5, row6, row8, row28, row00"><label for="cate07">공판출석</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate03" name="category" data-visible-target="row2, row3, row6, row14, row15, row00"><label for="cate03">조사참여</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate04" name="category" data-visible-target="row0, row2, row3, row6, row16, row17, row00"><label for="cate04">접견</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate02" name="category" data-visible-target="row0, row3, row7, row8, row9, row10, row11, row12, row13, row00"><label for="cate02">기록등사</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate09" name="category" data-visible-target="row6, row29, row30, row31, row01"><label for="cate09">법률문서 번역</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate08" name="category" data-visible-target="row1, row2, row3, row5, row6, row32, row00"><label for="cate08">기일, 선고 청취</label></span></li>
+                            <li><span class="rdo-btn-wrap"><input type="radio" id="cate10" name="category" data-visible-target="row6, row8, row25, row33, row00"><label for="cate10">기타</label></span></li>
                         </ul>
                     </div>
                     <!-- // category -->
@@ -110,6 +110,36 @@
                         <button type="submit" class="btn btn-lg btn-point"><span>의뢰하기</span></button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</article>
+}
+@@if(context.id === 'modal-typeselect'){
+<article id="@@id" class="modal medium" aria-hidden="true">
+    <div class="modal-wrap">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h1 class="modal-title">전문분야 선택</h1>
+                <button type="button" class="btn-close" data-toggle="modal-close"><span class="blind">팝업 닫기</span></button>
+            </div>
+            <div class="modal-body">
+                @@include('./modules/slt-list.html', {
+                    size : 'col5',
+                    chk : 'type',
+                    slt : [
+                        '가사법', '건설', '교통사고', '균형법', '도산', '등기/경매', '민사법', '민사집행', '보험', '부동산',
+                        '상사법', '소년법', '손해배상', '이혼', '임대차관련법', '재개발/재건축', '채권추심', '형사법', '공정거래', '금융',
+                        '수용 및 보상', '식품/의약', '의료', '증권', '행정법', '관세', '국가계약', '국제거래', '노동법', '무역', 
+                        '법인세', '산재', '상속', '상속증여세', '상표', '엔터테인먼트', '영업비밀', '인수합병', '저작권', '조세법', 
+                        '지적재산권법', '특허', '해외투자', '회사법', 'IT', '국제관계법', '국제조세', '국제중재', '방송통신', '스포츠',
+                        '에너지', '이주 및 비자', '조선', '종교', '중재', '해상', '헌법재판', '환경', '성년후견', '스타트업', '학교폭력', '입법'
+                    ]
+                })
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-border-point" data-toggle="modal-close"><span>취소하기</span></button>
+                    <button type="submit" class="btn btn-lg btn-point"><span>적용하기</span></button>
+                </div>
             </div>
         </div>
     </div>

@@ -31,6 +31,9 @@
     }
     &.auto li {
         padding-right:60px;
+        &.mix {
+            width:100%;
+        }
     }
     &.col4 li {
         min-width:25%;
@@ -38,6 +41,21 @@
         &.mix {
             width:100%;
         }
+    }
+    &.col5 li {
+        min-width:20%;
+        padding-right:20px;
+    }
+    &.col4mix li {
+        min-width:20%;
+        padding-right:20px;
+        &.mix {
+            width:40%;
+        }
+    }
+    &.col6 li {
+        min-width:calc(100% / 6);
+        padding-right:20px;
     }
 }
 

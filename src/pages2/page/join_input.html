@@ -105,7 +105,7 @@
                                                 size : 'col4', 
                                                 chk : 'area',
                                                 slt : [
-                                                    '서울', '경기', '인천', '대전', '대구', '부산', '광주', '충청도', '전라도', '경상도', '강원도', '제주도' 
+                                                    '서울', '경기', '인천', '대전', '대구', '부산', '울산', '광주', '충청도', '전라도', '경상도', '강원도', '제주도' 
                                                 ]
                                             })
                                         </div>
@@ -117,7 +117,7 @@
                                         <p class="tit">전문분야</p>
                                         <div class="forms">
                                             <div class="text-box">민사법, 부동산, 건설</div>
-                                            <a href="" class="btn btn-point absolute"><span>분야선택</span></a>
+                                            <button type="button" class="btn btn-point absolute" data-toggle="modal" data-target="#modal-typeselect"><span>분야선택</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -212,6 +212,12 @@
         <!-- footer -->
         @@include('./layout/footer.html')
         <!-- // footer -->
+
+        <!-- modal -->
+        @@include('./modules/modal.html', {
+            id : 'modal-typeselect'
+        })
+        <!-- // modal -->
     </div>
     <script>
         $(function(){

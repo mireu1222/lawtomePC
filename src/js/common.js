@@ -373,3 +373,13 @@ function modalToggle() {
         modal.attr('aria-hidden', true);
     });
 }
+
+// display toggle
+function displayToggle() {
+    $('[data-toggle="display"] .rdo-wrap').click(function(){
+        var id = $(this).find('input').attr('id');
+
+        $('[data-display-id]').hide();
+        $('[data-display-id="'+id+'"]').show();
+    });
+}

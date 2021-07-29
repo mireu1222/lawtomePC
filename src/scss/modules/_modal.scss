@@ -18,6 +18,11 @@
             max-width:1239px + 80px;
         }
     }
+    &.medium {
+        .modal-wrap {
+            max-width:900px + 80px;
+        }
+    }
     &.login {
         .modal-wrap {
             max-width:1100px;

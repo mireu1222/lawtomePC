@@ -24,6 +24,7 @@
     .row {
         display:flex;
         align-items:flex-start;
+        flex-wrap:wrap;
         margin-top:40px;
         &:first-child {
             margin-top:0;
@@ -51,6 +52,7 @@
             }
         }
         .forms {
+            margin-left:auto;
             width:calc(100% - 195px);
             font-size:18px;
             .btn {
@@ -100,7 +102,7 @@
                 }
                 &.size3 {
                     .col {
-                        flex:1;
+                        width:calc((100% - 70px) / 3);
                         margin-left:35px;
                         &:first-child {
                             margin-left:0;
