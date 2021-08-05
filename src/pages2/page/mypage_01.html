@@ -81,6 +81,38 @@
                         <div class="row-form-wrap">
                             <div class="row">
                                 <div class="col">
+                                    <p class="tit essen">소속<span class="blind">필수입력</span></p>
+                                    <div class="forms">
+                                        <div class="slt-lists mix" data-toggle="writable">
+                                            <ul>
+                                                <li>
+                                                    <span class="rdo-wrap">
+                                                        <input type="radio" id="belong01" name="belongs" checked>
+                                                        <label for="belong01">개인변호사</label>
+                                                    </span>
+                                                </li>
+                                                <li class="mix">
+                                                    <span class="rdo-wrap">
+                                                        <input type="radio" id="belong02" name="belongs">
+                                                        <label for="belong02">법률사무소</label>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="법률사무소명을 입력하세요" aria-label="법률사무소명 입력" data-writable-target="input" disabled>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit essen">변호사등록번호<span class="blind">필수입력</span></p>
+                                    <div class="forms">
+                                        <input type="text" class="form-control" placeholder="변호사등록번호를 입력하세요" aria-label="변호사등록번호 입력">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
                                     <p class="tit essen">휴대폰 번호<span class="blind">필수입력</span></p>
                                     <div class="forms">
                                         <input type="text" class="form-control" aria-label="휴대폰 번호 입력" value="010-0000-0000">
@@ -109,9 +141,44 @@
                                                 <option value="">00:00</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="form-control" aria-label="연락 가능 지정 휴대폰번호 입력">
+                                        <input type="text" class="form-control" placeholder="연락처를 입력하세요" aria-label="연락 가능 지정 휴대폰번호 입력">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit">비밀번호 변경</p>
+                                    <div class="forms password-type">
+                                        <input type="password" class="form-control" placeholder="비밀번호(6~16자의 영문, 숫자, 특수기호 포함)를 입력하세요" aria-label="비밀번호(6~16자의 영문, 숫자, 특수기호 포함) 입력">
+                                        <button type="button" class="password-view off"><span class="blind">비밀번호 입력 보이기</span></button>
+                                    </div>
+                                </div>
+                                <p class="alert-txt">사용불가(안전도 등급 매우 약함)</p>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit">비밀번호 확인</p>
+                                    <div class="forms password-type">
+                                        <input type="password" class="form-control" placeholder="비밀번호를 다시한번 입력하세요" aria-label="변경할 비밀번호 재입력">
+                                        <button type="button" class="password-view off"><span class="blind">비밀번호 입력 보이기</span></button>
+                                    </div>
+                                </div>
+                                <p class="alert-txt">사용불가(안전도 등급 매우 약함)</p>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit essen">업무가능지역<span class="blind">필수입력</span></p>
+                                    <div class="forms">
+                                        @@include('./modules/slt-list.html', {
+                                            size : 'col4', 
+                                            chk : 'area',
+                                            slt : [
+                                                '서울', '경기', '인천', '대전', '대구', '부산', '울산', '광주', '충청도', '전라도', '경상도', '강원도', '제주도' 
+                                            ]
+                                        })
+                                    </div>
+                                </div>
+                                <p class="alert-txt">업무가능지역을 하나 이상 선택해 주세요!</p>
                             </div>
                         </div>
                     </section>
@@ -301,5 +368,24 @@
         @@include('./layout/footer.html')
         <!-- // footer -->
     </div>
+    <script>
+        $(function(){
+            // 비밀번호 입력 보이기
+            $('.password-view').click(function() {
+                var btn = $(this);
+                var passwordInput = btn.siblings('input.form-control');
+
+                if (btn.hasClass('off')){
+                    passwordInput.attr('type', 'text');
+                    btn.removeClass('off');
+                    btn.addClass('on');
+                } else if (btn.hasClass('on')) {
+                    passwordInput.attr('type', 'password');
+                    btn.removeClass('on');
+                    btn.addClass('off');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

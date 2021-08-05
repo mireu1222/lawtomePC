@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents mypage">
+            @@include('./layout/mypage-lnb.html', {
+                my08 : '03',
+            })
+
+            <!-- mypage page contents -->
+            <div class="mypage-contents">
+                <h3 class="mypage-title">위임장 관리</h3>
+                <a href="" class="btn btn-point absolute"><span>받은 위임장</span></a>
+                <div class="warrant-wrap">
+                    <div class="information">
+                        <div class="cont">
+                            <p class="tit">위임장 관리 안내</p>
+                            <p class="desc">
+                                변호사 업무 공유를 위해서는 위임장이 필요하며, 각 업무에 따라서 위임장 내용이 다릅니다.<br>
+                                도장을 등록하면 위임장 출력하여 수탁변호사가 출력하여 업무를 진행할 수 있습니다.<br>
+                                하기 위임장은 샘플이며, 실제 업무 수행에 맞게 위임장을 출력하면 됩니다.
+                            </p>
+                        </div>
+                        <div class="sign">
+                            <img src="/images/@sign.png" alt="위임장 도장 샘플">
+                            <a href="" class="btn btn-sm btn-border-border"><span>도장 등록</span></a>
+                        </div>
+                    </div>
+                    @@include('./modules/warrant-list.html', {
+                        list : ['복대리', '공판출석', '조사참여', '접견', '기록등사', '기일, 선고 청취', '기타 위임']
+                    })
+                </div>
+            </div>
+            <!-- // mypage page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

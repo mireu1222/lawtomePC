@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                work : '01'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                @@include('./modules/work-card.html')
+
+                <div class="form-wrap type2 narrow">
+                    <h3 class="form-title">업무대행 지원 정보 확인</h3>
+                    @@loop('./modules/form-row-loop.html', [
+                        {
+                            tit : '성명',
+                            inputBtn : {
+                                value : '홍길동',
+                                button : '프로필'
+                            }
+                        }, {
+                            tit : '휴대폰번호',
+                            input : {
+                                value : '010-0000-0000'
+                            }
+                        }, {
+                            tit : '이메일',
+                            input : {
+                                value : 'gawooro@naver.com'
+                            }
+                        }, {
+                            tit : '경력년수',
+                            col2 : {
+                                input1 : {
+                                    value : '10',
+                                    text : '년'
+                                },
+                                input2 : {
+                                    value : '12',
+                                    text : '개월'
+                                }
+                            }
+                        }, {
+                            tit : '업무가능일시',
+                            datepicker : true
+                        }, {
+                            tit : '희망보수',
+                            input : {
+                                value : '00,000',
+                                placeholder : '희망보수를 입력하세요'
+                            }
+                        }, {
+                            tit : '남기는 글',
+                            textarea : true
+                        },
+                    ])
+                    <div class="alert-msg">결제가 완료되면 업무대행이 시작됩니다.</div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-border-point"><span>취소하기</span></button>
+                    <button type="button" class="btn btn-lg btn-point"><span>결제하기</span></button>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

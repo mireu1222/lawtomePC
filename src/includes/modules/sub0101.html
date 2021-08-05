@@ -1,5 +1,5 @@
 <div class="form-wrap">
-    <!-- 업무지역(접견) -->
+    <!-- 업무지역(접견, 조사참여) -->
     <div class="row" data-collapse-num="row0">
         <p class="tit">업무지역</p>
         <div class="forms">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    <!-- // 업무지역(접견) -->
+    <!-- // 업무지역(접견, 조사참여) -->
     <!-- 업무명(기타) -->
     <div class="row" data-collapse-num="row33">
         <p class="tit">업무명</p>
@@ -41,10 +41,10 @@
         </div>
     </div>
     <!-- // 법원 선택(복대리, 공판출석) -->
-    <!-- 보관처(기록등사) -->
+    <!-- 보관장소(기록등사) -->
     <div class="row" data-collapse-num="row7">
-        <p class="tit">보관처</p>
-        <div class="forms flex size2" data-toggle="writable">
+        <p class="tit">보관장소</p>
+        <div class="forms flex size3" data-toggle="writable">
             <div class="col">
                 <span class="rdo-wrap">
                     <input type="radio" id="storage01" name="storage">
@@ -67,9 +67,16 @@
                     </select>
                 </div>
             </div>
+            <div class="col">
+                <span class="rdo-wrap">
+                    <input type="radio" id="storage03" name="storage">
+                    <label for="storage03">기타</label>
+                </span>
+                <input type="text" class="form-control" data-writable-target="input" aria-label="기타 입력" disabled>
+            </div>
         </div>
     </div>
-    <!-- // 보관처(기록등사) -->
+    <!-- // 보관장소(기록등사) -->
     <!-- 조사처(조사참여) -->
     <div class="row" data-collapse-num="row14">
         <p class="tit">조사처</p>
@@ -185,6 +192,18 @@
         <p class="tit narrow">업무유형</p>
         <div class="forms">
             @@include('./modules/slt-list.html', {
+                rdo : 'worktype2',
+                size : 'auto',
+                slt : [
+                    '작성', '검토'
+                ]
+            })
+        </div>
+    </div>
+    <div class="row" data-collapse-num="row21">
+        <p class="tit narrow">계약서 종류</p>
+        <div class="forms">
+            @@include('./modules/slt-list.html', {
                 rdo : 'writing2',
                 size : 'auto',
                 slt : [
@@ -195,7 +214,7 @@
         </div>
     </div>
     <div class="row" data-collapse-num="row21">
-        <p class="tit narrow">업무분량</p>
+        <p class="tit narrow">계약서 분량</p>
         <div class="forms">
             @@include('./modules/slt-list.html', {
                 rdo : 'amount',
@@ -288,7 +307,8 @@
                 size : 'wide',
                 slt : [
                     '종이복사', '스캔'
-                ]
+                ], 
+                typing : '기타',
             })
         </div>
     </div>
@@ -546,96 +566,49 @@
         </div>
     </div>
     <!-- // 당사자(접견) -->
-    <!-- 당사자(법률문서 번역)-->
-    <div class="row" data-collapse-num="row31" data-toggle="writable">
-        <p class="tit">당사자</p>
+    <!-- 당사자(기일선고청취) -->
+    <div class="row" data-collapse-num="row32" data-toggle="writable">
+        <p class="tit narrow">당사자</p>
         <div class="forms flex size2">
             <div class="col">
                 <span class="rdo-wrap">
-                    <input type="radio" id="positionby1-01" name="positionby1">
-                    <label for="positionby1-01">기재</label>
+                    <input type="radio" id="positiontype01" name="positiontype">
+                    <label for="positiontype01">원고</label>
                 </span>
-                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="당사자 이름 입력" data-writable-target="input" disabled>
+                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="원고 성함 입력" data-writable-target="input" disabled>
             </div>
             <div class="col">
                 <span class="rdo-wrap">
-                    <input type="radio" id="positionby1-02" name="positionby1">
-                    <label for="positionby1-02">미기재</label>
+                    <input type="radio" id="positiontype02" name="positiontype">
+                    <label for="positiontype02">피고</label>
                 </span>
+                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="피고 성함 입력" data-writable-target="input" disabled>
             </div>
         </div>
-    </div>
-    <!-- // 당사자(법률문서 번역)-->
-    <!-- 당사자(기일선고청취) -->
-    <div class="row" data-collapse-num="row32">
-        <p class="tit narrow">당사자</p>
-        <div class="forms">
-            <div class="slt-lists wide" data-toggle="display">
-                <ul>
-                    <li>
-                        <span class="rdo-wrap">
-                            <input type="radio" id="positiontype01" name="positiontype">
-                            <label for="positiontype01">형사</label>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="rdo-wrap">
-                            <input type="radio" id="positiontype02" name="positiontype">
-                            <label for="positiontype02">민사</label>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="forms flex size3 mt-10" data-display-id="positiontype01" style="display:none">
+        <div class="forms flex size3 mt-10">
             <div class="col">
                 <span class="rdo-wrap">
-                    <input type="radio" id="position7-01" name="position7">
-                    <label for="position7-01">원고</label>
+                    <input type="radio" id="positiontype03" name="positiontype">
+                    <label for="positiontype03">고소인(피해자)</label>
                 </span>
-                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="원고 이름 입력" data-writable-target="input" disabled>
             </div>
             <div class="col">
                 <span class="rdo-wrap">
-                    <input type="radio" id="position7-02" name="position7">
-                    <label for="position7-02">피고</label>
+                    <input type="radio" id="positiontype04" name="positiontype">
+                    <label for="positiontype04">피의자(피고인)</label>
                 </span>
-                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="피고 이름 입력" data-writable-target="input" disabled>
             </div>
             <div class="col">
                 <span class="rdo-wrap">
-                    <input type="radio" id="position7-03" name="position7">
-                    <label for="position7-03">기타</label>
+                    <input type="radio" id="positiontype05" name="positiontype">
+                    <label for="positiontype05">기타</label>
                 </span>
-                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="기타 이름 입력" data-writable-target="input" disabled>
-            </div>
-        </div>
-        <div class="forms flex size3 mt-10" data-display-id="positiontype02" style="display:none">
-            <div class="col">
-                <span class="rdo-wrap">
-                    <input type="radio" id="position8-01" name="position8">
-                    <label for="position8-01">피고인</label>
-                </span>
-                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="피고인 이름 입력" data-writable-target="input" disabled>
-            </div>
-            <div class="col">
-                <span class="rdo-wrap">
-                    <input type="radio" id="position8-02" name="position8">
-                    <label for="position8-02">피해자</label>
-                </span>
-                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="피해자 이름 입력" data-writable-target="input" disabled>
-            </div>
-            <div class="col">
-                <span class="rdo-wrap">
-                    <input type="radio" id="position8-03" name="position8">
-                    <label for="position8-03">기타</label>
-                </span>
-                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="기타 이름 입력" data-writable-target="input" disabled>
+                <input type="text" class="form-control" placeholder="성함을 입력하세요" aria-label="기타 성함 입력" data-writable-target="input" disabled>
             </div>
         </div>
     </div>
     <!-- // 당사자(기일선고청취) -->
-    <!-- 진행구분(복대리, 공판출석, 기일선고청취) -->
+    <!-- 진행구분(복대리, 공판출석) -->
     <div class="row" data-collapse-num="row5">
         <p class="tit narrow">진행구분</p>
         <div class="forms">
@@ -648,7 +621,7 @@
             })
         </div>
     </div>
-    <!-- // 진행구분(복대리, 공판출석, 기일선고청취) -->
+    <!-- // 진행구분(복대리, 공판출석) -->
     <!-- 업무내용(공통) -->
     <div class="row" data-collapse-num="row00">
         <p class="tit">업무내용</p>
@@ -665,6 +638,14 @@
         </div>
     </div>
     <!-- // 업무내용(계약서, 법률문서 번역) -->
+    <!-- 업무내용(기타) -->
+    <div class="row" data-collapse-num="row02">
+        <p class="tit">업무내용</p>
+        <div class="forms">
+            <textarea class="form-control" placeholder="당사자나 사건번호가 있는 경우 자세히 입력해 주세요" aria-label="업무내용 입력"></textarea>
+        </div>
+    </div>
+    <!-- // 업무내용(기타) -->
     <!-- 업무진행(계약서, 기타) -->
     <div class="row" data-collapse-num="row19">
         <p class="tit">업무진행</p>
@@ -673,21 +654,21 @@
         </div>
     </div>
     <!-- // 업무진행(계약서, 기타) -->
-    <!-- 소통방식(서면작성, 기타) -->
-    <div class="row" data-collapse-num="row25">
-        <p class="tit">소통방식</p>
+    <!-- 소통방법(공통) -->
+    <div class="row">
+        <p class="tit">소통방법</p>
         <div class="forms">
             @@include('./modules/slt-list.html', {
                 rdo : 'commby',
-                size : 'col4mix',
+                size : 'col4',
                 slt : [
-                    '이메일', '카톡', '휴대폰'
+                    '이메일', '메시지(김변호사톡)', '카톡', '휴대폰'
                 ],
                 typing : '기타'
             })
         </div>
     </div>
-    <!-- // 소통방식(서면작성, 기타) -->
+    <!-- // 소통방법(공통) -->
     <!-- 업무비용(복대리, 조사참여, 서면작성, 계약서, 증명서 발급, 법률문서 번역, 기일선고청취, 기타) -->
     <div class="row" data-collapse-num="row6">
         <div class="tit">
@@ -733,7 +714,7 @@
     <!-- 등사물전달(기록등사) -->
     <div class="row" data-collapse-num="row13">
         <p class="tit">등사물전달</p>
-        <div class="forms flex size2" data-toggle="writable">
+        <div class="forms flex size3" data-toggle="writable">
             <div class="col">
                 <span class="rdo-wrap">
                     <input type="radio" id="sendby01" name="sendby">
@@ -747,6 +728,13 @@
                     <label for="sendby02">이메일(스캔)</label>
                 </span>
                 <input type="text" class="form-control" placeholder="이메일을 입력하세요" aria-label="이메일 입력" data-writable-target="input" disabled>
+            </div>
+            <div class="col">
+                <span class="rdo-wrap">
+                    <input type="radio" id="sendby03" name="sendby">
+                    <label for="sendby03">기타</label>
+                </span>
+                <input type="text" class="form-control" placeholder="기타 내용을 입력하세요" aria-label="기타 입력" data-writable-target="input" disabled>
             </div>
         </div>
     </div>

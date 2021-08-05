@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                work : '01'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                <div class="tbl-wrap">
+                    <h3 class="tbl-title">공유업무 진행</h3>
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:110px;">
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width:250px;">
+                            <col style="width:130px;">
+                            <col style="width:130px;">
+                            <col style="width:110px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">회원명</th>
+                                <th scope="col">확정금액</th>
+                                <th scope="col">확정일</th>
+                                <th scope="col">결제일</th>
+                                <th scope="col">진행</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td>복대리</td>
+                                <td>hong1234</td>
+                                <td>홍길동(41)</td>
+                                <td>
+                                    <div class="input-flex">
+                                        <input type="text" class="form-control" value="100,000 원" readonly>
+                                        <button type="button" class="btn btn-sm btn-point"><span>변경</span></button>
+                                    </div>
+                                </td>
+                                <td>2021.00.00</td>
+                                <td>2021.00.00</td>
+                                <td class="text-gray">취소</td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td>복대리</td>
+                                <td>hong1234</td>
+                                <td>홍길동(41)</td>
+                                <td>
+                                    <div class="input-flex">
+                                        <input type="text" class="form-control" value="100,000 원" readonly>
+                                        <button type="button" class="btn btn-sm btn-point"><span>변경</span></button>
+                                    </div>
+                                </td>
+                                <td>2021.00.00</td>
+                                <td>2021.00.00</td>
+                                <td class="text-point">진행</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tbl-wrap mt-60">
+                    <h3 class="tbl-title">지원자 목록</h3>
+                    <table class="table col-table">
+                        <colgroup>
+                            <col style="width:110px;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width:250px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">회원명</th>
+                                <th scope="col">지원금액</th>
+                                <th scope="col">지원일</th>
+                                <th scope="col">관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>999</td>
+                                <td>복대리</td>
+                                <td>hong1234</td>
+                                <td>홍길동(41)</td>
+                                <td>000,000원</td>
+                                <td>2021.00.00</td>
+                                <td>
+                                    <div class="input-flex">
+                                        <input type="text" class="form-control" value="대행업무지원" readonly>
+                                        <button type="button" class="btn btn-sm btn-point"><span>변경</span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td>복대리</td>
+                                <td>hong1234</td>
+                                <td>홍길동(41)</td>
+                                <td>000,000원</td>
+                                <td>2021.00.00</td>
+                                <td>
+                                    <div class="input-flex">
+                                        <input type="text" class="form-control" value="대행업무지원" readonly>
+                                        <button type="button" class="btn btn-sm btn-point"><span>변경</span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

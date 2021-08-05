@@ -20,59 +20,72 @@
 
             <!-- page contents -->
             <div class="page-contents type2">
-                @@include('./modules/work-card.html')
-
-                <div class="form-wrap type2 narrow">
-                    <h3 class="form-title">업무대행 지원 정보 확인</h3>
-                    @@loop('./modules/form-row-loop.html', [
-                        {
-                            tit : '성명',
-                            inputBtn : {
-                                value : '홍길동',
-                                button : '프로필'
-                            }
-                        }, {
-                            tit : '휴대폰번호',
-                            input : {
-                                value : '010-0000-0000'
-                            }
-                        }, {
-                            tit : '이메일',
-                            input : {
-                                value : 'gawooro@naver.com'
-                            }
-                        }, {
-                            tit : '경력년수',
-                            col2 : {
-                                input1 : {
-                                    value : '10',
-                                    text : '년'
-                                },
-                                input2 : {
-                                    value : '12',
-                                    text : '개월'
-                                }
-                            }
-                        }, {
-                            tit : '업무가능일시',
-                            datepicker : true
-                        }, {
-                            tit : '희망보수',
-                            input : {
-                                value : '00,000',
-                                placeholder : '희망보수를 입력하세요'
-                            }
-                        }, {
-                            tit : '남기는 글',
-                            textarea : true
-                        },
-                    ])
-                    <div class="alert-msg">결제가 완료되면 업무대행이 시작됩니다.</div>
+                <div class="order-page-wrap">
+                    @@include('./modules/work-card.html')
+                    <div class="pay-info">
+                        <div class="total">
+                            <div class="price">
+                                <p class="tit">결제금액</p>
+                                <input type="text" class="form-control" value="100,000" placeholder="결제금액을 입력하세요">
+                                <p class="txt">원</p>
+                            </div>
+                            <p class="ment">※ 반드시 수탁변호사와 합의된 금액으로 결제해 주세요!</p>
+                        </div>
+                        <ul class="by-my">
+                            <li>
+                                <p class="title">보유캐시 결제</p>
+                                <div class="price">
+                                    <p class="tit">사용</p>
+                                    <input type="text" class="form-control" value="100,000" placeholder="결제금액을 입력하세요">
+                                    <p class="txt">원</p>
+                                    <p class="txt">(보유 : 10,000원)</p>
+                                    <button type="button" class="btn btn-border-border"><span>전액사용</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="title">보유적립금 결제</p>
+                                <div class="price">
+                                    <p class="tit">사용</p>
+                                    <input type="text" class="form-control" value="100,000" placeholder="결제금액을 입력하세요">
+                                    <p class="txt">원</p>
+                                    <p class="txt">(보유 : 100,000원)</p>
+                                    <button type="button" class="btn btn-border-border"><span>전액사용</span></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
+                <div class="total-pay-info">
+                    <div class="box">
+                        <p class="tit">결제금액</p>
+                        <p class="price"><em>0,000,000</em>원</p>
+                    </div>
+                    <div class="box">
+                        <p class="tit">차감금액</p>
+                        <p class="price"><em>00</em>원</p>
+                    </div>
+                    <div class="box">
+                        <p class="tit">결제예정금액</p>
+                        <p class="price total"><em>0,000,000</em>원</p>
+                    </div>
+                </div>
+                <div class="form-wrap">
+                    <div class="row">
+                        <p class="tit narrow">결제수단</p>
+                        <div class="forms">
+                            @@include('./modules/slt-list.html', {
+                                rdo : 'payby',
+                                size : 'auto',
+                                slt : [
+                                    '신용카드', '휴대폰', '실시간계좌이체'
+                                ]
+                            })
+                        </div>
+                    </div>
+                </div>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-lg btn-border-point"><span>취소하기</span></button>
-                    <button type="button" class="btn btn-lg btn-point"><span>결제하기</span></button>
+                    <!-- <button type="button" class="btn btn-lg btn-point"><span>결제하기</span></button> -->
+                    <a href="/page/mywork_01_order_complete.html" class="btn btn-lg btn-point"><span>결제하기</span></a>
                 </div>
             </div>
             <!-- // page contents -->

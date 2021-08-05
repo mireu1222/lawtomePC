@@ -21,6 +21,7 @@
             <!-- mypage page contents -->
             <div class="mypage-contents">
                 <div class="mypage-sections">
+                    <img src="/images/img/img-mypage01.png" alt="">
                     <section class="sect">
                         <h3 class="sect-title">자기소개</h3>
                         <div class="row-form-wrap">
@@ -32,6 +33,15 @@
                                     </div>
                                     <div class="forms">
                                         <textarea class="form-control" aria-label="내용 입력"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="tit">전문분야</p>
+                                    <div class="forms">
+                                        <div class="text-box">민사법, 부동산, 건설</div>
+                                        <button type="button" class="btn btn-point absolute" data-toggle="modal" data-target="#modal-typeselect"><span>분야선택</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -50,6 +60,12 @@
         <!-- footer -->
         @@include('./layout/footer.html')
         <!-- // footer -->
+
+        <!-- modal -->
+        @@include('./modules/modal.html', {
+            id : 'modal-typeselect'
+        })
+        <!-- // modal -->
     </div>
 </body>
 </html>

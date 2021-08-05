@@ -147,9 +147,17 @@
                 background:url('/images/icon/icon-vol.png') center no-repeat;
             }
         }
-        .btn-talk {
+        .btns {
+            display:flex;
+            align-items:center;
             margin-top:30px;
-            margin-left:auto;
+            > * {
+                margin-left:10px;
+            }
+            .btn {
+                width:84px;
+                margin-top:3px;
+            }
         }
         .btn.btn-md {
             width:200px;
@@ -185,6 +193,160 @@
                         display:none;
                     }
                 }
+            }
+        }
+    }
+}
+
+.order-page-wrap {
+    display:flex;
+    .work-info-wrap.card-type {
+        margin:0;
+    }
+    .pay-info {
+        width:570px;
+        margin-left:auto;
+        .total {
+            padding:20px 30px;
+            background:$disabled;
+            .form-control {
+                width:270px;
+            }
+            .ment {
+                margin-top:15px;
+                color:#666;
+                font-size:16px;
+            }
+        }
+        .by-my {
+            margin-top:15px;
+            .title {
+                margin-bottom:10px;
+                color:$point;
+                font-size:18px;
+                font-weight:500;
+            }
+            li {
+                margin-top:20px;
+                &:first-child {
+                    margin-top:0;
+                }
+                .txt {
+                    width:auto;
+                    min-width:15px;
+                    margin-right:20px;
+                }
+                .form-control {
+                    width:200px;
+                    height:40px;
+                    min-height:40px;
+                    padding:0 24px;
+                }
+                .btn.btn-border-border {
+                    margin-left:auto;
+                    color:#333;
+                }
+            }
+        }
+        .price {
+            display:flex;
+            align-items:center;
+            p {
+                white-space:nowrap;
+            }
+            .txt {
+                font-size:18px;
+            }
+            .tit {
+                margin-right:20px;
+                font-size:22px;
+                font-weight:500;
+            }
+            .form-control {
+                height:50px;
+                min-height:50px;
+                margin-right:10px;
+                padding:13px 24px;
+            }
+        }
+    }
+}
+
+.total-pay-info {
+    display:flex;
+    margin-top:60px;
+    margin-bottom:40px;
+    padding:16px 0;
+    border:1px solid $border;
+    .box {
+        position:relative;
+        flex:1;
+        padding:30px 60px;
+        border-left:1px solid $border;
+        text-align:right;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:50%;
+            right:0;
+            width:32px;
+            height:32px;
+            margin-top:-16px;
+            margin-right:-16px;
+            border:1px solid $border;
+            border-radius:50%;
+            background:#fff;
+            z-index:10;
+        }
+        &::after {
+            content:' ';
+            position:absolute;
+            top:50%;
+            right:0;
+            margin-right:-7px;
+            width:14px;
+            z-index:15;
+        }
+        &:first-child {
+            border-left:none;
+            &::after {
+                height:2px;
+                margin-top:-1px;
+                background:#333;
+            }
+        }
+        &:nth-child(2) {
+            &::after {
+                height:8px;
+                margin-top:-4px;
+                border:2px solid #333;
+                border-left:none;
+                border-right:none;
+            }
+        }
+        &:last-child {
+            flex:unset;
+            width:470px;
+            min-width:470px;
+            &::before,
+            &::after {
+                display:none;
+            }
+        }
+        .tit {
+            margin-bottom:10px;
+            font-size:16px;
+        }
+        .price {
+            font-size:18px;
+            font-weight:500;
+            em {
+                margin-right:4px;
+                font-size:36px;
+                font-weight:700;
+            }
+            &.total em {
+                color:$point;
             }
         }
     }

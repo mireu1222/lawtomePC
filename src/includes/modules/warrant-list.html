@@ -1,0 +1,15 @@
+<div class="warrant-list-wrap">
+    <ul class="lists">
+        @@for(var i=0; i < list.length; i++) {
+            <li>
+                <div class="inner">
+                    <p class="tit">`+list[i]+`</p>
+                    <div class="img">
+                        <img src="/images/img/img-wr`+[i+1]+`.jpg" alt="`+list[i]+` 위임장">
+                    </div>
+                    <a href="" class="btn btn-point"><span>위임장 보기</span></a>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

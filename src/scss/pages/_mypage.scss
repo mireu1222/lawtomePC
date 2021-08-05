@@ -1,5 +1,12 @@
 /* 마이페이지 */
 .mypage-contents {
+    position:relative;
+    > .btn.absolute {
+        position:absolute;
+        top:46px;
+        right:0;
+        width:175px;
+    }
     .mypage-sections {
         .sect {
             position:relative;
@@ -682,6 +689,76 @@
         .btn.btn-sm {
             margin-top:15px;
             color:$basic;
+        }
+    }
+    // 위임장 관리
+    .warrant-wrap {
+        .information {
+            position:relative;
+            display:flex;
+            border:1px solid $border;
+            padding:10px 20px 10px 150px;
+            background:url('/images/icon/icon-warrant.png') 44px center no-repeat;
+            .cont {
+                flex:1;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+            }
+            .tit {
+                font-size:18px;
+                font-weight:500;
+            }
+            .desc {
+                margin-top:15px;
+                color:#666;
+                @include font;
+            }
+            .sign {
+                width:150px;
+                min-width:150px;
+                margin-left:20px;
+                padding:10px 0;
+                background:$disabled;
+                text-align:center;
+                .btn.btn-sm {
+                    display:block;
+                    width:95px;
+                    margin:0 auto;
+                }
+            }
+        }
+        .warrant-list-wrap {
+            margin-top:60px;
+            overflow:hidden;
+            ul.lists {
+                display:flex;
+                flex-wrap:wrap;
+                margin-top:-60px;
+                margin-left:-20px;
+                li {
+                    width:25%;
+                    padding-left:20px;
+                    margin-top:60px;
+                }
+                .inner {
+                    text-align:center;
+                    .tit {
+                        margin-bottom:10px;
+                        font-size:20px;
+                        font-weight:500;
+                    }
+                    .img {
+                        border:1px solid $border;
+                        padding:10px;
+                        text-align:center;
+                    }
+                    .btn.btn-point {
+                        margin-top:15px;
+                        width:150px;
+                    }
+                }
+            }
         }
     }
 }
