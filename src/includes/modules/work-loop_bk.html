@@ -1,0 +1,69 @@
+<!-- loop -->
+@@if(context.listType){
+<li>
+}
+@@if(!context.listType){
+<div class="swiper-slide">
+}
+    <div class="inner">
+        <div class="top">
+            <div class="flag-wrap">
+                <span class="flag flag-border-point">모집중</span>
+                @@if(context.new){
+                    <span class="flag flag-point">NEW</span>
+                }
+            </div>
+            @@if(context.city === '01'){<span class="flag flag-gray" data-city="01">서울</span>}
+            @@if(context.city === '02'){<span class="flag flag-gray" data-city="02">경기</span>}
+            @@if(context.city === '03'){<span class="flag flag-gray" data-city="03">인천</span>}
+            @@if(context.city === '04'){<span class="flag flag-gray" data-city="04">광주</span>}
+            @@if(context.city === '05'){<span class="flag flag-gray" data-city="05">부산</span>}
+            @@if(context.city === '06'){<span class="flag flag-gray" data-city="06">대전</span>}
+            @@if(context.city === '07'){<span class="flag flag-gray" data-city="07">충청도</span>}
+            @@if(context.city === '08'){<span class="flag flag-gray" data-city="08">전라도</span>}
+            @@if(context.city === '09'){<span class="flag flag-gray" data-city="09">경상도</span>}
+            @@if(context.city === '10'){<span class="flag flag-gray" data-city="10">강원도</span>}
+            @@if(context.city === '11'){<span class="flag flag-gray" data-city="11">제주도</span>}
+            <span class="like-chk-wrap">
+                <input type="checkbox" id="@@id" name="@@id"@@if(context.checked){ checked}>
+                <label for="@@id"><span class="blind">관심 업무</span></label>
+            </span>
+        </div>
+        <div class="end-alert">
+            <p>0월 0일 마감</p>
+            <span class="dday">D-1</span>
+            <span class="count">00:00</span>
+        </div>
+        <div class="head">
+            @@if(context.work === '01'){<p class="category" data-work-category="01">[복대리]</p>}
+            @@if(context.work === '02'){<p class="category" data-work-category="02">[기록등사]</p>}
+            @@if(context.work === '03'){<p class="category" data-work-category="03">[조사참여]</p>}
+            @@if(context.work === '04'){<p class="category" data-work-category="04">[접견]</p>}
+            @@if(context.work === '05'){<p class="category" data-work-category="05">[서면작성]</p>}
+            @@if(context.work === '06'){<p class="category" data-work-category="06">[계약서]</p>}
+            @@if(context.work === '07'){<p class="category" data-work-category="07">[공판출석]</p>}
+            @@if(context.work === '08'){<p class="category" data-work-category="08">[기일, 선고 청취]</p>}
+            @@if(context.work === '09'){<p class="category" data-work-category="09">[법률문서 번역]</p>}
+            @@if(context.work === '10'){<p class="category" data-work-category="10">[기타]</p>}
+            <a href="@@page" class="title">@@title</a>
+            <ul class="info-list">
+                <li>위임인 : 최고로 변호사</li>
+                <li>소속사무실 : 법무법인한강시대</li>
+            </ul>
+        </div>
+        <ul class="condition-list">
+            <li class="type1">희망비용 : <em>000,000</em>원</li>
+            <li class="type2">처리일시 : <em>2021.00.00 00:00</em></li>
+        </ul>
+        <div class="more">
+            <p class="tit">업무내용</p>
+            <p class="desc">법원 대리출석업무로 플랫폼을 통한 업무위임장 전달 예정 내용이 길어지면 최대 2줄까지 노출 후 말줄임처리 됨</p>
+        </div>
+    </div>
+@@if(!context.listType){
+</div>
+}
+@@if(context.listType){
+</li>
+}
+<!-- // loop -->

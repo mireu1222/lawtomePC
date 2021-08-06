@@ -100,119 +100,226 @@
 }
 
 // work list
+// .worklist-wrap {
+//     ul.lists {
+//         display:flex;
+//         > li {
+//             width:380px;
+//             margin-left:30px;
+//             &:first-child {
+//                 margin-left:0;
+//             }
+//         }
+//     }
+//     .inner {
+//         display:flex;
+//         flex-direction:column;
+//         height:100%;
+//         padding:24px 16px 30px; 
+//         border:1px solid $border;
+//         .top {
+//             display:flex;
+//             align-items:center;
+//             justify-content:flex-end;
+//             .flag-wrap {
+//                 margin-right:auto;
+//                 font-size:0;
+//                 .flag {
+//                     margin-right:7px;
+//                 }
+//             }
+//             .like-chk-wrap {
+//                 margin-left:8px;
+//             }
+//         }
+//         .end-alert {
+//             margin-top:18px;
+//             font-size:0;
+//             > * {
+//                 display:inline-block;
+//                 vertical-align:top;
+//                 font-size:18px;
+//                 font-weight:500;
+//             }
+//             .dday {
+//                 margin-left:20px;
+//             }
+//             .count {
+//                 margin-left:10px;
+//             }
+//         }
+//         .head {
+//             margin-top:35px;
+//             padding-bottom:20px;
+//             .category {
+//                 margin-bottom:5px;
+//                 font-size:18px;
+//             }
+//             .title {
+//                 display:block;
+//                 color:$point;
+//                 @include font-title;
+//                 font-weight:500;
+//                 @include textEllipsisClamp(2);
+//             }
+//             .info-list {
+//                 margin-top:10px;
+//                 li {
+//                     @include font;
+//                     color:$gray;
+//                     @include textEllipsis;
+//                 }
+//             }
+//         }
+//         .condition-list {
+//             margin:0 -16px;
+//             margin-top:auto;
+//             padding:20px 16px;
+//             background:$disabled;
+//             li {
+//                 margin-top:10px;
+//                 font-size:18px;
+//                 line-height:20px;
+//                 &:first-child {
+//                     margin-top:0;
+//                 }
+//                 em {
+//                     font-weight:500;
+//                 }
+//                 &::before {
+//                     content:' ';
+//                     display:inline-block;
+//                     vertical-align:top;
+//                     width:20px;
+//                     height:20px;
+//                     margin-right:10px;
+//                     background-repeat:no-repeat;
+//                     background-position:center;
+//                 }
+//                 &.type1::before {
+//                     background-image:url('/images/icon/icon-won.png');
+//                 }
+//                 &.type2::before {
+//                     background-image:url('/images/icon/icon-time.png');
+//                 }
+//             }
+//         }
+//         .more {
+//             margin-top:20px;
+//             @include font;
+//             .tit {
+//                 margin-bottom:3px;
+//                 font-weight:700;
+//             }
+//             .desc {
+//                 @include textEllipsisClamp(2);
+//             }
+//         }
+//     }
+// }
 .worklist-wrap {
-    ul.lists {
-        display:flex;
-        > li {
-            width:380px;
-            margin-left:30px;
-            &:first-child {
-                margin-left:0;
+    overflow:hidden;
+    &.type2 {
+        ul.lists {
+            margin-top:-10px;
+            margin-left:-10px;
+            > li {
+                margin-top:10px;
+                padding-left:10px;
+                .inner {
+                    padding:12px;
+                    .body {
+                        .left {
+                            width:100px;
+                            min-width:100px;
+                        }
+                    }
+                }
             }
         }
     }
-    .inner {
+    ul.lists {
         display:flex;
-        flex-direction:column;
-        height:100%;
-        padding:24px 16px 30px; 
-        border:1px solid $border;
-        .top {
-            display:flex;
-            align-items:center;
-            justify-content:flex-end;
-            .flag-wrap {
-                margin-right:auto;
-                font-size:0;
-                .flag {
-                    margin-right:7px;
+        flex-wrap:wrap;
+        margin-top:-30px;
+        margin-left:-30px;
+        > li {
+            width:calc(100% / 3);
+            margin-top:30px;
+            padding-left:30px;
+            .inner {
+                padding:20px;
+                border:1px solid $border;
+                .top {
+                    display:flex;
+                    align-items:center;
+                    .flag-wrap {
+                        margin-right:auto;
+                        font-size:0;
+                        .flag {
+                            margin-right:7px;
+                        }
+                    }
+                    .like-chk-wrap {
+                        margin-left:8px;
+                    }
                 }
-            }
-            .like-chk-wrap {
-                margin-left:8px;
-            }
-        }
-        .end-alert {
-            margin-top:18px;
-            font-size:0;
-            > * {
-                display:inline-block;
-                vertical-align:top;
-                font-size:18px;
-                font-weight:500;
-            }
-            .dday {
-                margin-left:20px;
-            }
-            .count {
-                margin-left:10px;
-            }
-        }
-        .head {
-            margin-top:35px;
-            padding-bottom:20px;
-            .category {
-                margin-bottom:5px;
-                font-size:18px;
-            }
-            .title {
-                display:block;
-                color:$point;
-                @include font-title;
-                font-weight:500;
-                @include textEllipsisClamp(2);
-            }
-            .info-list {
-                margin-top:10px;
-                li {
-                    @include font;
-                    color:$gray;
-                    @include textEllipsis;
+                .body {
+                    display:flex;
+                    margin-top:20px;
+                    .left {
+                        width:130px;
+                        min-width:130px;
+                        margin-right:10px;
+                        text-align:center;
+                        .cate {
+                            font-size:16px;
+                            line-height:18px;
+                            @include textEllipsis;
+                            &::after {
+                                content:' ';
+                                display:block;
+                                width:90px;
+                                height:90px;
+                                margin:10px auto 0;
+                                background-repeat:no-repeat;
+                                background-position:center;
+                            }
+                            @for $i from 1 through 9 {
+                                &.cate0#{$i}::after {
+                                    background-image:url('/images/icon/icon-main0#{$i}.gif');
+                                }
+                            }
+                            &.cate10::after {
+                                background-image:url('/images/icon/icon-main10.gif');
+                            }
+                        }
+                    }
+                    .right {
+                        flex:1;
+                        overflow:hidden;
+                        .tit {
+                            display:inline-block;
+                            vertical-align:top;
+                            max-width:100%;
+                            margin-bottom:10px;
+                            color:#f26522;
+                            font-size:18px;
+                            line-height:20px;
+                            font-weight:500;
+                            @include textEllipsis;
+                        }
+                        .price,
+                        .date {
+                            margin-top:10px;
+                            font-size:15px;
+                            @include textEllipsis;
+                            em {
+                                font-weight:700;
+                            }
+                        }
+                    }
                 }
-            }
-        }
-        .condition-list {
-            margin:0 -16px;
-            margin-top:auto;
-            padding:20px 16px;
-            background:$disabled;
-            li {
-                margin-top:10px;
-                font-size:18px;
-                line-height:20px;
-                &:first-child {
-                    margin-top:0;
-                }
-                em {
-                    font-weight:500;
-                }
-                &::before {
-                    content:' ';
-                    display:inline-block;
-                    vertical-align:top;
-                    width:20px;
-                    height:20px;
-                    margin-right:10px;
-                    background-repeat:no-repeat;
-                    background-position:center;
-                }
-                &.type1::before {
-                    background-image:url('/images/icon/icon-won.png');
-                }
-                &.type2::before {
-                    background-image:url('/images/icon/icon-time.png');
-                }
-            }
-        }
-        .more {
-            margin-top:20px;
-            @include font;
-            .tit {
-                margin-bottom:3px;
-                font-weight:700;
-            }
-            .desc {
-                @include textEllipsisClamp(2);
             }
         }
     }
@@ -220,6 +327,54 @@
 
 // lawyer list
 .lawyerlist-wrap {
+    &.type2 {
+        ul.lists {
+            > li {
+                width:calc((100% - 20px) / 3);
+                margin-left:10px;
+            }
+        }
+        .inner {
+            padding:20px 12px 30px;
+            .head {
+                margin-top:20px;
+                .thumb {
+                    width:50px;
+                    min-width:50px;
+                    height:50px;
+                    margin-right:10px;
+                }
+                .info {
+                    .name {
+                        font-size:22px;
+                        line-height:24px;
+                    }
+                    .company {
+                        font-size:18px;
+                        line-height:22px;
+                    }
+                }
+            }
+            .belong {
+                margin-top:15px;
+                .flag {
+                    margin-top:0;
+                }
+                p {
+                    font-size:16px;
+                    line-height:22px;
+                    @include textEllipsis;
+                }
+            }
+            .introduce {
+                margin-top:15px;
+            }
+            .spot-info {
+                margin-top:15px;
+                margin-bottom:30px;
+            }
+        }
+    }
     ul.lists {
         display:flex;
         > li {

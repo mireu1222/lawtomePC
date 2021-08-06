@@ -37,38 +37,7 @@
                         <li><a href="#n">제주도</a></li>
                     </ul>
                 </div>
-                <div class="worklist-wrap">
-                    <ul class="lists">
-                        @@loop('./modules/work-loop.html', [
-                            {
-                                listType : true,
-                                new : true,
-                                id : 'work01',
-                                checked : true,
-                                work : '06',
-                                city : '01',
-                                title : '서울남부지방법원',
-                                page : 'sub_02_06_view.html'
-                            },
-                            {
-                                listType : true,
-                                id : 'work02',
-                                work : '06',
-                                city : '02',
-                                title : '서울남부지방법원 총무과/법원경비관리대',
-                                page : 'sub_02_06_view.html'
-                            },
-                            {
-                                listType : true,
-                                id : 'work03',
-                                work : '06',
-                                city : '03',
-                                title : '서울남부지방법원 총무과/법원경비관리대 제목이 길면 두줄까지 노출 말줄임 처리',
-                                page : 'sub_02_06_view.html'
-                            },
-                        ])
-                    </ul>
-                </div>
+                @@include('./modules/work-loop.html')
                 @@include('./modules/pagination.html')
             </div>
             <!-- // page contents -->

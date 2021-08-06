@@ -75,6 +75,45 @@
                         </ul>
                     </section>
                     <!-- // 업무 정보 -->
+                    <section class="sect">
+                        <h3 class="sect-title">지원완료 공유업무</h3>
+                        @@include('./modules/work-loop.html', {
+                            type2 : true
+                        })
+                        @@include('./modules/pagination.html')
+                    </section>
+                    <section class="sect">
+                        <h3 class="sect-title">지원완료 공유업무</h3>
+                        <div class="lawyerlist-wrap type2">
+                            <ul class="lists">
+                                @@loop('./modules/lawyer-loop.html', [
+                                    {
+                                        new : true,
+                                        id : 'lawyer01',
+                                        checked : true,
+                                        city : '01',
+                                        name : '최고로 변호사',
+                                        company : '법무법인 한강시대',
+                                        belong : '서울지방법원 안동지원 영주사법원'
+                                    }, {
+                                        new : true,
+                                        id : 'lawyer02',
+                                        city : '02',
+                                        name : '최고로 변호사',
+                                        company : '법무법인 한강시대',
+                                        belong : '서울지방법원 안동지원 영주사법원 소속명이 길면 줄이 늘어남'
+                                    }, {
+                                        id : 'lawyer03',
+                                        city : '04',
+                                        name : '이름이긴 변호사',
+                                        company : '소속명이 노출됨 소속명이 길면 줄이 늘어남',
+                                        belong : '서울지방법원 안동지원 영주사법원 소속명이 길면 줄이 늘어남'
+                                    },
+                                ])
+                            </ul>
+                        </div>
+                        @@include('./modules/pagination.html')
+                    </section>
                     <!-- 기본 정보 -->
                     <section class="sect">
                         <h3 class="sect-title">기본정보</h3>

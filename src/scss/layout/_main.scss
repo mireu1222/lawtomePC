@@ -154,49 +154,57 @@
     }
     // section01
     section.sect01 {
-        .icon-slider {
-            .swiper-container {
-                margin:-20px;
-                padding:20px;
-            }
-            .swiper-slide {
-                > a {
+        ul.icon-lists {
+            font-size:0;
+            li {
+                display:inline-block;
+                vertical-align:top;
+                width:175px;
+                margin-left:81px;
+                &:nth-child(5n + 1) {
+                    margin-left:0;
+                }
+                &:nth-child(5) ~ li {
+                    margin-top:40px;
+                }
+                a {
                     position:relative;
                     display:block;
-                    padding:34px 10px 23px;
-                    border:2px solid transparent;
-                    border-radius:$border-radius-lg;
-                    text-align:center;
+                    padding:30px 6px 25px;
+                    border:1px solid $border;
+                    border-radius:$border-radius;
                     font-size:18px;
-                    line-height:1;
-                    &::after {
-                        content:' ';
-                        position:absolute;
-                        top:-2px;
-                        left:-2px;
-                        right:-2px;
-                        bottom:-2px;
-                        border:1px solid $border;
-                        border-radius:$border-radius-lg;
-                        z-index:-1;
-                    }
+                    text-align:center;
                     &::before {
                         content:' ';
                         display:block;
-                        width:82px;
-                        height:82px;
-                        margin:0 auto 16px;
+                        width:90px;
+                        height:90px;
+                        margin:0 auto 10px;
                         background-repeat:no-repeat;
                         background-position:center;
                     }
-                    @for $i from 1 through 10 {
-                        &.link0#{$i}::before {
+                    @for $i from 1 through 9 {
+                        &.icon0#{$i}::before {
                             background-image:url('/images/icon/icon-main0#{$i}.gif');
                         }
                     }
-                    &:hover {
-                        border-color:$point;
-                        box-shadow:0px 0px 20px 0px rgba(25, 101, 176, 0.15);
+                    &.icon10::before {
+                        background-image:url('/images/icon/icon-main10.gif');
+                    }
+                    &::after {
+                        content:' ';
+                        display:none;
+                        position:absolute;
+                        top:-1px;
+                        right:-1px;
+                        bottom:-1px;
+                        left:-1px;
+                        border:2px solid $point;
+                        border-radius:$border-radius;
+                    }
+                    &:hover::after {
+                        display:block;
                     }
                 }
             }

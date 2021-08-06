@@ -56,23 +56,18 @@
             <section class="sect01">
                 <div class="cont-area">
                     <h3 class="sect-title"><em>분야별</em>로 공유업무를 찾으세요.</h3>
-                    <div class="icon-slider">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a href="/page/sub_02_05.html" class="link05">서면작성</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_06.html" class="link06">계약서</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_01.html" class="link01">복대리</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_07.html" class="link07">공판출석</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_03.html" class="link03">조사참여</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_04.html" class="link04">접견</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_02.html" class="link02">기록등사</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_09.html" class="link09">법률문서 번역</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_08.html" class="link08">기일, 선고 청취</a></div>
-                                <div class="swiper-slide"><a href="/page/sub_02_10.html" class="link10">기타</a></div>
-                            </div>
-                        </div>
-                        <div class="page-control"></div>
-                    </div>
+                    <ul class="icon-lists">
+                        <li><a href="/page/sub_02_05.html" class="icon01">서면작성</a></li>
+                        <li><a href="/page/sub_02_06.html" class="icon02">계약서 검토, 작성</a></li>
+                        <li><a href="/page/sub_02_01.html" class="icon03">복대리</a></li>
+                        <li><a href="/page/sub_02_07.html" class="icon04">공판출석</a></li>
+                        <li><a href="/page/sub_02_03.html" class="icon05">조사참여</a></li>
+                        <li><a href="/page/sub_02_04.html" class="icon06">접견</a></li>
+                        <li><a href="/page/sub_02_02.html" class="icon07">기록등사</a></li>
+                        <li><a href="/page/sub_02_09.html" class="icon08">법률문서 번역</a></li>
+                        <li><a href="/page/sub_02_08.html" class="icon09">기일, 선고 청취</a></li>
+                        <li><a href="/page/sub_02_10.html" class="icon10">기타</a></li>
+                    </ul>
                 </div>
             </section>
             <!-- // section 01 -->
@@ -136,112 +131,18 @@
                         </ul>
                     </div>
                     <!-- // 도시 -->
-                    <div class="worklist-wrap">
+                    <div class="worklist-slider">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                                @@loop('./modules/work-loop.html', [
-                                    {
-                                        cateNum : '01',
-                                        cityNum : '01',
-                                        new : true,
-                                        city : '01',
-                                        id : 'work01',
-                                        checked : true,
-                                        work : '01',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '02',
-                                        cityNum : '02',
-                                        city : '02',
-                                        id : 'work02',
-                                        work : '02',
-                                        title : '서울남부지방법원 총무과/법원경비관리대',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '03',
-                                        cityNum : '03',
-                                        city : '03',
-                                        id : 'work03',
-                                        work : '03',
-                                        title : '서울남부지방법원 총무과/법원경비관리대 제목이 길면 두줄까지 노출 말줄임 처리',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '02',
-                                        cityNum : '04',
-                                        city : '04',
-                                        id : 'work04',
-                                        work : '02',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '03',
-                                        cityNum : '05',
-                                        city : '05',
-                                        id : 'work05',
-                                        work : '03',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '03',
-                                        cityNum : '06',
-                                        city : '06',
-                                        id : 'work06',
-                                        work : '03',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '04',
-                                        cityNum : '07',
-                                        city : '07',
-                                        id : 'work07',
-                                        work : '04',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '05',
-                                        cityNum : '08',
-                                        city : '08',
-                                        id : 'work08',
-                                        work : '05',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '06',
-                                        cityNum : '09',
-                                        city : '09',
-                                        id : 'work09',
-                                        work : '06',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '07',
-                                        cityNum : '10',
-                                        city : '10',
-                                        id : 'work10',
-                                        work : '07',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    },
-                                    {
-                                        cateNum : '08',
-                                        cityNum : '11',
-                                        city : '11',
-                                        id : 'work11',
-                                        work : '08',
-                                        title : '서울남부지방법원',
-                                        page : '#n'
-                                    }
-                                ])
+                                <div class="swiper-slide">
+                                    @@include('./modules/work-loop.html')
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include('./modules/work-loop.html')
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include('./modules/work-loop.html')
+                                </div>
                             </div>
                         </div>
                         <div class="page-control"></div>
@@ -630,26 +531,11 @@
                 }
             });
 
-            // icon slider
-            const iconSlider = new Swiper('.icon-slider .swiper-container', {
-                loop : false,
-                slidesPerView : 7,
-                spaceBetween : 25,
-                pagination : {
-                    el : '.icon-slider .page-control',
-                    type : 'bullets',
-                    clickable : true,
-                }
-            });
-
             // 대행업무 slider
-            const workSlider = new Swiper('.worklist-wrap .swiper-container', {
+            const workSlider = new Swiper('.worklist-slider .swiper-container', {
                 loop: false,
-                slidesPerGroup: 3,
-                slidesPerView: 3,
-                spaceBetween: 30,
                 pagination: {
-                    el : '.worklist-wrap .page-control',
+                    el : '.worklist-slider .page-control',
                     type : 'bullets',
                     clickable : true
                 },
