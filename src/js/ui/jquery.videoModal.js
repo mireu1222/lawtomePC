@@ -12,32 +12,25 @@
         // modal DOM append
         $('body').append(opts.templates.popup);
 
-        // click info var
-        var wrap = self.closest('.info'),
-            tit = wrap.find('.tit').text(),
-            desc = wrap.find('.desc').text(),
-            date = wrap.find('.date').html(),
-            src = wrap.find('.src').text();
-
         // video modal var
         var videoModal = $('.video-modal-area'),
-            v = {
-                tit : videoModal.find('.tit'),
-                desc : videoModal.find('.desc'),
-                date : videoModal.find('.date'),
-                iframe : videoModal.find('iframe')
-            },
-            closeBtn = videoModal.find('.btn-close');
+        v = {
+            tit : videoModal.find('.tit'),
+            desc : videoModal.find('.desc'),
+            date : videoModal.find('.date'),
+            iframe : videoModal.find('iframe')
+        },
+        closeBtn = videoModal.find('.btn-close');
 
         // click function
         self.click(function(){
-            modalOpen();
-        });
-        closeBtn.click(function(){
-            modalClose();
-        });
+            // click info var
+            var wrap = $(this).siblings('.info'),
+                tit = wrap.find('.tit').text(),
+                desc = wrap.find('.desc').text(),
+                date = wrap.find('.date').html(),
+                src = wrap.find('.src').text();
 
-        function modalOpen(){            
             v.tit.text(tit);
             v.desc.text(desc);
             v.date.html(date);
@@ -45,9 +38,8 @@
 
             $('body').append(opts.templates.dim);
             videoModal.show();
-        }
-
-        function modalClose() {
+        });
+        closeBtn.click(function(){
             v.tit.text('');
             v.desc.text('');
             v.date.html('');
@@ -55,7 +47,7 @@
 
             $('body').find('.common-dim').remove();
             videoModal.hide();
-        }
+        });
 
         return this;
     }
