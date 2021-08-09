@@ -19,8 +19,39 @@
             })
 
             <!-- page contents -->
-            <div class="page-contents">
-                
+            <div class="page-contents type2">
+                <div class="masonry-list-wrap">
+                    <div class="item-wrap">
+                        @@loop('./modules/masonry-list.html', [
+                            {
+                                thumbType : true,
+                                link : '/page/sub_07_04_view.html',
+                            }, {
+                                link : '/page/sub_07_04_view.html',
+                            }, {
+                                videoType : true,
+                                video : 'https://www.youtube.com/embed/QGjd96HsHzI'
+                            }, {
+                                thumbType : true,
+                                link : '/page/sub_07_04_view.html',
+                            }, {
+                                link : '/page/sub_07_04_view.html',
+                            }, {
+                                videoType : true,
+                                video : 'https://www.youtube.com/embed/QGjd96HsHzI'
+                            }, {
+                                thumbType : true,
+                                link : '/page/sub_07_04_view.html',
+                            }, {
+                                link : '/page/sub_07_04_view.html',
+                            }, {
+                                videoType : true,
+                                video : 'https://www.youtube.com/embed/QGjd96HsHzI'
+                            }, 
+                        ])
+                    </div>
+                </div>
+                @@include('./modules/pagination.html')
             </div>
             <!-- // page contents -->
         </div>
@@ -30,5 +61,17 @@
         @@include('./layout/footer.html')
         <!-- // footer -->
     </div>
+    <script>
+        $(function(){
+            // masonry
+            $('.masonry-list-wrap .item-wrap').masonry({
+                itemSelector: '.items',
+                percentPosition: true,
+                horizontalOrder: true
+            });
+            
+            $('[data-control="modal"]').videoModal();
+        });
+    </script>
 </body>
 </html>

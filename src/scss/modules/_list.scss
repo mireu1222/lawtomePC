@@ -99,124 +99,6 @@
     }
 }
 
-// work list
-// .worklist-wrap {
-//     ul.lists {
-//         display:flex;
-//         > li {
-//             width:380px;
-//             margin-left:30px;
-//             &:first-child {
-//                 margin-left:0;
-//             }
-//         }
-//     }
-//     .inner {
-//         display:flex;
-//         flex-direction:column;
-//         height:100%;
-//         padding:24px 16px 30px; 
-//         border:1px solid $border;
-//         .top {
-//             display:flex;
-//             align-items:center;
-//             justify-content:flex-end;
-//             .flag-wrap {
-//                 margin-right:auto;
-//                 font-size:0;
-//                 .flag {
-//                     margin-right:7px;
-//                 }
-//             }
-//             .like-chk-wrap {
-//                 margin-left:8px;
-//             }
-//         }
-//         .end-alert {
-//             margin-top:18px;
-//             font-size:0;
-//             > * {
-//                 display:inline-block;
-//                 vertical-align:top;
-//                 font-size:18px;
-//                 font-weight:500;
-//             }
-//             .dday {
-//                 margin-left:20px;
-//             }
-//             .count {
-//                 margin-left:10px;
-//             }
-//         }
-//         .head {
-//             margin-top:35px;
-//             padding-bottom:20px;
-//             .category {
-//                 margin-bottom:5px;
-//                 font-size:18px;
-//             }
-//             .title {
-//                 display:block;
-//                 color:$point;
-//                 @include font-title;
-//                 font-weight:500;
-//                 @include textEllipsisClamp(2);
-//             }
-//             .info-list {
-//                 margin-top:10px;
-//                 li {
-//                     @include font;
-//                     color:$gray;
-//                     @include textEllipsis;
-//                 }
-//             }
-//         }
-//         .condition-list {
-//             margin:0 -16px;
-//             margin-top:auto;
-//             padding:20px 16px;
-//             background:$disabled;
-//             li {
-//                 margin-top:10px;
-//                 font-size:18px;
-//                 line-height:20px;
-//                 &:first-child {
-//                     margin-top:0;
-//                 }
-//                 em {
-//                     font-weight:500;
-//                 }
-//                 &::before {
-//                     content:' ';
-//                     display:inline-block;
-//                     vertical-align:top;
-//                     width:20px;
-//                     height:20px;
-//                     margin-right:10px;
-//                     background-repeat:no-repeat;
-//                     background-position:center;
-//                 }
-//                 &.type1::before {
-//                     background-image:url('/images/icon/icon-won.png');
-//                 }
-//                 &.type2::before {
-//                     background-image:url('/images/icon/icon-time.png');
-//                 }
-//             }
-//         }
-//         .more {
-//             margin-top:20px;
-//             @include font;
-//             .tit {
-//                 margin-bottom:3px;
-//                 font-weight:700;
-//             }
-//             .desc {
-//                 @include textEllipsisClamp(2);
-//             }
-//         }
-//     }
-// }
 .worklist-wrap {
     overflow:hidden;
     &.type2 {
@@ -248,6 +130,7 @@
             margin-top:30px;
             padding-left:30px;
             .inner {
+                display:block;
                 padding:20px;
                 border:1px solid $border;
                 .top {
@@ -535,6 +418,68 @@
                     margin-top:20px;
                     color:$gray;
                     font-size:16px;
+                }
+            }
+        }
+    }
+}
+
+.masonry-list-wrap {
+    overflow:hidden;
+    .item-wrap {
+        margin-top:-60px;
+        margin-left:-20px;
+        @include clearfix;
+        .items {
+            float:left;
+            width:25%;
+            margin-top:60px;
+            padding-left:20px;
+            .thumb {
+                position:relative;
+                display:block;
+                margin-bottom:30px;
+                border-radius:10px;
+                overflow:hidden;
+                img {
+                    width:100%;
+                }
+            }
+            .info {
+                position:relative;
+                .tit {
+                    display:block;
+                    @include font-title;
+                    @include textEllipsisClamp(2);
+                    font-weight:700;
+                    word-break:keep-all;
+                    &:hover,
+                    &:active {
+                        text-decoration:underline;
+                    }
+                    &::before {
+                        content:' ';
+                        display:block;
+                        width:30px;
+                        height:2px;
+                        margin-bottom:10px;
+                        background:$point;
+                    }
+                }
+                .desc {
+                    margin-top:10px;
+                    color:$cont;
+                    @include font;
+                    @include textEllipsisClamp(5);
+                    word-break:keep-all;
+                }
+                .date {
+                    margin-top:15px;
+                    color:$gray;
+                    @include font-sm;
+                }
+                .src {
+                    display:none !important;
                 }
             }
         }

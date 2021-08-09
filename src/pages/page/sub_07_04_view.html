@@ -15,17 +15,14 @@
         <!-- contents -->
         <div id="contents" class="contents">
             @@include('./layout/page-title.html', {
-                work : '02'
+                cate07 : '04'
             })
 
             <!-- page contents -->
             <div class="page-contents type2">
-                @@include('./modules/mywork-list.html', {
-                    type2: true,
-                    list : 3
+                @@include('./modules/board-view.html', {
+                    page : 'sub_07_04'
                 })
-
-                @@include('./modules/pagination.html')
             </div>
             <!-- // page contents -->
         </div>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="contents" class="contents">
+            @@include('./layout/page-title.html', {
+                work : '02'
+            })
+
+            <!-- page contents -->
+            <div class="page-contents type2">
+                <div class="work-page-wrap">
+                    <div class="lawyerlist-wrap">
+                        <div class="inner">
+                            <div class="head">
+                                <span class="thumb" style="background-image:url('/images/@noimg.gif')" aria-hidden="true"></span>
+                                <div class="info">
+                                    <p class="name">최고로 변호사</p>
+                                    <p class="company">법무법인 한강시대</p>
+                                </div>
+                            </div>
+                            <div class="belong">
+                                <span class="flag flag-sm flag-point">소속</span>
+                                <p>서울지방법원 안동지원 영주사법원</p>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./modules/work-card.html', {
+                        btn : true
+                    })
+                </div>
+                <div class="form-wrap narrow">
+                    <h3 class="form-title">업무진행내역</h3>
+                    <div class="row">
+                        <p class="tit">제목</p>
+                        <div class="forms">
+                            <input type="text" class="form-control" aria-label="제목 입력">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="tit">작성자</p>
+                        <div class="forms">
+                            <input type="text" class="form-control" aria-label="작성자 입력">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="tit">등록일</p>
+                        <div class="forms">
+                            <input type="text" class="form-control" aria-label="등록일 입력">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="tit">내용</p>
+                        <div class="forms">
+                            <textarea class="form-control" aria-label="내용 입력"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="tit narrow">상태</p>
+                        <div class="forms">
+                            @@include('./modules/slt-list.html', {
+                                size : 'auto',
+                                rdo : 'state',
+                                slt : [
+                                    '접수', '진행', '보류', '취소', '완료'
+                                ]
+                            })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="tit">첨부파일</p>
+                        <div class="forms">
+                            <div class="inputfile-wrap">
+                                <input type="text" class="form-control">
+                                <input type="file" id="file-upload">
+                                <label for="file-upload" class="btn">파일선택</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-gray"><span>취소</span></button>
+                    <button type="button" class="btn btn-lg btn-point"><span>저장</span></button>
+                </div>
+                <!-- loop -->
+                <div class="work-progress-wraps">
+                    <div class="work-progress">
+                        <div class="tbl-wrap narrow">
+                            <p class="tbl-title">업무진행내역</p>
+                            <table class="table work-table">
+                                <colgroup>
+                                    <col style="width:263px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">제목</th>
+                                        <td>제목</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">작성자</th>
+                                        <td>작성자</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">등록일</th>
+                                        <td>2021.00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">내용</th>
+                                        <td>내용</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">상태</th>
+                                        <td>
+                                            <span class="flag flag-cont">접수</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부파일</th>
+                                        <td><a href="" class="text-basic">첨부파일.jpg</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="btns">
+                            <button type="button" class="btn btn-sm btn-border-point"><span>수정</span></button>
+                            <button type="button" class="btn btn-sm btn-border-point"><span>삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // loop -->
+                <div class="btn-group">
+                    <a href="" class="btn btn-lg btn-gray"><span>목록</span></a>
+                </div>
+            </div>
+            <!-- // page contents -->
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

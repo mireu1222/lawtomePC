@@ -13,7 +13,7 @@
     }
     &.narrow {
         border-top:1px solid $basic;
-        padding:0 180px;
+        padding:0 135px;
     }
     .form-title {
         margin-bottom:70px;
@@ -422,8 +422,8 @@
 
 /* file upload */
 .inputfile-wrap {
+    display:flex;
     position:relative;
-    font-size:0;
     input[type="file"] {
         position:absolute;
         width:1px;
@@ -435,11 +435,9 @@
         clip:rect(0, 0, 0, 0);
     }
     .form-control {
-        display:inline-block;
         width:calc(100% - 175px);
     }
     label.btn {
-        display:inline-block;
         width:160px;
         height:50px;
         margin-left:15px;

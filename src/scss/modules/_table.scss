@@ -7,8 +7,10 @@
     }
     .tbl-title {
         margin-bottom:25px;
-        @include font-xl;
+        font-size:22px;
+        line-height:30px;
         font-weight:500;
+        word-break:keep-all;
     }
     .tbl-desc {
         margin-bottom:10px;
@@ -331,6 +333,30 @@
                     min-height:40px;
                     padding:8px;
                     margin-right:8px;
+                }
+                .select-wrap {
+                    flex:1; 
+                    margin-right:8px;
+                    .nice-select {
+                        height:40px;
+                        line-height:38px;
+                        padding:0 8px;
+                        padding-right:30px;
+                        &::after {
+                            right:11px;
+                            width:8px;
+                            height:8px;
+                            margin-top:-6px;
+                        }
+                        &.open::after {
+                            margin-top:-2px;
+                        }
+                        ul.list .option {
+                            min-height:40px;
+                            line-height:40px;
+                            padding:0 8px;
+                        }
+                    }
                 }
             }
         }

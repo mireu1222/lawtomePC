@@ -118,38 +118,6 @@
                 }
             }
         }
-        .state-select-lists {
-            > li {
-                margin-top:40px;
-                &:first-child {
-                    margin-top:0;
-                }
-            }
-            .state-options {
-                margin-top:15px;
-                padding:30px 25px;
-                background:$disabled;
-                ul {
-                    display:flex;
-                    li {
-                        flex:1;
-                        display:flex;
-                        align-items:center;
-                        .chk-wrap {
-                            margin-right:20px;
-                            input + label {
-                                white-space:nowrap;
-                            }
-                        }
-                        .form-control {
-                            height:50px;
-                            min-height:50px;
-                            background:#fff;
-                        }
-                    }
-                }
-            }
-        }
         .alert-setting {
             margin-bottom:100px;
             padding-right:45px;

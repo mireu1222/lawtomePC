@@ -1,4 +1,38 @@
+.state-select-lists {
+    > li {
+        margin-top:40px;
+        &:first-child {
+            margin-top:0;
+        }
+    }
+    .state-options {
+        margin-top:15px;
+        padding:30px 25px;
+        background:$disabled;
+        ul {
+            display:flex;
+            li {
+                flex:1;
+                display:flex;
+                align-items:center;
+                .chk-wrap {
+                    margin-right:20px;
+                    input + label {
+                        white-space:nowrap;
+                    }
+                }
+                .form-control {
+                    height:50px;
+                    min-height:50px;
+                    background:#fff;
+                }
+            }
+        }
+    }
+}
+
 .work-info-wrap {
+    position:relative;
     display:flex;
     padding:0 40px;
     text-align:left;
@@ -196,6 +230,11 @@
             }
         }
     }
+    > .btn.btn-sm {
+        position:absolute;
+        top:20px;
+        right:20px;
+    }
 }
 
 .order-page-wrap {
@@ -348,6 +387,51 @@
             &.total em {
                 color:$point;
             }
+        }
+    }
+}
+
+.work-page-wrap {
+    display:flex;
+    margin-bottom:40px;
+    &:last-child {
+        margin-bottom:0;
+    }
+    .lawyerlist-wrap {
+        padding:20px 16px;
+        .inner {
+            height:auto;
+            border:none;
+            padding:0;
+            .head {
+                margin-top:0;
+            }
+        }
+    }
+    .work-info-wrap.card-type {
+        margin:0;
+        margin-left:auto;
+    }
+}
+
+.work-progress-wraps {
+    margin-top:100px;
+    padding-top:45px;
+    border-top:1px solid $basic;
+}
+.work-progress {
+    position:relative;
+    margin-top:60px;
+    &:first-child {
+        margin-top:0;
+    }
+    .btns {
+        position:absolute;
+        top:1px;
+        right:135px;
+        font-size:0;
+        .btn {
+            margin-left:5px;
         }
     }
 }
